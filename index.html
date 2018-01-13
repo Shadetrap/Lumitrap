@@ -890,7 +890,6 @@
     </div>
 
 
-
 <script src="beepbox_synth.js"></script>
 <script>//---------Keypress Toggle Play--------------
 beep = new beepbox.Synth("");
@@ -902,6 +901,12 @@ beep = new beepbox.Synth("");
 
     // elem.src = 'images/hydrangeas.jpg';
     // document.getElementById("pButtonID").appendChild(elem);
+
+
+    //-----force gif to play-----
+    var gifSource = $('#lumigif').attr('src'); //get the source in the var
+    $('#lumigif').attr('src', ""); //erase the source     
+    $('#lumigif').attr('src', gifSource+"?"+new Date().getTime()); //add the date to the source of the image... :-) 
     
 
 }
