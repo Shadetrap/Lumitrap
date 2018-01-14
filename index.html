@@ -901,7 +901,9 @@
     $("#pButtonID").html("▮");
 
     //-----force GIF image to start-----
-
+    var gifSource = $('#lumigif').attr('src'); //get the source in the var
+    $('#lumigif').attr('src', ""); //erase the source     
+    $('#lumigif').attr('src', gifSource+"?"+new Date().getTime()); //add the date to the source of the image... :-) 
     //----Bonus features-------
     var secretSound = new Audio('audio/secret.mp3');
     var isPlaying = false;
