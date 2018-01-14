@@ -7,7 +7,7 @@
 
 }
 .underline{
-    color:red;
+    color:pink;
     animation: undertitle 3.25s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
@@ -83,36 +83,3 @@ div#wrappa {
     margin: 0px auto;
 }
 
-@media all and (max-width: 666px) {
-    
-}
-@media all and (max-width: 640px) {
-    #lumigif {
-        display: block;
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        margin-right: auto;
-        position: relative;
-        margin-top: -120px;
-        height: 100px;
-        left: 0px;
-        top: 36px;
-    }
-}
-/* table tr:last-child {
-    padding-bottom: 200px;
-    background: blue;
-    width: 100px;
-} */
-span {
-    padding-right:38px;
-}
-table tr:last-child{
-    border-radius: 15px 50px 30px 5px;
-
-}
-tr:first-child td:first-child { border-top-left-radius: 0.5em; }
-tr:first-child td:last-child { border-top-right-radius: 0.5em; }
-tr:last-child td:first-child { border-bottom-left-radius: 0.5em;}
-tr:last-child td:last-child { border-bottom-right-radius: 0.5em;}
