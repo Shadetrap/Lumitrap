@@ -314,7 +314,6 @@ button img {
 
 .scroll-container {
     height: 100vh;
-    overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
