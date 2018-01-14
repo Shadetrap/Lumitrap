@@ -1023,29 +1023,6 @@ var gifSource = $('#lumigif').attr('src'); //get the source in the var
 </script>
 <script>//---Hide Text/Show Div On Scroll Down (delete)------
     //----HIDE TEXT------
-    $(document).ready(function () {
-        $('body').css('display', 'none');
-        $('body').fadeIn(3200);
-        $('.link').click(function (event) {
-            event.preventDefault();
-            newLocation = $('.link a').attr("href");
-            $('body').fadeOut(1000, newpage);
-        });
-        function newpage() {
-            window.location = newLocation;
-        }
-
-        var $links = $('.newTab').click(function () {
-            beep.pause();
-            isPlaying = false;
-        });
-
-        //---Click a P tag to hide it----
-        $("p").click(function () {
-            $(this).hide();
-        });
-    });
-
     //----SCROLLDOWN SHOW DIV (delete this)------
     function yHandler() {
         var wrap = document.getElementById('showAtBottom');
