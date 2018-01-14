@@ -1,9 +1,6 @@
 
 .underline{
     color:pink;
-    animation: undertitle 3.25s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
 }
 
 .scroll-container {
@@ -12,7 +9,6 @@
 }
 
 -webkit-scrollbar {
-    width: 20px;
 }
 
 -webkit-scrollbar-track {
