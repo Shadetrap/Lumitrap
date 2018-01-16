@@ -996,7 +996,7 @@
         if (e.keyCode == 37) {
             e.preventDefault();
             console.log("Rewinded 1 bar backwards");
-            beep.preBar();
+            beep.prevBar();
             // beep.snapToBar();
         }
         if (e.keyCode == 8) {
@@ -1011,7 +1011,6 @@
             beep.reverb = 2;
             song.reverb = 2; //nothing is happening though!
         }
-
         if (e.keyCode == 83) {
             e.preventDefault();
             if (secret1 == true) {
