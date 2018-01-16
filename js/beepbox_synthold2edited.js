@@ -206,10 +206,10 @@ var beepbox;
     Config.pitchNames = ["C", null, "D", null, "E", "F", null, "G", null, "A", null, "B"];
     Config.keyNames = ["B", "A♯", "A", "G♯", "G", "F♯", "F", "E", "D♯", "D", "C♯", "C"];
     Config.keyTransposes = [23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12];
-    Config.tempoSteps = 15;
+    Config.tempoNames = ["molasses", "slow", "leisurely", "moderate", "steady", "brisk", "hasty", "fast", "strenuous", "grueling", "hyper", "ludicrous", "speedoflight", "sonic", "insane"];
     Config.reverbRange = 4;
     Config.beatsPerBarMin = 3;
-    Config.beatsPerBarMax = 16;
+    Config.beatsPerBarMax = 15;
     Config.barCountMin = 1;
     Config.barCountMax = 128;
     Config.patternsPerChannelMin = 1;
@@ -786,7 +786,7 @@ var beepbox;
                     else {
                         this.tempo = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                     }
-                    this.tempo = this._clip(0, Config.tempoSteps, this.tempo);
+                    this.tempo = this._clip(0, Config.tempoNames.length, this.tempo);
                 }
                 else if (command == 109) {
                     this.reverb = base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
@@ -1233,7 +1233,7 @@ var beepbox;
             if (jsonObject.beatsPerMinute != undefined) {
                 var bpm = jsonObject.beatsPerMinute | 0;
                 this.tempo = Math.round(4.0 + 9.0 * Math.log(bpm / 120) / Math.LN2);
-                this.tempo = this._clip(0, Config.tempoSteps, this.tempo);
+                this.tempo = this._clip(0, Config.tempoNames.length, this.tempo);
             }
             if (jsonObject.reverb != undefined) {
                 this.reverb = this._clip(0, Config.reverbRange, jsonObject.reverb | 0);
@@ -1676,6 +1676,23 @@ var beepbox;
                 this.delayLine[i] = 0.0;
         };
         Synth.prototype.nextBar = function () {
+            if (!this.song)
+                return;
+            var oldBar = this.bar;
+            this.bar++;
+            if (this.enableOutro) {
+                if (this.bar >= this.song.barCount) {
+                    this.bar = this.enableIntro ? 0 : this.song.loopStart;
+                }
+            }
+            else {
+                if (this.bar >= this.song.loopStart + this.song.loopLength || this.bar >= this.song.barCount) {
+                    this.bar = this.song.loopStart;
+                }
+            }
+            this.playheadInternal += this.bar - oldBar;
+        };
+        Synth.prototype.nextBeat = function () {
             if (!this.song)
                 return;
             var oldBar = this.bar;

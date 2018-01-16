@@ -1,5 +1,6 @@
 * {
     font-family: 'arial', arial;
+    font-family: 'futura_lt_btlight';
     font-weight: normal;
     font-style: normal;
     font-size: 18px;
@@ -45,7 +46,7 @@ h1 {
     font-size: 60px;
     margin: 0 auto;
     text-align: center;
-    color: #66d964;
+    color: #64d962;
     font-weight: bold;
     left: 60px;
     text-decoration: none;
@@ -109,7 +110,7 @@ header {
     text-align: center;
 }
 
-#lumigif {
+#lumipop {
     display: block;
     position: absolute;
     margin-left: auto;
@@ -117,26 +118,50 @@ header {
     position: relative;
     margin-top: -120px;
     height: 100px;
-    left: 180px;
-    top: 36px;
+    left: 150px;
+    top: 0px;
+    z-index:2;
 }
 
-#lumigif2 {
-    display: block;
+#lumipeak {
+    display: none;
+    opacity:1;
     position: absolute;
-    border: 1px solid purple;
     margin-left: auto;
     margin-right: auto;
-    position: fixed;
-    left: 180px;
+    position: relative;
+    margin-top: -120px;
+    height: 120px;
+    left: 310px;
+    top: -251px;
+    z-index:2;
 }
-
+.playlist{
+    margin:0 auto;
+    width:501px;
+    /* overflow:hidden; */
+    -webkit-border-radius: 0.5em;
+    position:relative;
+}
 .playlist tr:hover td {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(116, 116, 116, 0.3);
     font-weight: bold;
     color: white;
     animation: flash 0s;
     
+}
+.bgShadow{
+    padding-bottom: 20px;
+}
+.extraDiv{
+    height:60px;
+    width:60px;
+    color:yellow;
+    margin:0;
+    text-align:center;
+    vertical-align: bottom;
+    bottom:0%;
+    opacity:0;
 }
 
 .playlist tr:hover a {
@@ -148,17 +173,17 @@ header {
 }
 
 table {
+    -webkit-box-shadow: 0 3px 40px #66d964;
+    box-shadow: 0 0.3px 40px #66d964;
     border-collapse: collapse;
     border-radius: 0.5em;
-    -webkit-box-shadow: 0 3px 40px #FFF;
-    box-shadow: 0 0.3px 40px #66d964;
     border-radius: 9px;
-    margin: 2em auto;
-    background-color: black;
+    /* margin: 2em auto; */
+    background-color: rgb(11, 11, 11);
     cursor: default;
     color: #666666;
-    margin-top: 10000em;
-    margin-bottom: 60px;
+    /* margin-top: 10000em; */
+    margin-bottom: 0px;
     opacity: 1;
     transition: opacity 0.5s;
     text-decoration: none;
@@ -173,7 +198,7 @@ table {
     }
     70% {}
     100% {
-        margin-top: 2em;
+        margin-top: 0;
     }
 }
 
@@ -185,7 +210,7 @@ tr, td {
     /* transition: opacity 0.5s;
     animation: texton 10s; */
     transition: opacity 0.5s;
-    animation: texton 0.5s;
+    animation: texton 1.5s;
     
     animation-fill-mode: forwards;
 }
@@ -205,7 +230,7 @@ tr, td {
 @keyframes texton{
 
     0% {
-        color:rgb(225, 225, 225);
+        color:#64d962;
     }
     100% {
         color: rgb(102, 102, 102);
@@ -253,11 +278,15 @@ a:hover {
 .linkyou{
 right:0px;
 }
+.transparent{
+    opacity:0.2;
+    cursor: default;
+}
 .linkbeep{
     right:23px;
 }
 .linkbeep2{
-    right:29px;
+    right:23px;
 }
 .linkTwit{
     right:0px;
@@ -287,6 +316,7 @@ button img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    
 }
 
 @keyframes flash {
@@ -310,10 +340,6 @@ button img {
         color: rgb(0, 255, 0);
         width: 50px;
     }
-}
-
-.scroll-container {
-    height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -372,7 +398,14 @@ div.newData {
     width: 100px;
 } */
 span {
-    padding-right:38px;
+    position: relative;
+    text-align: center;
+    margin-left:-90px;
+    margin-right: -47px;
+    display:inline-block;
+    transform:scale(0.68,1); 
+    -webkit-transform:scale(0.68,1); 
+    
 }
 table tr:last-child{
     border-radius: 15px 50px 30px 5px;
