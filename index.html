@@ -12,16 +12,18 @@
     <!-- <link rel="import" href="html/test.html"> -->
     <script src="js/ScrollToPlugin.min.js"></script>
     <script src="js/beepbox_synth.js"></script>
-    <!-- <link rel="icon" href="lumicon.gif" type="image/gif"/> -->
+    <script src="js/parallax.min.js"></script>
+    <!-- <link rel="icon" href="lumicon.gif" type   ="image/gif"/> -->
     <link rel="icon" href="img/lumicon.ico">
     <title>Lumitrap</title>
 </head>
 <body class="scroll-container" id="scrollTainer">
+    <div class="stageStarsFar tween-stageStarsFar"></div>
         <!-- <div w3-include-html="html/test.html"></div> -->
         <div w3-include-html="content.html"></div>
     <!-- onload="onLoad()" -->
     <div class="bgShadow">
-        <div class="wrapper">
+        <div class="wrapper" >
             
             <header><h1><a href="index.html"></a>Lumitrap</a></h1>
                 <p class="underline">2017 Covers</p>
@@ -36,7 +38,7 @@
                 <table class="dynamicShadow"><!-- PLAYLIST TABLE -->
                     <tr>
                         <td><button onclick="pauseButton
-                            ()" id="pButtonID"class="btn2" name="▮"></button></td>
+                            ()" id="pButtonID"class="btn2" name="⏹"></button></td>
                             <td><!-- <p id="firstLine">or spacebar to stop</p> -->
                             <div class="links">
                                 <a href="https://twitter.com/Lumitrap"target="_blank"><img src="img/twitterbirb.svg" class="linkTwit" title="my twitter!"/></a>
@@ -127,7 +129,7 @@
                     <tr>
                         <td><button onclick="playSound
                             (this, 'zCastlevania')" class="btn"><img src="img/play.svg"/></button></td>
-                        <td>Groovy Birbday
+                        <td>Groovy Birthday
                                 <div class="links">
                                         <a href="https://t.co/Jq7XgFuYnb" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep2" title="Beepbox"/></a>
                                         <a><img src="img/yout.svg" class="linkYou transparent"/></a>
@@ -279,7 +281,7 @@
                     <tr>
                         <td><button onclick="playSound
                             (this, 'zUT35')" class="btn"><img src="img/play.svg"/></button></td>
-                        <td><span>Undertale - 35. Bird That Carries You Over A Disproportionately Small Gap</span>
+                        <td>Undertale - 35. Birb that carries you...
                             <div class="links">
                                 <a href="https://t.co/AoLrfE2oa5" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="Beepbox"/></a>
                                 <a href="https://www.youtube.com/watch?v=Z51lfE2k7jU" target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou" title="Original"/></a>
@@ -769,7 +771,7 @@
                     </tr>
                     <tr>
                         <td><button  onclick="playSound
-                            (this, 'zThroughzemachine')" class="btn showLumiPeak"><img src="img/play.svg"/></button></td>
+                            (this, 'zThroughzemachine')" class="btn"><img src="img/play.svg"/></button></td>
                         <td>Lumitrap - Through Ze Machine
                             <div class="links">
                                 <a href="https://t.co/cT9y7g6Zz1" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="Beepbox"/></a>
@@ -863,13 +865,13 @@
                         <td>Lumitrap/8372 - Electric Winds
                             <div class="links">
                                 <a href="https://t.co/gedI0StApL" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="Beepbox"/></a>
-                                <a href="" target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou" title="Original"/></a>
+                                <a href="" target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou transparent" title="Original"/></a>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td><button onclick="playSound
-                            (this, 'zShovel')" class="btn"><img src="img/play.svg"/></button></td>
+                            (this, 'zShovel')" class="btn showLumiPeak"><img src="img/play.svg"/></button></td>
                         <td>Shovel Knight - Strike the Earth!
                             <div class="links">
                                 <a href="https://t.co/x1w61iV1qT" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="Beepbox"/></a>
@@ -878,16 +880,8 @@
                         </td>
                     </tr>
                     <tr>
-                            <td><button onclick="playSound
-                                (this, 'zTest')" class="btn"><img src="img/play.svg"/></button></td>
-                            <td>[Test sound]
-                                <div class="links">
-                                </div>
-                            </td>
-                        </tr>
-                    <tr>
                         <td><button class="btn"><a href="https://theepicosity.github.io/modded-beepbox-2.0/#5sbk7l1le00tfm0q0u1a7g1lj_i9r0w1h311234214214343442222211411205h11111111111111111f30403002002000020210000000200010500000000000000000d10001000000010000000001000000010100000001000000000c03010101011001310110010111111000011111110111111111h00001102102007000220000000200100600000000000000000v33302100101130000010111100000120200000002000000004o33300b0wg88210wwoga63y18Emc94OzwGme639IUobDiV0Yvg8kid8Bj9R2BkHmblOZwZ73O8QyqpcSzlITteg88220ww88220ww89SY00088642xwUwia02NwQsf84ihcElb5P1AQre7jNZ0xh8QylcCjFR2xiFlaBqJoJnbS35APpd6HpKUsKw000000001_000001SYuLw00221x0Eoe84yxoMqe7A294Aia52FoKocCzpMWuwfPVY-wgEki96zi9kOtgEkGBo0000b2r9CRrdT3BQXu0wogaZvblOZwN00000000wwoga63y088642xwUAkb63hMUugw3i98CkaByVwYvg8kid8Bj9R2BkHmbnqVuMnIlX1uOpJ6HpCTsf0886-2xwUw221LgEoe_0008843fwwggGw18gic4k3xwW8e63Bx1t8o65P9Ewf76PxUSrdJzqlcDkaliISImxm8Qia4yROZwimHS39C2qJ0g842pwCHg4214O80p31O_2DaMGAQUhkw9QAz0k3KW6ChXKwTt1JU7ri1mA0qqamFCG9yEW3kdh98zbGG7lNf5WbmczhIFzjy6ifdStD0ZPr6AyhN74YPCsOfyHGWhRkMBFlcE5OeoV2j2A61V8ewRc443A8LdYMw36XIwPsA7mF2XRHkMP1h1z6f8Osz1Iz6b8Osz4cz678OszcOcT8OsybFEoaTlllR0xiEtNvd31HtWKXJQQc845i0R8LALSFwujBpaCcq95P755kshqCDcKGFN1GGsMWGIGGOGHaGIGGt44iGHGGHyGE5lk2GG0nNokMEg1xC421E42y32o8egCa06zyAyGSiFytjN8f57ydg1TocA72f7BN7oYoRfo1BV0cPyyFzvAsm3p3CucsPJ0E1g3MELnkkil572eacOyKwcNh9bIkh1NLl0Mj91BX9rUayjWH4ZL8GUE6ingld11Xzwq5Nu8VrR4dqcld61w2Gp8fYtjjtl0kROdxulsyHM1OtD8FXE61BFELGEOwrui3bShFD4WoOqCEAyq1J3jhqHR7pSNX6FsnJXoYHyGtGgWAv5siFH95zbVv2fqEQRkj9UKEtRaCcbePEERdloh0qqV2iF78g_01cq-MOew9ykfakQkmIDCYP97BpLdXiCAwQfsGT4QShUFUhVpPMWqK4uVR8uQAb2CCCRN0WqmIAAy5X6JjmS1rg9Xx4m4xEYrYoV3VzCdDoS4Xn7reRIW3KrCPKsjIFTebStHpTdPm7sUzwb8jw28Qp6hAp6pAp6hAp2sPxj9wsH9wcFcmsBj21LKnFbFgCzhglja1s5c8460U039N2JcH0p87FHNkFGMGzRdq25Q0ateI04VpAqscF0QAna16D4lH0jCBr4RwkO1eEly0D6hc0cBD1Nj35PmP6n2s0pCDct04dN5GGOGHaGIGGOGE001cy6mE65jNSnywFIz6w21lXS7hEQaI5zID00kBS557h_3T20ld2py1L03K0w0lwpttTy05psTrw1tSM0KIKrSGGZCJyqHO-bUysOKXLyWHLyaHbHaCZyqLoBccT4go658a190Mboc0OWpGOpag4y80caoQxE2yb6g6wehA33AeoiUte8dljCsxgjc97Aw9uPIP4-LLuECCoolaogM2C440dj2e_Mz4sxigq64E6cqs0OE4V9nN5g6iKCdO0I9xgy32pOfa1Q35lcc65suJwWIWps90MC77z2C7722A23asYiBbcFzNN2D6n5cMYDNAWCzB8-kaooiaCm3aNzNNDRADWGIagcQzkMMoFSJD8Osz9OcBj3zP3GspsjPioYIMGTG4QZ58m6osx9xhUitj30CyBj32Dgo9ce5ucc60sBD704sPnotj75BjlNoXCCFj3zM4WoYaUsoYOHNNzMxaPxNBTPRdkC7tBHkQmlcuKpS6so04u68wNNqpspy0cpegBC6CxIt8ozN6PGq0kaoWdmOA16jR7l9Rb0dxj3azsUgUzpStxjz3j0kMNFh2xcq4F2MHxNxY3N2L766xlp6RehBjAtPfzeNyegBcHM9zzEzhwegCm0A375sgFPxRns9YwgeEWDGcH8kMOIStzai5xaC7702osglddddddddddddddddddaokFN62FFFFFFFFFFFFFFFFFFGFpxM3walcEetCtGgJLAp2hA99j62gp1ltCIw-_Ag212wweoiHHVkQ0cMHgJXHQp95A2yyA2A1rE8bcGb1bsmJ1GBMcQKSqmYJrKsEKI6Xn8x0YKhTRBO08iGTNq4xfggnKaXtkEzaNr5AqhOD4SHExkDdj7LbXClmkCcTMapSghRz7LkYc451ceGQNYeCHOFxwOFzylhBkDlMUMUPGqGRccGuVj2CGK2woaCGBA75p42toMUMME1kMUVDCv6GRcI6sFjf4EWqf2NxNBxju8lDjjEhoO3ZVTejCu4FxPjJucLjqWnSfjpUhcma7FHMkw-ONWqfOCxxsCzgAyZdN4s4gdQwgqGwLC62zgazO9sTrV0wTlm5V8KXI75TtYndTNtlsMYntS3yXK-bKXUKXIf5TtwUKXLyXK-bKXC7yVKMeC62w25TllTlk5N8GG1NllNllNllcf5lge9D-aGKaGwYll4xClWhxkrj6Z3hdmYyNdmP6T68IOVzldK8JjjCtlkC5Py3tTyy8cpmgC3KgkyWoo6O4UylleA23lk5QghaGwsllsllsll53Nlk3yGHyGHyGEf5lg7j31021GGGp1bJTtcSW885TuZTsRlsll1VGG1NllNllNlkkf5lgeaGKaGKaGwYll0USGGGDj32LtbNKXrKZrKY8lnlln5lguGGwsllsllsll53Nlk3yGHyGHyGEf5lge9DGaHE4bNKCm1lwVllRllRllU01nUperBo5XhNfL1LqdtTr8a4Cgaqj45hdy4FdlYpP8cw4xMARq0GgQc0cMUBcd546kNURbpOIHpStDdOAPUSJAa8I90Owjf4wh0A58AMGw4NHYbpxNf4ruMBI1jeD491cS-AcgN79pxhqgk1SK4IhNb9j9A294025ck3Mgh1DoStD4IHKJHpSdHpOIHq254mee0CsxDYPIreOP350ja0X06Cx0YNymgH8lpP2k1kwxUS6gqoa80bca9i2xcaKFPMuienIV04PAe4gLoj684EZ0ntTBTtVtTuntSYwntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntS5P20GT42GHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGCIBQD0hhokgAa0YJg8ndlmllpllBlmllpllBlmllpllBlmllpllBlmllpllBljA1lkVxRlpllBlmllpllBlgnIdgp55W0KHLbKHOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKX3NG8zy3llBlmllpllBlmllpllBlmllplkUxllplvBlmllpllBlmllpllBlmllpllBlmll1sNYN5N5GqOGHyGHMGGOGHaGIGGOGFX7GGZV5KXLbKXYHKXugrKXOXKYKXLbKXOXKMVtnvdRullnBTullnBTvllmllpllBlmllpllPllvlTtVtTvdTtZntTBTtVtTuntTBTtxQ7gvUKXLbKXUKXJW0KXLbKXOXKYKXLbKXOXJjbKXOXKYKXLaKXOHKYKXnOHKYGXLbKXOXLcKXIeTtW-g8dTtVtTuntTBTtLA25tTvdTtYTtTBTtVtTultTBntVtTCltTUG2begdln7-IgLgdTtxsOYUdN1GGsNWGJCvSGHqGJCgD4aGHqGJCgJGGSGEeP8f5lmRle8JlnzllNllBlmllsTtVllBlmllsPdKgJlgkM_i2zKa3YqGIGGOGHMGGOGHaGIGGSGHaGIGGOGHqGIGGXGG3URlfooweFf8kjtVlluhtSZEtllV5TrSnlluhtTBTtVtTrVzzntSky-oojc68AYyntS-g8dTtxv44iXKMsntTNtTv5TtB8XtTosGGIbUwwhtm-pgdTtRTtB8Y0S4FPtTvdTtxWKXI75TtYntTNtTpieTodXtTuTtS7yXKMsntTNtTv5TtB8WxvwrtTuRtS7yHKMsntTNtTv5TtB3NtTo7j32Xwn4iGFQwgqGwKy29lk3yGHyGHyGEEuaGwsllsllsll1UGG1Nl1Yllsll53Nlk3MTqXMKXLMKXIfxtToebKXUKXLyXKOxUKXI3CntSUxlleotk3BlrFzxllVllClCllrBpBlmjuegclhifzm0w-dTt-dllxYoKX1Nllv4ntYllmnybKNslZpNtTv4RtxUyqI75llYntTNtTpQAkO7P22PcPyXK-9GXlMUNOg5j31Bcd5C6K5EtsTdqocJM1GGsRKsPaGFKoWUOzybkQVBRle8dljC7llBlmllpllBljEwylltllsll0GGwllg0FES9xtiCczvC9AEoyy3eNAcMUJc62FBk3LTj30kCD4iGFQwgqGwK95lgeaGKaGKaGyK85lgeaGD8iGHaGIGGN0c7dTsCGPtTcTsGGPtQLdlndlgtTtSGHqGwZll0UGGUGGUGGa7yGE75ln5ln5lguaGweptljy3llQw5Enc_c3t886GFPgWGD86GFQNPF5jtd32IawLCm2JT9Lr3ndSZxTtSZ0TtTBTtL8dTtVtTuntS0bCOMdkVxRlullmlle8dlmllplk5ZRUEJ2G2Sp2UGGOGHyGHaGIGG2VBwQ5NllBlmllpllBljSncxnVntTBTtVtTv5Tv5lhkNMAhog6zoSdzoOcz8OcwKjIr6NIr6wr6NEa9I1uRZfb2v48WXKTE2XKTJ3KXJW1KXILfrgjQyTtSZxTtTNtTuntTRtTuntTBTtBvcura11huNYPctcc5F42v847KXDi11XKv44jKXwf8BTtYZTe8BlndlhgKy20xl1tccaGEeRl1SGEf85llls0y8xvcI0f4ruMXKXYFCH1ntSZzToexOXKQMgAMw4Qs0bQztSZlg5MJRtcS85WqVw_-2CvaoZ8wg183g9xRI9Bzp0kQuMQag82UurUzM5Tdxjz7ykwokMMI3RqoYZg183gu5r2pup0kQuMQao86xVI7w5BExgFNBEErDs1VDOLo1VcgeqSf8t4i09EZxEO0YRP7xfw3AGooi0sXrWx8id4Sa0-4xEO0Xs2Cd6ll3m1ULMwmTUpUNN74nmSxjeFca40oSZA61p8c2j5EelEL4rCQ3bOgpD51NnhK8TeWXztStzrWEelRnkrvlthJXeNJ-kxM7ErGdjWHGdTpSd_GwVLnthLZlR6ZIX6VRosiW5Wzk-GWzrStzpXAelTu9YRP6_IX6TNEsHaGEUHye0tDoS-e3DUBCVe2pe2VwkPWOJjOcLCuoSKb3Dp-9Vm1VenAxxa8AFEExaas7OgVTmV6hD-4wMnl0VelCpe1perABjbmh1xcu4gEh5w2C21qqfcEnCqGl4kicz8Ocxce4wEbVgw17kthAp2C656NjTfs007Kgsgdc4gBAxVM0u91I3U51IwS4Qew1YF7OeiVA7l03AwWwv103pi1zyf6BcIa0YxwUwvn4cAqok03UMfzg9DPAwOYI0uBAwEXwv0Vb92C6C0fcYNN0-q1Nf4sgCxU0f0agcsgfEw1Nf4shGmNT00XeNN0-q1Nf4shUlAxPc3u03l100H0OWXL40aOVKT02XJw1tpkTIjlXdr4RnmtrQ44Gwb6E9xO39UEeao6581C1Ng4OY0CzO4fmsi39Ogpea0SwY190NT0QMgyntx3Pge87M83GkQew1VA7c3V70FBwGGoocpmglj32oqqkgEh5w6NIr0dzoS0r1qdx46dzoUw6NIr0eoEFFbMD4ddddcL45cgP1imoUuCCCCmy2CCCAIH45ddddddddd9pwy2CCCCCCCCCAIMMZddddddddd9pi7FFFFC68aqqqiRRQQQQOYfj4cLimpowFFFFFFFFFFb8gZddddddddd9nw0Qwg0aMcKKXN02IKrJM0KXo0nmldX4RuPmNdlRD5YhmpBV5Tv5Rnv4lmnmldX4RuNmPl1jhTo6C2g4AOV0C6E0LyNQQQQQOYhkQQQxVNj10m3Mi8wgCk7Aaoo5ZUFx08ow7MLMUfw7T2p-rq8kaspsErvc1X1h4wao_MaoQp5cgaooiokPKU6NjMHMzuStzrj5EaC21Mkw0MaU8840O0pocA6g3807q3AwS0p0cE6i1n114x8l0fdxUE7c0O0pocA6MA8zPwtMf5wVw7cdck7e0PBgZ5emkkUqA2C230kMf1U-390QUwcTZM2gIso3p1A0UPcSMsg7z0r8cA76pCU3yec1IwO0spCroe83NwagkwUPcUM74so3p1A0UPcSMr00JcoR83ztTw47cs-3p1A0UPcSMr00ZoFgwmwD8zrj11Lle03A5a62FVj10RajqOKqPCYkE09Mfz7zBufnRuZtTzkZUrUXmlPmsTCnomD41ewu6uFMwnOsITRc-fjrjy1LIYHSLmoKsP4CsygJc910FFN0vK900wi5xc186O381NCpJwS01I1wocA6XKXwe8qUg8cY1Fx0EqFx0SCbdElc43Age1Ug1i10D90Fg0riC23H42V1N8eE1A0O01j9x464xoj5z8h5xCbfkPhasK8M7pCxqp9cPPR7cap8cr2Cij4SCCIgA00bj65CmpIPUEwkPBTjentcxkMgf2A1E5s4420p0cY6i1j19zOg3PokxakUq8HAFagjAx1j110tc4290jBF1FN0jg5lk7KQ44w0MaU8840O0pwBs44ikxk0Jc87_FCCkUkfHHNggpO-xXCbl8Y-1jepC9yVq5c3w90xwOgde82XZ83092NNwdA6g3zcPr1N0uc1IwOgspCrw5c46dKXGGCB43lkFx0SQUwkryyU3TEf70p8eJPdM6M3rKZI6M3rKZI2oc03PtTVnBTumFMwQxVhVpmsRlcVgtgjBR5FMwxpHjy0P_2Fww98ws1820p0cw2B00BiC23r42V1N8eo1A0O01WH91I0O0p0eHHG-HA74wVw6g1i11E8nw07KRM0KWOKKMlTu80lBPtwSXJw1tpkS3oCHSVHI6PdlVoMGo86-70Y81A0O092gCbvB6PIX6O7GwYO1n110wlgBs44ikxk0YS7C0sQ381BwOgsNPour2C105c46AU9Q7u0Y81BwY8iAPMZW2I586D41TZPwf2ec1IwO0du8k3cNFN0Rl1kMgc3N0fb0tg3a1AwYEi5Ufdwi1A6i1FN0rKZo3Cec1IwO0spCrodw0v34gd1N0cw6g1aidj5Nj11yxejk4UrA2D216xYoYd0AbTB8dw6OHwwws3q0C10cw2gA1XLp1RvswS0rftwSgtQ381T0uXSgtlT8IBj11Lywk0Xw6k3y0ZnJ0SKF1I0Sv2Mr8eG1A0UAflZk3y0p0cw50eXowj8dA740O0udxWLywsg381A0E1RvkO3p1N0cw7txWLywsgB1G7tivxasGlIVg04aqJHONgQ1i0bjy1zt2QNzt0qsg6pDA418m4Me1IwO0spCrodw0mC4wYxNKXNEeoVU2gAGo84tpCruM7z0pei3zcPzeoUM6PP7epCTP0us1Pei3DcPDeoUM6PP7epCTI1XXKdTuZ1T7v0Sgp0ecPdI6M0fztSC9untFOmzCpC09ask8nlwcFOPdOdALC206zDxqoNI0aU8860YE1C0OgaU88A92E1kMge3Ng5c4i0slRoea1N0ea3Poua1P0cw6m391I8yhI03J8wi3o1A0O09gvg5c46S85O3ygsM38k1gs000000000" target="_blank" class="newTab"><img src="img/link.png" href="" class="linkBeep" title="Modded Beepbox"/></a></button></td>
-                        <td>Crypt of the Necrodancer - Fungal Funk (Virt Remix)
+                        <td>Crypt of the Necrodancer - Fungal Funk (Virt Remix)<span> </span>
                             <div class="links">
                                 <a href="https://theepicosity.github.io/modded-beepbox-2.0/#5sbk7l1le00tfm0q0u1a7g1lj_i9r0w1h311234214214343442222211411205h11111111111111111f30403002002000020210000000200010500000000000000000d10001000000010000000001000000010100000001000000000c03010101011001310110010111111000011111110111111111h00001102102007000220000000200100600000000000000000v33302100101130000010111100000120200000002000000004o33300b0wg88210wwoga63y18Emc94OzwGme639IUobDiV0Yvg8kid8Bj9R2BkHmblOZwZ73O8QyqpcSzlITteg88220ww88220ww89SY00088642xwUwia02NwQsf84ihcElb5P1AQre7jNZ0xh8QylcCjFR2xiFlaBqJoJnbS35APpd6HpKUsKw000000001_000001SYuLw00221x0Eoe84yxoMqe7A294Aia52FoKocCzpMWuwfPVY-wgEki96zi9kOtgEkGBo0000b2r9CRrdT3BQXu0wogaZvblOZwN00000000wwoga63y088642xwUAkb63hMUugw3i98CkaByVwYvg8kid8Bj9R2BkHmbnqVuMnIlX1uOpJ6HpCTsf0886-2xwUw221LgEoe_0008843fwwggGw18gic4k3xwW8e63Bx1t8o65P9Ewf76PxUSrdJzqlcDkaliISImxm8Qia4yROZwimHS39C2qJ0g842pwCHg4214O80p31O_2DaMGAQUhkw9QAz0k3KW6ChXKwTt1JU7ri1mA0qqamFCG9yEW3kdh98zbGG7lNf5WbmczhIFzjy6ifdStD0ZPr6AyhN74YPCsOfyHGWhRkMBFlcE5OeoV2j2A61V8ewRc443A8LdYMw36XIwPsA7mF2XRHkMP1h1z6f8Osz1Iz6b8Osz4cz678OszcOcT8OsybFEoaTlllR0xiEtNvd31HtWKXJQQc845i0R8LALSFwujBpaCcq95P755kshqCDcKGFN1GGsMWGIGGOGHaGIGGt44iGHGGHyGE5lk2GG0nNokMEg1xC421E42y32o8egCa06zyAyGSiFytjN8f57ydg1TocA72f7BN7oYoRfo1BV0cPyyFzvAsm3p3CucsPJ0E1g3MELnkkil572eacOyKwcNh9bIkh1NLl0Mj91BX9rUayjWH4ZL8GUE6ingld11Xzwq5Nu8VrR4dqcld61w2Gp8fYtjjtl0kROdxulsyHM1OtD8FXE61BFELGEOwrui3bShFD4WoOqCEAyq1J3jhqHR7pSNX6FsnJXoYHyGtGgWAv5siFH95zbVv2fqEQRkj9UKEtRaCcbePEERdloh0qqV2iF78g_01cq-MOew9ykfakQkmIDCYP97BpLdXiCAwQfsGT4QShUFUhVpPMWqK4uVR8uQAb2CCCRN0WqmIAAy5X6JjmS1rg9Xx4m4xEYrYoV3VzCdDoS4Xn7reRIW3KrCPKsjIFTebStHpTdPm7sUzwb8jw28Qp6hAp6pAp6hAp2sPxj9wsH9wcFcmsBj21LKnFbFgCzhglja1s5c8460U039N2JcH0p87FHNkFGMGzRdq25Q0ateI04VpAqscF0QAna16D4lH0jCBr4RwkO1eEly0D6hc0cBD1Nj35PmP6n2s0pCDct04dN5GGOGHaGIGGOGE001cy6mE65jNSnywFIz6w21lXS7hEQaI5zID00kBS557h_3T20ld2py1L03K0w0lwpttTy05psTrw1tSM0KIKrSGGZCJyqHO-bUysOKXLyWHLyaHbHaCZyqLoBccT4go658a190Mboc0OWpGOpag4y80caoQxE2yb6g6wehA33AeoiUte8dljCsxgjc97Aw9uPIP4-LLuECCoolaogM2C440dj2e_Mz4sxigq64E6cqs0OE4V9nN5g6iKCdO0I9xgy32pOfa1Q35lcc65suJwWIWps90MC77z2C7722A23asYiBbcFzNN2D6n5cMYDNAWCzB8-kaooiaCm3aNzNNDRADWGIagcQzkMMoFSJD8Osz9OcBj3zP3GspsjPioYIMGTG4QZ58m6osx9xhUitj30CyBj32Dgo9ce5ucc60sBD704sPnotj75BjlNoXCCFj3zM4WoYaUsoYOHNNzMxaPxNBTPRdkC7tBHkQmlcuKpS6so04u68wNNqpspy0cpegBC6CxIt8ozN6PGq0kaoWdmOA16jR7l9Rb0dxj3azsUgUzpStxjz3j0kMNFh2xcq4F2MHxNxY3N2L766xlp6RehBjAtPfzeNyegBcHM9zzEzhwegCm0A375sgFPxRns9YwgeEWDGcH8kMOIStzai5xaC7702osglddddddddddddddddddaokFN62FFFFFFFFFFFFFFFFFFGFpxM3walcEetCtGgJLAp2hA99j62gp1ltCIw-_Ag212wweoiHHVkQ0cMHgJXHQp95A2yyA2A1rE8bcGb1bsmJ1GBMcQKSqmYJrKsEKI6Xn8x0YKhTRBO08iGTNq4xfggnKaXtkEzaNr5AqhOD4SHExkDdj7LbXClmkCcTMapSghRz7LkYc451ceGQNYeCHOFxwOFzylhBkDlMUMUPGqGRccGuVj2CGK2woaCGBA75p42toMUMME1kMUVDCv6GRcI6sFjf4EWqf2NxNBxju8lDjjEhoO3ZVTejCu4FxPjJucLjqWnSfjpUhcma7FHMkw-ONWqfOCxxsCzgAyZdN4s4gdQwgqGwLC62zgazO9sTrV0wTlm5V8KXI75TtYndTNtlsMYntS3yXK-bKXUKXIf5TtwUKXLyXK-bKXC7yVKMeC62w25TllTlk5N8GG1NllNllNllcf5lge9D-aGKaGwYll4xClWhxkrj6Z3hdmYyNdmP6T68IOVzldK8JjjCtlkC5Py3tTyy8cpmgC3KgkyWoo6O4UylleA23lk5QghaGwsllsllsll53Nlk3yGHyGHyGEf5lg7j31021GGGp1bJTtcSW885TuZTsRlsll1VGG1NllNllNlkkf5lgeaGKaGKaGwYll0USGGGDj32LtbNKXrKZrKY8lnlln5lguGGwsllsllsll53Nlk3yGHyGHyGEf5lge9DGaHE4bNKCm1lwVllRllRllU01nUperBo5XhNfL1LqdtTr8a4Cgaqj45hdy4FdlYpP8cw4xMARq0GgQc0cMUBcd546kNURbpOIHpStDdOAPUSJAa8I90Owjf4wh0A58AMGw4NHYbpxNf4ruMBI1jeD491cS-AcgN79pxhqgk1SK4IhNb9j9A294025ck3Mgh1DoStD4IHKJHpSdHpOIHq254mee0CsxDYPIreOP350ja0X06Cx0YNymgH8lpP2k1kwxUS6gqoa80bca9i2xcaKFPMuienIV04PAe4gLoj684EZ0ntTBTtVtTuntSYwntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntS5P20GT42GHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGCIBQD0hhokgAa0YJg8ndlmllpllBlmllpllBlmllpllBlmllpllBlmllpllBljA1lkVxRlpllBlmllpllBlgnIdgp55W0KHLbKHOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKX3NG8zy3llBlmllpllBlmllpllBlmllplkUxllplvBlmllpllBlmllpllBlmllpllBlmll1sNYN5N5GqOGHyGHMGGOGHaGIGGOGFX7GGZV5KXLbKXYHKXugrKXOXKYKXLbKXOXKMVtnvdRullnBTullnBTvllmllpllBlmllpllPllvlTtVtTvdTtZntTBTtVtTuntTBTtxQ7gvUKXLbKXUKXJW0KXLbKXOXKYKXLbKXOXJjbKXOXKYKXLaKXOHKYKXnOHKYGXLbKXOXLcKXIeTtW-g8dTtVtTuntTBTtLA25tTvdTtYTtTBTtVtTultTBntVtTCltTUG2begdln7-IgLgdTtxsOYUdN1GGsNWGJCvSGHqGJCgD4aGHqGJCgJGGSGEeP8f5lmRle8JlnzllNllBlmllsTtVllBlmllsPdKgJlgkM_i2zKa3YqGIGGOGHMGGOGHaGIGGSGHaGIGGOGHqGIGGXGG3URlfooweFf8kjtVlluhtSZEtllV5TrSnlluhtTBTtVtTrVzzntSky-oojc68AYyntS-g8dTtxv44iXKMsntTNtTv5TtB8XtTosGGIbUwwhtm-pgdTtRTtB8Y0S4FPtTvdTtxWKXI75TtYntTNtTpieTodXtTuTtS7yXKMsntTNtTv5TtB8WxvwrtTuRtS7yHKMsntTNtTv5TtB3NtTo7j32Xwn4iGFQwgqGwKy29lk3yGHyGHyGEEuaGwsllsllsll1UGG1Nl1Yllsll53Nlk3MTqXMKXLMKXIfxtToebKXUKXLyXKOxUKXI3CntSUxlleotk3BlrFzxllVllClCllrBpBlmjuegclhifzm0w-dTt-dllxYoKX1Nllv4ntYllmnybKNslZpNtTv4RtxUyqI75llYntTNtTpQAkO7P22PcPyXK-9GXlMUNOg5j31Bcd5C6K5EtsTdqocJM1GGsRKsPaGFKoWUOzybkQVBRle8dljC7llBlmllpllBljEwylltllsll0GGwllg0FES9xtiCczvC9AEoyy3eNAcMUJc62FBk3LTj30kCD4iGFQwgqGwK95lgeaGKaGKaGyK85lgeaGD8iGHaGIGGN0c7dTsCGPtTcTsGGPtQLdlndlgtTtSGHqGwZll0UGGUGGUGGa7yGE75ln5ln5lguaGweptljy3llQw5Enc_c3t886GFPgWGD86GFQNPF5jtd32IawLCm2JT9Lr3ndSZxTtSZ0TtTBTtL8dTtVtTuntS0bCOMdkVxRlullmlle8dlmllplk5ZRUEJ2G2Sp2UGGOGHyGHaGIGG2VBwQ5NllBlmllpllBljSncxnVntTBTtVtTv5Tv5lhkNMAhog6zoSdzoOcz8OcwKjIr6NIr6wr6NEa9I1uRZfb2v48WXKTE2XKTJ3KXJW1KXILfrgjQyTtSZxTtTNtTuntTRtTuntTBTtBvcura11huNYPctcc5F42v847KXDi11XKv44jKXwf8BTtYZTe8BlndlhgKy20xl1tccaGEeRl1SGEf85llls0y8xvcI0f4ruMXKXYFCH1ntSZzToexOXKQMgAMw4Qs0bQztSZlg5MJRtcS85WqVw_-2CvaoZ8wg183g9xRI9Bzp0kQuMQag82UurUzM5Tdxjz7ykwokMMI3RqoYZg183gu5r2pup0kQuMQao86xVI7w5BExgFNBEErDs1VDOLo1VcgeqSf8t4i09EZxEO0YRP7xfw3AGooi0sXrWx8id4Sa0-4xEO0Xs2Cd6ll3m1ULMwmTUpUNN74nmSxjeFca40oSZA61p8c2j5EelEL4rCQ3bOgpD51NnhK8TeWXztStzrWEelRnkrvlthJXeNJ-kxM7ErGdjWHGdTpSd_GwVLnthLZlR6ZIX6VRosiW5Wzk-GWzrStzpXAelTu9YRP6_IX6TNEsHaGEUHye0tDoS-e3DUBCVe2pe2VwkPWOJjOcLCuoSKb3Dp-9Vm1VenAxxa8AFEExaas7OgVTmV6hD-4wMnl0VelCpe1perABjbmh1xcu4gEh5w2C21qqfcEnCqGl4kicz8Ocxce4wEbVgw17kthAp2C656NjTfs007Kgsgdc4gBAxVM0u91I3U51IwS4Qew1YF7OeiVA7l03AwWwv103pi1zyf6BcIa0YxwUwvn4cAqok03UMfzg9DPAwOYI0uBAwEXwv0Vb92C6C0fcYNN0-q1Nf4sgCxU0f0agcsgfEw1Nf4shGmNT00XeNN0-q1Nf4shUlAxPc3u03l100H0OWXL40aOVKT02XJw1tpkTIjlXdr4RnmtrQ44Gwb6E9xO39UEeao6581C1Ng4OY0CzO4fmsi39Ogpea0SwY190NT0QMgyntx3Pge87M83GkQew1VA7c3V70FBwGGoocpmglj32oqqkgEh5w6NIr0dzoS0r1qdx46dzoUw6NIr0eoEFFbMD4ddddcL45cgP1imoUuCCCCmy2CCCAIH45ddddddddd9pwy2CCCCCCCCCAIMMZddddddddd9pi7FFFFC68aqqqiRRQQQQOYfj4cLimpowFFFFFFFFFFb8gZddddddddd9nw0Qwg0aMcKKXN02IKrJM0KXo0nmldX4RuPmNdlRD5YhmpBV5Tv5Rnv4lmnmldX4RuNmPl1jhTo6C2g4AOV0C6E0LyNQQQQQOYhkQQQxVNj10m3Mi8wgCk7Aaoo5ZUFx08ow7MLMUfw7T2p-rq8kaspsErvc1X1h4wao_MaoQp5cgaooiokPKU6NjMHMzuStzrj5EaC21Mkw0MaU8840O0pocA6g3807q3AwS0p0cE6i1n114x8l0fdxUE7c0O0pocA6MA8zPwtMf5wVw7cdck7e0PBgZ5emkkUqA2C230kMf1U-390QUwcTZM2gIso3p1A0UPcSMsg7z0r8cA76pCU3yec1IwO0spCroe83NwagkwUPcUM74so3p1A0UPcSMr00JcoR83ztTw47cs-3p1A0UPcSMr00ZoFgwmwD8zrj11Lle03A5a62FVj10RajqOKqPCYkE09Mfz7zBufnRuZtTzkZUrUXmlPmsTCnomD41ewu6uFMwnOsITRc-fjrjy1LIYHSLmoKsP4CsygJc910FFN0vK900wi5xc186O381NCpJwS01I1wocA6XKXwe8qUg8cY1Fx0EqFx0SCbdElc43Age1Ug1i10D90Fg0riC23H42V1N8eE1A0O01j9x464xoj5z8h5xCbfkPhasK8M7pCxqp9cPPR7cap8cr2Cij4SCCIgA00bj65CmpIPUEwkPBTjentcxkMgf2A1E5s4420p0cY6i1j19zOg3PokxakUq8HAFagjAx1j110tc4290jBF1FN0jg5lk7KQ44w0MaU8840O0pwBs44ikxk0Jc87_FCCkUkfHHNggpO-xXCbl8Y-1jepC9yVq5c3w90xwOgde82XZ83092NNwdA6g3zcPr1N0uc1IwOgspCrw5c46dKXGGCB43lkFx0SQUwkryyU3TEf70p8eJPdM6M3rKZI6M3rKZI2oc03PtTVnBTumFMwQxVhVpmsRlcVgtgjBR5FMwxpHjy0P_2Fww98ws1820p0cw2B00BiC23r42V1N8eo1A0O01WH91I0O0p0eHHG-HA74wVw6g1i11E8nw07KRM0KWOKKMlTu80lBPtwSXJw1tpkS3oCHSVHI6PdlVoMGo86-70Y81A0O092gCbvB6PIX6O7GwYO1n110wlgBs44ikxk0YS7C0sQ381BwOgsNPour2C105c46AU9Q7u0Y81BwY8iAPMZW2I586D41TZPwf2ec1IwO0du8k3cNFN0Rl1kMgc3N0fb0tg3a1AwYEi5Ufdwi1A6i1FN0rKZo3Cec1IwO0spCrodw0v34gd1N0cw6g1aidj5Nj11yxejk4UrA2D216xYoYd0AbTB8dw6OHwwws3q0C10cw2gA1XLp1RvswS0rftwSgtQ381T0uXSgtlT8IBj11Lywk0Xw6k3y0ZnJ0SKF1I0Sv2Mr8eG1A0UAflZk3y0p0cw50eXowj8dA740O0udxWLywsg381A0E1RvkO3p1N0cw7txWLywsgB1G7tivxasGlIVg04aqJHONgQ1i0bjy1zt2QNzt0qsg6pDA418m4Me1IwO0spCrodw0mC4wYxNKXNEeoVU2gAGo84tpCruM7z0pei3zcPzeoUM6PP7epCTP0us1Pei3DcPDeoUM6PP7epCTI1XXKdTuZ1T7v0Sgp0ecPdI6M0fztSC9untFOmzCpC09ask8nlwcFOPdOdALC206zDxqoNI0aU8860YE1C0OgaU88A92E1kMge3Ng5c4i0slRoea1N0ea3Poua1P0cw6m391I8yhI03J8wi3o1A0O09gvg5c46S85O3ygsM38k1gs000000000" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="Beepbox"/></a>
                                 <a href="" target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou" title="Original"/></a>
@@ -901,13 +895,14 @@
             
         </div>
     </div>
+    <!-- <img id="lumitrap" src="img/lumitrap.gif" alt="gif here"> -->
     <div class="extraDiv">help...</div>
 <script>//---------On page start--------------
     var song = new beepbox.Song(song);
-    var beep = new beepbox.Synth("5n41sbk4l03e00t7m0a7g04j8i2r1w311024321311411f000000200000000d210001101111111c000000040000000h000085060600000v210120400000400o22200b4z018M0ic040020g0p21XEA62B40t86a4goSa2Fcyxf0PA_BOdjzIghqjk001k6f4cpiImcgTw002Ak5sBpx0qP1WCgdkN1GC85llhkCpgxwqiFzb0000Ct1tw0000C1gxAY1cNB3MSc0000");
+    var beep = new beepbox.Synth("5n41sbk4l03e00t7m0a7g04j8i2r1w311024321311411f000000200000000d210001101111111c000000040000000h000085060600000v210120400000400o22200b4z018M0ic040020g0p21YEA62B40t86a4goSa2Fcyxf0UxwYn8RaeM95Edg005goYgNBaNoN3u000ahglOlC41Hc7Gp0Rj46Gowlll5ipB261FaCcI0002pQ5S00002o526jM4P6kf3oM0000");
     beep.volume = 2;
     beep.play();
-    $("#pButtonID").html("▮");
+    $("#pButtonID").html("⏹");
     //-----force GIF image to start-----
     var gifSource = $('#lumipop').attr('src'); //get the source in the var
     $('#lumipop').attr('src', ""); //erase the source     
@@ -945,7 +940,7 @@
             } else if (isPlaying == true) {
                 beep.pause();
                 isPlaying = false;
-                $("#pButtonID").html("▮");
+                $("#pButtonID").html("⏹");
                 console.log("Pressed space = stopped song");
             }
         }
@@ -1183,7 +1178,7 @@
         // second.snapToStart()
         isPlaying = false;
         console.log(isPlaying);
-        $("#pButtonID").html("▮");
+        $("#pButtonID").html("⏹");
         // alert("button pressed");
         // $('#pButtonID').removeClass('.btn');
         
@@ -1230,6 +1225,11 @@
 	});
 	
 });
+$('.parallax-window').parallax({imageSrc: 'bg.png'});
+
+
+
+
 </script>
 </body>
 </html>
