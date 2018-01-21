@@ -694,7 +694,7 @@
                         <td>Smash Mouth - All Star
                             <div class="links">
                                 <a href="https://t.co/I7606N15wt" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
-                                <a href="https://www.youtube.com/watch?v=L_jWHffIx5E" target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou" title="Original"/></a>
+                                <a href="https://www.youtube.com/watch?v=L_jWHffIx5E&t=36s" target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou" title="Original"/></a>
                             </div>
                         </td>
                     </tr>
@@ -895,6 +895,7 @@
         </div>
     </div>
     <!-- <img id="lumitrap" src="img/lumitrap.gif" alt="gif here"> -->
+    <p id="thanks">Thanks for listening!</p>
     <div class="bottomMargin"></div>
 <script>//---------On page start--------------¨
     var song = new beepbox.Song(song);
@@ -928,24 +929,20 @@
 
     //-----Keyboard Events-----
     window.addEventListener('keypress', function (e) {
-        e.preventDefault();
-        console.log(e.keyCode);
+        // console.log(e.keyCode);
         if (e.keyCode == 32) {
+            e.preventDefault();
             if (isPlaying == false) {
                 beep.play();
                 isPlaying = true;
                 $("#pButtonID").html("▶");
-                console.log("Pressed space = resuming song");
+                // console.log("Pressed space = resuming song");
             } else if (isPlaying == true) {
                 beep.pause();
                 isPlaying = false;
                 $("#pButtonID").html("⏹");
-                console.log("Pressed space = stopped song");
+                // console.log("Pressed space = stopped song");
             }
-        }
-        if (e.keyCode == 13) {
-            e.preventDefault();
-            console.log("pressed button 13");
         }
         if (e.keyCode == 119) {
             e.preventDefault();
@@ -976,12 +973,7 @@
     });
 
     window.addEventListener('keydown', function (e) {
-        
-        console.log(e.keyCode);
-        if (e.keyCode == 106) {
-            e.preventDefault();
-            console.log("pressed x");
-        }
+        // console.log(e.keyCode);
         if (e.keyCode == 39) {
             e.preventDefault();
             console.log("Skipped 1 bar ahead");
@@ -1000,7 +992,7 @@
             beep.snapToStart();
             console.log("Snapped back to song start.");
         }
-        if (e.keyCode == 52) {
+        if (e.keyCode == 52000000000) {
             e.preventDefault();
             var tempoVar = 10;
             var reverbVar = 2;
@@ -1020,11 +1012,11 @@
         if (e.keyCode == 83) {
             e.preventDefault();
             if (secret1 == true) {
-                // secretSound.play();
-                if (secret1Toggle = true){
-                    beep.setSong("5n31sbk3l00e0btam0a5g0fj7i0r1w3011f0000d2111c1300h0000v0001o2310b4xci4QhmtTsi4N8jhmu8y18i4x94lDtTghd14O8zllkp261FzW6C23mCuw6i3wgOgkQ_xYEc6701Zi38i0qARuwYAddEp6g38O0pb83x1M1l2Yg4222dk8kxwaGgOA8agOpgKwe4588iMwGGOk491IE8nmEoxrs0SagChGQ25dfBcvqI5OoiCLNGePnjhWAecFEI3UxdagiMI5GRSQF01I7wgcz8xHA0Ocw6hFz83AxGqdzE2apI9zhwmhyKhBp7fOcP8OIxcnaHlc_iaoY9E-Aqr48yjhgaqNhjI21h8gg0Ygha5wp00c0CK0ogho5lk1Mw0CMc0M3aKX1Ei25wr5wr5q0hFws230C95mi38OwkwOaIA6hjILsGLp1Apwagp5mi38Vgagp5mi38OwpKi39i4L8Fm0RClYi38P0kwOaIA6g0");
-                secret1Toggle = false;
-                console.log("Spook on, buddy!");
+                beep.setSong("5n31sbk3l00e0btam0a5g0fj7i0r1w3011f0000d2111c1300h0000v0001o2310b4xci4QhmtTsi4N8jhmu8y18i4x94lDtTghd14O8zllkp261FzW6C23mCuw6i3wgOgkQ_xYEc6701Zi38i0qARuwYAddEp6g38O0pb83x1M1l2Yg4222dk8kxwaGgOA8agOpgKwe4588iMwGGOk491IE8nmEoxrs0SagChGQ25dfBcvqI5OoiCLNGePnjhWAecFEI3UxdagiMI5GRSQF01I7wgcz8xHA0Ocw6hFz83AxGqdzE2apI9zhwmhyKhBp7fOcP8OIxcnaHlc_iaoY9E-Aqr48yjhgaqNhjI21h8gg0Ygha5wp00c0CK0ogho5lk1Mw0CMc0M3aKX1Ei25wr5wr5q0hFws230C95mi38OwkwOaIA6hjILsGLp1Apwagp5mi38Vgagp5mi38OwpKi39i4L8Fm0RClYi38P0kwOaIA6g0");
+                if (secret1Toggle == true){
+                    secretSound.play();
+                    secret1Toggle = false;
+                    console.log("Spook on, buddy!");
                 }
             }
         }
@@ -1151,13 +1143,12 @@
         
         // $( button, name.target ).closest( "tr" ).toggleClass("poop");
         $( button, name.target ).closest( "tr" ).addClass('poop').siblings().removeClass('poop');
-        console.clear()
+        // console.clear()
         cell = $(this).parent().prev();
         cell.text(parseInt(cell.text()) + 1);
-        console.log("pleeees work" + cell);
         
         secret1 = false;
-        secret1Toggle = false;
+        secret1Toggle = true;
         // beep.pause();
         beep.snapToStart();
         // beep = new beepbox.Synth(window[name]);
@@ -1166,26 +1157,6 @@
         isPlaying = true;
         $("#pButtonID").html("▶");
         $(button).blur();
-            console.log("cannelPatters " + beep.song.channelPatterns + " !")
-            console.log("channelOctaves " + beep.song.channelOctaves +" !")
-            console.log("instrumentVolumes " + beep.song.instrumentVolumes +" !")
-            console.log("instrumentWaves "+ beep.song.instrumentWaves +" !")
-            console.log("instrumentFilters " + beep.song.instrumentFilters +" !")
-            console.log("instrumentEnvelopes " + beep.song.instrumentEnvelopes +" !")
-            console.log("instrumentEffects " + beep.song.instrumentEffects +" !")
-            console.log("instrumentChorus " + beep.song.instrumentChorus +" !")
-            console.log("key " + beep.song.key +" !")
-            console.log("loopStart " + beep.song.loopStart +" !")
-            console.log("loopLength " + beep.song.loopLength +" !")
-            console.log("tempo " + beep.song.tempo +" !")
-            console.log("reverb " + beep.song.reverb +" !")
-            console.log("beatsPerBar " + beep.song.beatsPerBar +" !")
-            console.log("barCount " + beep.song.barCount +" !")
-            console.log("patternsPerChannel " + beep.song.patternsPerChannel +" !")
-            console.log("partsPerBeat " + beep.song.partsPerBeats +" !")
-            console.log("instrumentsPerChannel " + beep.song.instrumentsPerChannel +" !")
-            console.log("pitchChannelCount " + beep.song.pitchChannelCount +" !")
-            console.log("drumChannelCount " + beep.song.drumChannelCount +" !")
             var cells = document.getElementById("my_table").getElementsByTagName("td");
         for (var i = 0; i < cells.length; i++) {
             if (cells[i].innerHTML == "Undertale") {
@@ -1202,6 +1173,8 @@
                 $('#lumipeak').attr('src', ""); //erase the source     
                 $('#lumipeak').attr('src', gifSource + "?" + new Date().getTime()); //add the date to the source of the image... :-) 
                 document.getElementById("lumipeak").style.display = "block";
+                // $("#thanks").addClass('thanks');
+                document.getElementById("thanks").style.display = "block";
 
                 lumipeaker = true;
             }
