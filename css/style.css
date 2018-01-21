@@ -60,7 +60,9 @@ h1 {
 h1 a {
     text-decoration: none;
 }
-
+.h1{
+    height:100px;
+}
 @keyframes mymove {
     0% {
         font-size: 0px;
@@ -217,7 +219,7 @@ table {
 
 @keyframes tablehop {
     0% {
-        margin-top: 10000px;
+        margin-top: 5000px;
     }
     70% {}
     100% {
