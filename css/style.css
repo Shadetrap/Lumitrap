@@ -1,13 +1,12 @@
 * {
     font-family: 'arial', arial;
     font-family: 'futura_lt_btlight';
-    font-weight: normal;
     font-style: normal;
     font-size: 18px;
     /* color: white; */
 
 }
-
+/*---------header title-----------*/
 .underline{
     color:white;
     animation: undertitle 3.25s;
@@ -37,16 +36,7 @@
         height: auto;
     }
 }
-.btn2 {
-    background-color: rgba(104, 128, 138, .0);
-    border: 0 solid black;
-    cursor: pointer;
-    width: 50px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    margin-bottom: 0px;
-    color:white;
-}
+
 h1 {
     
     font-size: 60px;
@@ -56,7 +46,6 @@ h1 {
     font-weight: bold;
     left: 60px;
 
-    
     animation: mymove 3.25s;
     -webkit-animation: mymove 3.25s;
     animation-timing-function: ease-in;
@@ -101,40 +90,28 @@ h1 a {
     }
 }
 
-#firstLine {
-    float: left;
-    vertical-align: middle;
-    display: table-cell;
-}
-
-button:focus {
-    outline: 0;
-}
-body {
-    margin: 0 auto;
-    width: auto;
-    /* background-color: #1d212b; */
-    animation: bodycolor 3s, bgslowfade 10ms;
-    -webkit-animation: bodycolor 3s, bgslowfade 30s;
-    animation-delay: 0.0s;
-    -webkit-animation-fill-mode: forwards;
-    overflow-x: hidden;
-    position: relative;
-    box-shadow: inset 0 0 5em rgba(0, 0, 0, .5);
-}
-@keyframes bodycolor {
-    0% {background-color: #000000;}
-    20% {background-color: #000000;}
-    100% {background-color: #1d212b;}}
-@-webkit-keyframes bodycolor {
-    0% {background-color: #000000;}
-    100% {background-color: #1d212b;}}
-
 header {
     margin: 0 auto;
     text-align: center;}
 .headerdiv{
     height:100px;}
+
+/*------Play Pause Button------*/
+.btn2 {
+    background-color: rgba(104, 128, 138, .0);
+    border: 0 solid black;
+    cursor: pointer;
+    width: 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    color:white;
+}
+/*----Play Buttons---*/
+button:focus {
+    outline: 0;
+}
+/*------Gifs--------*/
 #lumipop {
     display: block;
     position: absolute;
@@ -142,8 +119,8 @@ header {
     margin-right: auto;
     position: relative;
     margin-top: -120px;
-    height: 100px;
-    left: 150px;
+    height: 120px;
+    left: 100px;
     top: 0px;
     z-index:2;}
 
@@ -160,17 +137,28 @@ header {
     top: -101px;
     z-index:2;
 }
-#lumitrap {
-
-    opacity:1;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    height: 120px;
-    right: 0px;
-    bottom: 0px;
-    z-index:2;
+/*----------Body----------*/
+body {
+    margin: 0 auto;
+    width: auto;
+    /* background-color: #1d212b; */
+    animation: bodycolor 3s, bgslowfade 10ms;
+    -webkit-animation: bodycolor 3s, bgslowfade 30s;
+    animation-delay: 0.0s;
+    -webkit-animation-fill-mode: forwards;
+    overflow-x: hidden;
+    position: relative;
+    box-shadow: inset 0 0 15em rgba(0, 0, 0, 1);
 }
+@keyframes bodycolor {
+    0% {background-color: #000000;}
+    20% {background-color: #000000;}
+    100% {background-color: #1d212b;}}
+@-webkit-keyframes bodycolor {
+    0% {background-color: #000000;}
+    100% {background-color: #1d212b;}}
+    
+/*-------Playlist---------*/
 .playlist{
     margin:0 auto;
     width:501px;
@@ -180,26 +168,8 @@ header {
     -moz-border-radius: 0.5em;
     position:relative;
 }
-.playlist tr:hover td {
-    background-color: rgba(116, 116, 116, 0.3);
-    font-weight: bold;
-    color: white;
-    animation: flash 0s;
-    -webkit-animation: flash 0s;
-    
-}
 .bgShadow{
     padding-bottom: 20px;
-}
-.extraDiv{
-    height:60px;
-    width:60px;
-    color:yellow;
-    margin:0;
-    text-align:center;
-    vertical-align: bottom;
-    bottom:0%;
-    opacity:0;
 }
 
 .playlist tr:hover a {
@@ -210,9 +180,18 @@ header {
     opacity: 1;
 }
 
+.playlist tr:not(.poop):hover td {
+    /* background-color: rgba(116, 116, 116, 0.3); */
+    /* font-weight: bold; */
+    color: white;
+    animation: flash 0s;
+    -webkit-animation: flash 0s; 
+}
+
+/*-------Table---------*/
 table {
-    -webkit-box-shadow: 0 3px 40px #66d964;
-    box-shadow: 0 0.3px 40px #66d964;
+    /* -webkit-box-shadow: 0 3px 40px #66d964;
+    box-shadow: 0 0.3px 40px #66d964; */
     border-collapse: collapse;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
@@ -246,20 +225,42 @@ table {
     }
 }
 
-tr, td {
+td {
     border-collapse: collapse;
     cursor: default;
-    /* color: rgb(102, 102, 102); */
     opacity: 1;
-    /* transition: opacity 0.5s;
-    animation: texton 10s; */
     transition: opacity 0.5s;
-    animation: texton 1.5s;
-    -webkit-animation: texton 1.5s;
-    
+    animation: texton 1.0s;
+    -webkit-animation: texton 1.0s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
+
+.poop{
+    background-color: rgba(116, 116, 116, 0.3);
+    color: white;
+    font-weight: bold;
+    animation: glowing 8s infinite;
+    -webkit-animation: glowing 8s infinite;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards; 
+    animation-timing-function: ease-in-out;
+}
+@keyframes glowing {
+    0% {background-color:rgb(11, 11, 11);}
+    50% {background-color: #1f441f;}
+    100% {background-color:rgb(11, 11, 11);}}
+.poop td {
+    animation: stayWhite 0s;
+    -webkit-animation: stayWhite 0s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes stayWhite {
+0% {color:#fff;}
+100% {color: rgb(255,255,255);}}
+
 /* @keyframes texton{
     0% {
     }
@@ -273,15 +274,6 @@ tr, td {
         color: rgb(102, 102, 102);
     }
 } */
-@keyframes texton{
-
-    0% {
-        color:#64d962;
-    }
-    100% {
-        color: rgb(102, 102, 102);
-    }
-}
 
 table tr td:first-child {
     padding-right: 0px;
@@ -303,15 +295,38 @@ table div {
 
 table tr:hover div {
     display: block;
-    animation: flash 0s;
-    -webkit-animation: flash 0s;
+
 }
 
+table tr:last-child{
+    border-radius: 15px 50px 30px 5px;
+    -webkit-border-radius: 15px 50px 30px 5px;
+    -moz-border-radius: 15px 50px 30px 5px;
+
+}
+tr:first-child td:first-child { border-top-left-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; -moz-border-top-left-radius: 0.5em;}
+tr:first-child td:last-child { border-top-right-radius: 0.5em; -webkit-border-top-right-radius: 0.5em;-moz-border-top-right-radius: 0.5em; }
+tr:last-child td:first-child { border-bottom-left-radius: 0.5em; -webkit-border-bottom-left-radius: 0.5em;-moz-border-bottom-left-radius: 0.5em;}
+tr:last-child td:last-child { border-bottom-right-radius: 0.5em; -webkit-border-bottom-right-radius: 0.5em;-moz-border-bottom-right-radius: 0.5em;}
+
+td::nth-child(1) {
+    background-color: yellow; 
+    color:yellow;
+  }
+  @keyframes texton{
+    0% {
+        color:#64d962;
+    }
+    100% {
+        color: rgb(102, 102, 102);
+    }
+}
+
+  /* tbody tr:nth-child(odd) {
+    background: rgb(8, 8, 8);
+  } */
 a:hover {
-    color: #00bfff;
     cursor: pointer;
-    animation: flash 9s;
-    -webkit-animation: flash 9s;
 }
 
 .btn {
@@ -367,68 +382,43 @@ button img {
     
 }
 
-@keyframes flash {
+/* @keyframes flash {
     0% {
         color: white;
     }
     100% {
         color: #00ff00;
     }
-}
+} */
 
-@keyframes link {
-    0% {
-        color: white;
-        width: 13px;
-    }
-    10% {
-        color: yellow;
-    }
-    100% {
-        color: #00ff00;
-        width: 50px;
-    }
-}
 
+/*----------Scroll bar---------*/
 ::-webkit-scrollbar {
     width: 20px;
 }
-
 ::-webkit-scrollbar-track {
     background: rgb(0, 0, 0);
 }
-
 ::-webkit-scrollbar-thumb {
     background: black;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     border: 4px solid #7744ff;
 }
-
 ::-webkit-scrollbar-thumb:before {
     background: blue;
     border-radius: 20px;
     border: 4px solid yellow;
 }
 
-div#status {
-    position: fixed;
-    font-size: 24px;
-}
-
-div#wrappa {
-    
-    width: 0px;
-    margin: 0px auto;
-}
-
 div.newData {
     background: #09F;
 }
-@media all and (max-width: 666px) {
-    
-}
-@media all and (max-width: 640px) {
+
+@media all and (max-width: 513px) {
+    /* .playlist{
+        width:100%;
+    }
     #lumigif {
         display: block;
         position: absolute;
@@ -440,7 +430,7 @@ div.newData {
         height: 100px;
         left: 0px;
         top: 36px;
-    }
+    } */
 }
 /* table tr:last-child {
     padding-bottom: 200px;
@@ -457,24 +447,6 @@ span {
     -webkit-transform:scale(0.68,1); 
     
 }
-table tr:last-child{
-    border-radius: 15px 50px 30px 5px;
-    -webkit-border-radius: 15px 50px 30px 5px;
-    -moz-border-radius: 15px 50px 30px 5px;
-
-}
-tr:first-child td:first-child { border-top-left-radius: 0.5em; -webkit-border-top-left-radius: 0.5em; -moz-border-top-left-radius: 0.5em;}
-tr:first-child td:last-child { border-top-right-radius: 0.5em; -webkit-border-top-right-radius: 0.5em;-moz-border-top-right-radius: 0.5em; }
-tr:last-child td:first-child { border-bottom-left-radius: 0.5em; -webkit-border-bottom-left-radius: 0.5em;-moz-border-bottom-left-radius: 0.5em;}
-tr:last-child td:last-child { border-bottom-right-radius: 0.5em; -webkit-border-bottom-right-radius: 0.5em;-moz-border-bottom-right-radius: 0.5em;}
-
-td::nth-child(1) {
-    background-color: yellow; 
-    color:yellow;
-  }
-  tbody tr:nth-child(odd) {
-    background: rgb(8, 8, 8);
-  }
 
 
 
@@ -488,14 +460,25 @@ td::nth-child(1) {
     margin: 0;
     background: url(http://simonkinslow.com/_2013/space/starsFar.png) repeat left top;
     z-index: 0;
-    opacity: 0.1;}
+    opacity: 0.3;}
     
 .tween-stageStarsFar{
-    -webkit-animation	: tweenStageStarsFarFrames 59s linear infinite;
-    animation			: tweenStageStarsFarFrames 59s linear infinite;}
+    -webkit-animation	: tweenStageStarsFarFrames 40s linear infinite;
+    animation			: tweenStageStarsFarFrames 40s linear infinite;}
 @-webkit-keyframes tweenStageStarsFarFrames{
     from	{ -webkit-transform: translateX(0px); }
     to		{ -webkit-transform: translateX(-240px); }}
 @keyframes tweenStageStarsFarFrames{
     from	{ transform: translateX(0px); }
     to		{ transform: translateX(-240px); }}
+
+    .bottomMargin{
+        height:60px;
+        width:60px;
+        color:yellow;
+        margin:0;
+        text-align:center;
+        vertical-align: bottom;
+        bottom:0%;
+        opacity:0;
+    }
