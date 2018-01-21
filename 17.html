@@ -35,11 +35,11 @@
             <img id="lumipop" src="img/lumipop.gif" alt="gif here" title="Animated by Moving_Picture_Show">
             <div class="playlist" id="showAtBottom">
                     
-                <table class="dynamicShadow"><!-- PLAYLIST TABLE -->
+                <table class="dynamicShadow" id="my_table"><!-- PLAYLIST TABLE -->
                     <tr>
                         <td><button onclick="pauseButton
                             ()" id="pButtonID"class="btn2" name="⏹"></button></td>
-                            <td><!-- <p id="firstLine">or spacebar to stop</p> -->
+                            <td>
                             <div class="links">
                                 <a href="https://twitter.com/Lumitrap"target="_blank"><img src="img/twitterbirb.svg" class="linkTwit" title="My twitter"/></a>
                                 <!-- <a href="https://www.youtube.com/watch?v=o9wxUGJ-HIc" target="_blank" class="newTab">hej2</a> -->
@@ -51,7 +51,6 @@
                             (this, 'zUT1')" class="btn"><img src="img/play.svg"/></button></td>
                         <td>Undertale - 1. Once Upon A Time
                             <div class="links">
-                                    <!-- <span onclick="baseUrl(this, 'zVimNo')">hey</span><img src="Artboard1.svg" class="linkBeep" title="BeepBox Link"/></a> -->
                                     <a href="https://t.co/UcpL73OxHp"target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
                                     <a href="https://www.youtube.com/watch?v=s7RRgF5Ve_E"
                                     target="_blank" class="newTab"><img src="img/yout.svg" class="linkYou" title="Original" /></a>
@@ -896,8 +895,8 @@
         </div>
     </div>
     <!-- <img id="lumitrap" src="img/lumitrap.gif" alt="gif here"> -->
-    <div class="extraDiv">help...</div>
-<script>//---------On page start--------------
+    <div class="bottomMargin"></div>
+<script>//---------On page start--------------¨
     var song = new beepbox.Song(song);
     var beep = new beepbox.Synth("5n41sbk4l03e00t7m0a7g04j8i2r1w311024321311411f000000200000000d210001101111111c000000040000000h000085060600000v210120400000400o22200b4z018M0ic040020g0p21YEA62B40t86a4goSa2Fcyxf0UxwYn8RaeM95Edg005goYgNBaNoN3u000ahglOlC41Hc7Gp0Rj46Gowlll5ipB261FaCcI0002pQ5S00002o526jM4P6kf3oM0000");
     beep.volume = 2;
@@ -1003,9 +1002,20 @@
         }
         if (e.keyCode == 52) {
             e.preventDefault();
-            console.log("In theory, the reverb should have been changed to 3 now...");
-            beep.reverb = 2;
-            song.reverb = 2; //nothing is happening though!
+            var tempoVar = 10;
+            var reverbVar = 2;
+            var keyVar = 0;
+            var rhythmVar = 11;
+            
+            // beep.song.tempo = parseInt(tempoVar);
+            // beep.song.reverb = parseInt(reverbVar);
+            beep.song.key = parseInt(keyVar);
+            // beep.song.partsPerBeat = parseInt(rhythmVar)
+            console.clear()
+            console.log("playheadInterval " + beep.playheadInternal +" !")
+            var baby = 10;
+            var manh = parseInt(baby);
+            // console.log(manh, "wooh");
         }
         if (e.keyCode == 83) {
             e.preventDefault();
@@ -1138,6 +1148,14 @@
 
 
     function playSound(button, name) {
+        
+        // $( button, name.target ).closest( "tr" ).toggleClass("poop");
+        $( button, name.target ).closest( "tr" ).addClass('poop').siblings().removeClass('poop');
+        console.clear()
+        cell = $(this).parent().prev();
+        cell.text(parseInt(cell.text()) + 1);
+        console.log("pleeees work" + cell);
+        
         secret1 = false;
         secret1Toggle = false;
         // beep.pause();
@@ -1148,6 +1166,33 @@
         isPlaying = true;
         $("#pButtonID").html("▶");
         $(button).blur();
+            console.log("cannelPatters " + beep.song.channelPatterns + " !")
+            console.log("channelOctaves " + beep.song.channelOctaves +" !")
+            console.log("instrumentVolumes " + beep.song.instrumentVolumes +" !")
+            console.log("instrumentWaves "+ beep.song.instrumentWaves +" !")
+            console.log("instrumentFilters " + beep.song.instrumentFilters +" !")
+            console.log("instrumentEnvelopes " + beep.song.instrumentEnvelopes +" !")
+            console.log("instrumentEffects " + beep.song.instrumentEffects +" !")
+            console.log("instrumentChorus " + beep.song.instrumentChorus +" !")
+            console.log("key " + beep.song.key +" !")
+            console.log("loopStart " + beep.song.loopStart +" !")
+            console.log("loopLength " + beep.song.loopLength +" !")
+            console.log("tempo " + beep.song.tempo +" !")
+            console.log("reverb " + beep.song.reverb +" !")
+            console.log("beatsPerBar " + beep.song.beatsPerBar +" !")
+            console.log("barCount " + beep.song.barCount +" !")
+            console.log("patternsPerChannel " + beep.song.patternsPerChannel +" !")
+            console.log("partsPerBeat " + beep.song.partsPerBeats +" !")
+            console.log("instrumentsPerChannel " + beep.song.instrumentsPerChannel +" !")
+            console.log("pitchChannelCount " + beep.song.pitchChannelCount +" !")
+            console.log("drumChannelCount " + beep.song.drumChannelCount +" !")
+            var cells = document.getElementById("my_table").getElementsByTagName("td");
+        for (var i = 0; i < cells.length; i++) {
+            if (cells[i].innerHTML == "Undertale") {
+                cells[i].style.backgroundColor = "red";
+            }
+        }
+
         // console.log("Orange button pressed: Playing song from start!");
         if ($(button).hasClass('showLumiPeak')) {
             if (lumipeaker == false) {
@@ -1169,6 +1214,7 @@
                 // secret1();
                 secret1 = true;
         }
+        
     }
     
 
