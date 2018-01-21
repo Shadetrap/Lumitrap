@@ -42,7 +42,7 @@
                             ()" id="pButtonID"class="btn2" name="⏹"></button></td>
                             <td>
                             <div class="links">
-                                <a href="https://twitter.com/Lumitrap"target="_blank"><img src="img/twitterbirb.svg" class="linkTwit" title="My twitter"/></a>
+                                <a href="https://twitter.com/Lumitrap"target="_blank"><img src="img/twitterbirb.svg" class="linkTwit newTab" title="My twitter"/></a>
                                 <!-- <a href="https://www.youtube.com/watch?v=o9wxUGJ-HIc" target="_blank" class="newTab">hej2</a> -->
                             </div>
                         </td>
@@ -89,7 +89,7 @@
                     </tr>
                     <tr>
                         <td><button onclick="playSound
-                            (this, 'zUT4')" class="btn"><img src="img/play.svg"/></button></td>
+                            (this, 'zUT4')" class="btn sUT4"><img src="img/play.svg"/></button></td>
                         <td>Undertale - 4. Fallen Down
                             <div class="links">
                                 <a href="https://t.co/lV6fwr7uxo" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
@@ -290,7 +290,7 @@
                     </tr>
                     <tr>
                         <td><button onclick="playSound
-                            (this, 'zUT37')" class="btn"><img src="img/play.svg"/></button></td>
+                            (this, 'zUT37')" class="btn sUT37"><img src="img/play.svg"/></button></td>
                         <td>Undertale - 37. Pathetic House
                             <div class="links">
                                 <a href="https://t.co/NvYFebexL7" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
@@ -320,7 +320,7 @@
                     </tr>
                     <tr>
                         <td><button onclick="playSound
-                            (this, 'zUT40')" class="btn"><img src="img/play.svg"/></button></td>
+                            (this, 'zUT40')" class="btn sUT40"><img src="img/play.svg"/></button></td>
                         <td>Undertale - 40. Ghouliday
                             <div class="links">
                                 <a href="https://t.co/XjwaWQD00a" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
@@ -601,7 +601,7 @@
                     </tr>
                     <tr>
                         <td><button onclick="playSound
-                            (this, 'zPuzzlePlank')" class="btn"><img src="img/play.svg"/></button></td>
+                            (this, 'zPuzzlePlank')" class="btn sPuzzlePlank"><img src="img/play.svg"/></button></td>
                         <td>Super Mario Galaxy 2 - Puzzle Plank Galaxy
                             <div class="links">
                                 <a href="https://t.co/XhT4mCEKPH" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
@@ -891,12 +891,12 @@
                     
                 </table>
                 <img id="lumipeak" src="img/lumipeak.gif" alt="gif here" title="Animated by Moving_Picture_Show"> 
+                <p id="thanks">Thanks for listening!</p>
             </div>
             
         </div>
     </div>
     <!-- <img id="lumitrap" src="img/lumitrap.gif" alt="gif here"> -->
-    <p id="thanks">Thanks for listening!</p>
     <div class="bottomMargin"></div>
 <script>//---------On page start--------------¨
     var song = new beepbox.Song(song);
@@ -919,6 +919,10 @@
     //----Bonus features-------
     var secretSound = new Audio('audio/secret.mp3');
     var secret1 = false;
+    var secret2 = false;
+    var secret3 = false;
+    var secret4 = false;
+    var secret5 = false;
     var isPlaying = false;
     var secretSpook = false;
     var secretSpookHint = false;
@@ -944,21 +948,6 @@
                 $("#pButtonID").html("⏹");
                 // console.log("Pressed space = stopped song");
             }
-        }
-        if (e.keyCode == 119) {
-            e.preventDefault();
-            console.log("pressed W");
-            // synth._bar = 0;
-            // synth.enableIntro = true;
-            beep.play();
-            isPlaying = true;
-            $("#pButtonID").html("▶");
-        }
-        if (e.keyCode == 97) {
-            e.preventDefault();
-            secretSound.play();
-            console.log("play audio file");
-
         }
         if (e.keyCode == 106) {
             e.preventDefault();
@@ -993,30 +982,45 @@
             beep.snapToStart();
             console.log("Snapped back to song start.");
         }
-        if (e.keyCode == 52000000000) {
-            e.preventDefault();
-            var tempoVar = 10;
-            var reverbVar = 2;
-            var keyVar = 0;
-            var rhythmVar = 11;
-            
-            // beep.song.tempo = parseInt(tempoVar);
-            // beep.song.reverb = parseInt(reverbVar);
-            beep.song.key = parseInt(keyVar);
-            // beep.song.partsPerBeat = parseInt(rhythmVar)
-            console.clear()
-            console.log("playheadInterval " + beep.playheadInternal +" !")
-            var baby = 10;
-            var manh = parseInt(baby);
-            // console.log(manh, "wooh");
-        }
         if (e.keyCode == 83) {
             e.preventDefault();
             if (secret1 == true) {
-                beep.setSong("5n31sbk3l00e0btam0a5g0fj7i0r1w3011f0000d2111c1300h0000v0001o2310b4xci4QhmtTsi4N8jhmu8y18i4x94lDtTghd14O8zllkp261FzW6C23mCuw6i3wgOgkQ_xYEc6701Zi38i0qARuwYAddEp6g38O0pb83x1M1l2Yg4222dk8kxwaGgOA8agOpgKwe4588iMwGGOk491IE8nmEoxrs0SagChGQ25dfBcvqI5OoiCLNGePnjhWAecFEI3UxdagiMI5GRSQF01I7wgcz8xHA0Ocw6hFz83AxGqdzE2apI9zhwmhyKhBp7fOcP8OIxcnaHlc_iaoY9E-Aqr48yjhgaqNhjI21h8gg0Ygha5wp00c0CK0ogho5lk1Mw0CMc0M3aKX1Ei25wr5wr5q0hFws230C95mi38OwkwOaIA6hjILsGLp1Apwagp5mi38Vgagp5mi38OwpKi39i4L8Fm0RClYi38P0kwOaIA6g0");
-                if (secret1Toggle == true){
+                beep.setSong(zSecret1);
+                if (secretToggle == true){
                     secretSound.play();
-                    secret1Toggle = false;
+                    secretToggle = false;
+                    console.log("Spook on, buddy!");
+                }
+            }
+            else if (secret2 == true) {
+                beep.setSong(zSecret2);
+                if (secretToggle == true){
+                    secretSound.play();
+                    secretToggle = false;
+                    console.log("Secret unlocked!");
+                }
+            }
+            else if (secret3 == true) {
+                beep.setSong(zSecret3);
+                if (secretToggle == true){
+                    secretSound.play();
+                    secretToggle = false;
+                    console.log("Secret unlocked!");
+                }
+            }
+            else if (secret4 == true) {
+                beep.setSong(zSecret4);
+                if (secretToggle == true){
+                    secretSound.play();
+                    secretToggle = false;
+                    console.log("Secret unlocked!");
+                }
+            }
+            else if (secret5 == true) {
+                beep.setSong(zSecret5);
+                if (secretToggle == true){
+                    secretSound.play();
+                    secretToggle = false;
                     console.log("Spook on, buddy!");
                 }
             }
@@ -1130,6 +1134,11 @@
     var zNecro32virt = "5sbk7l1le00tfm0q0u1a7g1lj_i9r0w1h311234214214343442222211411205h11111111111111111f30403002002000020210000000200010500000000000000000d10001000000010000000001000000010100000001000000000c03010101011001310110010111111000011111110111111111h00001102102007000220000000200100600000000000000000v33302100101130000010111100000120200000002000000004o33300b0wg88210wwoga63y18Emc94OzwGme639IUobDiV0Yvg8kid8Bj9R2BkHmblOZwZ73O8QyqpcSzlITteg88220ww88220ww89SY00088642xwUwia02NwQsf84ihcElb5P1AQre7jNZ0xh8QylcCjFR2xiFlaBqJoJnbS35APpd6HpKUsKw000000001_000001SYuLw00221x0Eoe84yxoMqe7A294Aia52FoKocCzpMWuwfPVY-wgEki96zi9kOtgEkGBo0000b2r9CRrdT3BQXu0wogaZvblOZwN00000000wwoga63y088642xwUAkb63hMUugw3i98CkaByVwYvg8kid8Bj9R2BkHmbnqVuMnIlX1uOpJ6HpCTsf0886-2xwUw221LgEoe_0008843fwwggGw18gic4k3xwW8e63Bx1t8o65P9Ewf76PxUSrdJzqlcDkaliISImxm8Qia4yROZwimHS39C2qJ0g842pwCHg4214O80p31O_2DaMGAQUhkw9QAz0k3KW6ChXKwTt1JU7ri1mA0qqamFCG9yEW3kdh98zbGG7lNf5WbmczhIFzjy6ifdStD0ZPr6AyhN74YPCsOfyHGWhRkMBFlcE5OeoV2j2A61V8ewRc443A8LdYMw36XIwPsA7mF2XRHkMP1h1z6f8Osz1Iz6b8Osz4cz678OszcOcT8OsybFEoaTlllR0xiEtNvd31HtWKXJQQc845i0R8LALSFwujBpaCcq95P755kshqCDcKGFN1GGsMWGIGGOGHaGIGGt44iGHGGHyGE5lk2GG0nNokMEg1xC421E42y32o8egCa06zyAyGSiFytjN8f57ydg1TocA72f7BN7oYoRfo1BV0cPyyFzvAsm3p3CucsPJ0E1g3MELnkkil572eacOyKwcNh9bIkh1NLl0Mj91BX9rUayjWH4ZL8GUE6ingld11Xzwq5Nu8VrR4dqcld61w2Gp8fYtjjtl0kROdxulsyHM1OtD8FXE61BFELGEOwrui3bShFD4WoOqCEAyq1J3jhqHR7pSNX6FsnJXoYHyGtGgWAv5siFH95zbVv2fqEQRkj9UKEtRaCcbePEERdloh0qqV2iF78g_01cq-MOew9ykfakQkmIDCYP97BpLdXiCAwQfsGT4QShUFUhVpPMWqK4uVR8uQAb2CCCRN0WqmIAAy5X6JjmS1rg9Xx4m4xEYrYoV3VzCdDoS4Xn7reRIW3KrCPKsjIFTebStHpTdPm7sUzwb8jw28Qp6hAp6pAp6hAp2sPxj9wsH9wcFcmsBj21LKnFbFgCzhglja1s5c8460U039N2JcH0p87FHNkFGMGzRdq25Q0ateI04VpAqscF0QAna16D4lH0jCBr4RwkO1eEly0D6hc0cBD1Nj35PmP6n2s0pCDct04dN5GGOGHaGIGGOGE001cy6mE65jNSnywFIz6w21lXS7hEQaI5zID00kBS557h_3T20ld2py1L03K0w0lwpttTy05psTrw1tSM0KIKrSGGZCJyqHO-bUysOKXLyWHLyaHbHaCZyqLoBccT4go658a190Mboc0OWpGOpag4y80caoQxE2yb6g6wehA33AeoiUte8dljCsxgjc97Aw9uPIP4-LLuECCoolaogM2C440dj2e_Mz4sxigq64E6cqs0OE4V9nN5g6iKCdO0I9xgy32pOfa1Q35lcc65suJwWIWps90MC77z2C7722A23asYiBbcFzNN2D6n5cMYDNAWCzB8-kaooiaCm3aNzNNDRADWGIagcQzkMMoFSJD8Osz9OcBj3zP3GspsjPioYIMGTG4QZ58m6osx9xhUitj30CyBj32Dgo9ce5ucc60sBD704sPnotj75BjlNoXCCFj3zM4WoYaUsoYOHNNzMxaPxNBTPRdkC7tBHkQmlcuKpS6so04u68wNNqpspy0cpegBC6CxIt8ozN6PGq0kaoWdmOA16jR7l9Rb0dxj3azsUgUzpStxjz3j0kMNFh2xcq4F2MHxNxY3N2L766xlp6RehBjAtPfzeNyegBcHM9zzEzhwegCm0A375sgFPxRns9YwgeEWDGcH8kMOIStzai5xaC7702osglddddddddddddddddddaokFN62FFFFFFFFFFFFFFFFFFGFpxM3walcEetCtGgJLAp2hA99j62gp1ltCIw-_Ag212wweoiHHVkQ0cMHgJXHQp95A2yyA2A1rE8bcGb1bsmJ1GBMcQKSqmYJrKsEKI6Xn8x0YKhTRBO08iGTNq4xfggnKaXtkEzaNr5AqhOD4SHExkDdj7LbXClmkCcTMapSghRz7LkYc451ceGQNYeCHOFxwOFzylhBkDlMUMUPGqGRccGuVj2CGK2woaCGBA75p42toMUMME1kMUVDCv6GRcI6sFjf4EWqf2NxNBxju8lDjjEhoO3ZVTejCu4FxPjJucLjqWnSfjpUhcma7FHMkw-ONWqfOCxxsCzgAyZdN4s4gdQwgqGwLC62zgazO9sTrV0wTlm5V8KXI75TtYndTNtlsMYntS3yXK-bKXUKXIf5TtwUKXLyXK-bKXC7yVKMeC62w25TllTlk5N8GG1NllNllNllcf5lge9D-aGKaGwYll4xClWhxkrj6Z3hdmYyNdmP6T68IOVzldK8JjjCtlkC5Py3tTyy8cpmgC3KgkyWoo6O4UylleA23lk5QghaGwsllsllsll53Nlk3yGHyGHyGEf5lg7j31021GGGp1bJTtcSW885TuZTsRlsll1VGG1NllNllNlkkf5lgeaGKaGKaGwYll0USGGGDj32LtbNKXrKZrKY8lnlln5lguGGwsllsllsll53Nlk3yGHyGHyGEf5lge9DGaHE4bNKCm1lwVllRllRllU01nUperBo5XhNfL1LqdtTr8a4Cgaqj45hdy4FdlYpP8cw4xMARq0GgQc0cMUBcd546kNURbpOIHpStDdOAPUSJAa8I90Owjf4wh0A58AMGw4NHYbpxNf4ruMBI1jeD491cS-AcgN79pxhqgk1SK4IhNb9j9A294025ck3Mgh1DoStD4IHKJHpSdHpOIHq254mee0CsxDYPIreOP350ja0X06Cx0YNymgH8lpP2k1kwxUS6gqoa80bca9i2xcaKFPMuienIV04PAe4gLoj684EZ0ntTBTtVtTuntSYwntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntTBTtVtTuntS5P20GT42GHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGIGGOGHaGCIBQD0hhokgAa0YJg8ndlmllpllBlmllpllBlmllpllBlmllpllBlmllpllBljA1lkVxRlpllBlmllpllBlgnIdgp55W0KHLbKHOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKXOXKYKXLbKX3NG8zy3llBlmllpllBlmllpllBlmllplkUxllplvBlmllpllBlmllpllBlmllpllBlmll1sNYN5N5GqOGHyGHMGGOGHaGIGGOGFX7GGZV5KXLbKXYHKXugrKXOXKYKXLbKXOXKMVtnvdRullnBTullnBTvllmllpllBlmllpllPllvlTtVtTvdTtZntTBTtVtTuntTBTtxQ7gvUKXLbKXUKXJW0KXLbKXOXKYKXLbKXOXJjbKXOXKYKXLaKXOHKYKXnOHKYGXLbKXOXLcKXIeTtW-g8dTtVtTuntTBTtLA25tTvdTtYTtTBTtVtTultTBntVtTCltTUG2begdln7-IgLgdTtxsOYUdN1GGsNWGJCvSGHqGJCgD4aGHqGJCgJGGSGEeP8f5lmRle8JlnzllNllBlmllsTtVllBlmllsPdKgJlgkM_i2zKa3YqGIGGOGHMGGOGHaGIGGSGHaGIGGOGHqGIGGXGG3URlfooweFf8kjtVlluhtSZEtllV5TrSnlluhtTBTtVtTrVzzntSky-oojc68AYyntS-g8dTtxv44iXKMsntTNtTv5TtB8XtTosGGIbUwwhtm-pgdTtRTtB8Y0S4FPtTvdTtxWKXI75TtYntTNtTpieTodXtTuTtS7yXKMsntTNtTv5TtB8WxvwrtTuRtS7yHKMsntTNtTv5TtB3NtTo7j32Xwn4iGFQwgqGwKy29lk3yGHyGHyGEEuaGwsllsllsll1UGG1Nl1Yllsll53Nlk3MTqXMKXLMKXIfxtToebKXUKXLyXKOxUKXI3CntSUxlleotk3BlrFzxllVllClCllrBpBlmjuegclhifzm0w-dTt-dllxYoKX1Nllv4ntYllmnybKNslZpNtTv4RtxUyqI75llYntTNtTpQAkO7P22PcPyXK-9GXlMUNOg5j31Bcd5C6K5EtsTdqocJM1GGsRKsPaGFKoWUOzybkQVBRle8dljC7llBlmllpllBljEwylltllsll0GGwllg0FES9xtiCczvC9AEoyy3eNAcMUJc62FBk3LTj30kCD4iGFQwgqGwK95lgeaGKaGKaGyK85lgeaGD8iGHaGIGGN0c7dTsCGPtTcTsGGPtQLdlndlgtTtSGHqGwZll0UGGUGGUGGa7yGE75ln5ln5lguaGweptljy3llQw5Enc_c3t886GFPgWGD86GFQNPF5jtd32IawLCm2JT9Lr3ndSZxTtSZ0TtTBTtL8dTtVtTuntS0bCOMdkVxRlullmlle8dlmllplk5ZRUEJ2G2Sp2UGGOGHyGHaGIGG2VBwQ5NllBlmllpllBljSncxnVntTBTtVtTv5Tv5lhkNMAhog6zoSdzoOcz8OcwKjIr6NIr6wr6NEa9I1uRZfb2v48WXKTE2XKTJ3KXJW1KXILfrgjQyTtSZxTtTNtTuntTRtTuntTBTtBvcura11huNYPctcc5F42v847KXDi11XKv44jKXwf8BTtYZTe8BlndlhgKy20xl1tccaGEeRl1SGEf85llls0y8xvcI0f4ruMXKXYFCH1ntSZzToexOXKQMgAMw4Qs0bQztSZlg5MJRtcS85WqVw_-2CvaoZ8wg183g9xRI9Bzp0kQuMQag82UurUzM5Tdxjz7ykwokMMI3RqoYZg183gu5r2pup0kQuMQao86xVI7w5BExgFNBEErDs1VDOLo1VcgeqSf8t4i09EZxEO0YRP7xfw3AGooi0sXrWx8id4Sa0-4xEO0Xs2Cd6ll3m1ULMwmTUpUNN74nmSxjeFca40oSZA61p8c2j5EelEL4rCQ3bOgpD51NnhK8TeWXztStzrWEelRnkrvlthJXeNJ-kxM7ErGdjWHGdTpSd_GwVLnthLZlR6ZIX6VRosiW5Wzk-GWzrStzpXAelTu9YRP6_IX6TNEsHaGEUHye0tDoS-e3DUBCVe2pe2VwkPWOJjOcLCuoSKb3Dp-9Vm1VenAxxa8AFEExaas7OgVTmV6hD-4wMnl0VelCpe1perABjbmh1xcu4gEh5w2C21qqfcEnCqGl4kicz8Ocxce4wEbVgw17kthAp2C656NjTfs007Kgsgdc4gBAxVM0u91I3U51IwS4Qew1YF7OeiVA7l03AwWwv103pi1zyf6BcIa0YxwUwvn4cAqok03UMfzg9DPAwOYI0uBAwEXwv0Vb92C6C0fcYNN0-q1Nf4sgCxU0f0agcsgfEw1Nf4shGmNT00XeNN0-q1Nf4shUlAxPc3u03l100H0OWXL40aOVKT02XJw1tpkTIjlXdr4RnmtrQ44Gwb6E9xO39UEeao6581C1Ng4OY0CzO4fmsi39Ogpea0SwY190NT0QMgyntx3Pge87M83GkQew1VA7c3V70FBwGGoocpmglj32oqqkgEh5w6NIr0dzoS0r1qdx46dzoUw6NIr0eoEFFbMD4ddddcL45cgP1imoUuCCCCmy2CCCAIH45ddddddddd9pwy2CCCCCCCCCAIMMZddddddddd9pi7FFFFC68aqqqiRRQQQQOYfj4cLimpowFFFFFFFFFFb8gZddddddddd9nw0Qwg0aMcKKXN02IKrJM0KXo0nmldX4RuPmNdlRD5YhmpBV5Tv5Rnv4lmnmldX4RuNmPl1jhTo6C2g4AOV0C6E0LyNQQQQQOYhkQQQxVNj10m3Mi8wgCk7Aaoo5ZUFx08ow7MLMUfw7T2p-rq8kaspsErvc1X1h4wao_MaoQp5cgaooiokPKU6NjMHMzuStzrj5EaC21Mkw0MaU8840O0pocA6g3807q3AwS0p0cE6i1n114x8l0fdxUE7c0O0pocA6MA8zPwtMf5wVw7cdck7e0PBgZ5emkkUqA2C230kMf1U-390QUwcTZM2gIso3p1A0UPcSMsg7z0r8cA76pCU3yec1IwO0spCroe83NwagkwUPcUM74so3p1A0UPcSMr00JcoR83ztTw47cs-3p1A0UPcSMr00ZoFgwmwD8zrj11Lle03A5a62FVj10RajqOKqPCYkE09Mfz7zBufnRuZtTzkZUrUXmlPmsTCnomD41ewu6uFMwnOsITRc-fjrjy1LIYHSLmoKsP4CsygJc910FFN0vK900wi5xc186O381NCpJwS01I1wocA6XKXwe8qUg8cY1Fx0EqFx0SCbdElc43Age1Ug1i10D90Fg0riC23H42V1N8eE1A0O01j9x464xoj5z8h5xCbfkPhasK8M7pCxqp9cPPR7cap8cr2Cij4SCCIgA00bj65CmpIPUEwkPBTjentcxkMgf2A1E5s4420p0cY6i1j19zOg3PokxakUq8HAFagjAx1j110tc4290jBF1FN0jg5lk7KQ44w0MaU8840O0pwBs44ikxk0Jc87_FCCkUkfHHNggpO-xXCbl8Y-1jepC9yVq5c3w90xwOgde82XZ83092NNwdA6g3zcPr1N0uc1IwOgspCrw5c46dKXGGCB43lkFx0SQUwkryyU3TEf70p8eJPdM6M3rKZI6M3rKZI2oc03PtTVnBTumFMwQxVhVpmsRlcVgtgjBR5FMwxpHjy0P_2Fww98ws1820p0cw2B00BiC23r42V1N8eo1A0O01WH91I0O0p0eHHG-HA74wVw6g1i11E8nw07KRM0KWOKKMlTu80lBPtwSXJw1tpkS3oCHSVHI6PdlVoMGo86-70Y81A0O092gCbvB6PIX6O7GwYO1n110wlgBs44ikxk0YS7C0sQ381BwOgsNPour2C105c46AU9Q7u0Y81BwY8iAPMZW2I586D41TZPwf2ec1IwO0du8k3cNFN0Rl1kMgc3N0fb0tg3a1AwYEi5Ufdwi1A6i1FN0rKZo3Cec1IwO0spCrodw0v34gd1N0cw6g1aidj5Nj11yxejk4UrA2D216xYoYd0AbTB8dw6OHwwws3q0C10cw2gA1XLp1RvswS0rftwSgtQ381T0uXSgtlT8IBj11Lywk0Xw6k3y0ZnJ0SKF1I0Sv2Mr8eG1A0UAflZk3y0p0cw50eXowj8dA740O0udxWLywsg381A0E1RvkO3p1N0cw7txWLywsgB1G7tivxasGlIVg04aqJHONgQ1i0bjy1zt2QNzt0qsg6pDA418m4Me1IwO0spCrodw0mC4wYxNKXNEeoVU2gAGo84tpCruM7z0pei3zcPzeoUM6PP7epCTP0us1Pei3DcPDeoUM6PP7epCTI1XXKdTuZ1T7v0Sgp0ecPdI6M0fztSC9untFOmzCpC09ask8nlwcFOPdOdALC206zDxqoNI0aU8860YE1C0OgaU88A92E1kMge3Ng5c4i0slRoea1N0ea3Poua1P0cw6m391I8yhI03J8wi3o1A0O09gvg5c46S85O3ygsM38k1gs000000000";
     var zTest = "5n51s0kbl01e00tem0a7g0fj7i0r3w000001f444440d222221c000000h000000v000010o333330b414h4h4h4h4g4h4h4h4h4h0h4h4h4h4h414h4h4h4h4g4h4h4h4h4h0h4h4h4h4hp1PGq2IgjkQ5kwS09djglM4Vg2nkQ5sAUM2oRdwm0EQw9MRdpq3000";
     var zEmpty = "";
+    var zSecret1 = "5n31sbk3l00e0btam0a5g0fj7i0r1w3011f0000d2111c1300h0000v0001o2310b4xci4QhmtTsi4N8jhmu8y18i4x94lDtTghd14O8zllkp261FzW6C23mCuw6i3wgOgkQ_xYEc6701Zi38i0qARuwYAddEp6g38O0pb83x1M1l2Yg4222dk8kxwaGgOA8agOpgKwe4588iMwGGOk491IE8nmEoxrs0SagChGQ25dfBcvqI5OoiCLNGePnjhWAecFEI3UxdagiMI5GRSQF01I7wgcz8xHA0Ocw6hFz83AxGqdzE2apI9zhwmhyKhBp7fOcP8OIxcnaHlc_iaoY9E-Aqr48yjhgaqNhjI21h8gg0Ygha5wp00c0CK0ogho5lk1Mw0CMc0M3aKX1Ei25wr5wr5q0hFws230C95mi38OwkwOaIA6hjILsGLp1Apwagp5mi38Vgagp5mi38OwpKi39i4L8Fm0RClYi38P0kwOaIA6g0";
+    var zSecret2 = "5n31sbk9l00e0vtbm0a5g0vjyi2r0w333211111111f200000200000d010111011111c321000000000h600000000000v200000100100o0430blmnopqrsbcdefghu1234567812345k9a1123456711234567112345671123456811223415112234151122341511223411161616151616161592729293429cdef8p2glaqDiCzRPhjnUjhWaCMu6ACkSnwGWfmFwmlzzhVQt6kkNZj3AGsr9PNY8lQed7Q4-2xkRKebkQca6CjR2ocgs5wyoI9x1GoEsJjy522Vyxj3Bwhj9bxGsgwP0Fx2hhVh1gltdkbnm-ZJj21zoOcxcmcxjz5yRecqrqD4p074ship8mliCa7jYkpkMxgo63wU5GYgP400dj212HB9emB9ajj6oOnjhBOIsqfezE08FzG9xEdc8Sg90NyO8cXexrePGSPIXmPIWLIXbT0p6lIXeVIXeVIXeRIXeVlmU46hCrePJ0OckStDqStDldDpuU38NyStDvStDrStDlqWWXHD00OcLpSt2StDldDpSJDpRnqSnF838PdDpTJDpRjpStHpSt1StBW638OJDpTdDpRk6hBrePGKPILywp0dw2D64GEAb2gAaYoFiOw9td6n001j53h1z4Yz9OcD8Osz9O3yehyehBp294reNBp1kMwgIzkcz9OcT8OIzbO3Jp6PApehAV6jApegtD8Rb8Osz9Oc2Oe8eRIozApehAV6tApmgsD8SdHoSdgSdwX6NIruNIreNI00000000000000FBh1RkQQClwGGqqjaRSQQQCG2HFFFc30gtdd9u07j100H0OMlTu80lAllws08KS05RBjodyqLoKGMr4TnBwf1Ov2g05V0cKXLyaGI74lmnmldwS9GZyJCG400000000000000kMe3u6E20epg4waOMGU80d7931wFkMg0glpmlNmOy151OwR0FUE5mlB90NkC2Dklam3FXD0mRwYsOMu5pocxn102EX9p35Q4VgrMTxF1Nmk3aOguk7a1CV0arwtvBwUHb1AtktY7ep0cDf3k2CMa1a1OgrKg2CU7mVoeGOMp7l4202cw1U0R12Wa-MmntV6hdm2GGJw1dK04Tgeb23Sy6TND8kMhbjAHtJe43kooSzICszqeal85ao80fausw3unJlwEkN0Gei3ODydCF83p7sTcPqj1DCa3PgcHCdCE7uXvlsm2xjxAXA00000000000";
+    var zSecret3 = "5n31sbk7l00e0kt5m0a3g0kj8i0r1w1151f3000d1131c0030h0000v0000o2210b4zcN94gicP5mu04zcN94gicP5mu94zcN94gicP5mu04h4h4h4h4h4h4hp25aBkMxwl0F1F59yH5ubkaE42kR2wgl5dEHNlyI5F1iaAxi2A601i2ElMHNo840aIFu8aA03abLG1lBwkx1lp4w0i1Mwyg9og0Q1B8nodKg0aQ2gaHHg9I2CMcBkNtwE2CprFyyq5-rDVD5Tckcfcl8X7Ikgk4bd8UdQMyf12NyOkXUPeC21t9oPe2dW0v6dP8LwwoOptx0-bfGcA5c4Q1hF0giE5aF2B5Bd8OpeSTlBo2hRo3B4tI7npOsCAejjwasGW_wm0lAq40a3N15nBp50OA4fFx14Riyw1Mwh0J39KYCQ91G85SxJpCNdO2y1MAw0wp0ahp8w0";
+    var zSecret4 = "5n31sbk8l00e04t9m0a7g0fj7i1r1w88111111f00000000d20111111c44000000h00000000v00001000o3100b4zhh4h4h4h4id04h4h4h4h8Q0h4h4h4h4Ak14h4h4h4p260les1445cwlWWM94i3Bm2CgpdSxOH1lo5eY1sg2NVue68Dv8dWwkO2CgkO2Cgm00FA5cU5mec2rE5BS2GG0GhNMllu1gzHKMleI240Gctus2D726FPwNFM05cQNW4Qi1p56g13AgmaFz0Vpd1E56hIr5d6gC52y374lkkYOdd1Nu07t100H0OMlTu80lBPtws0bKS05RBjodyqLoKGMrtlnm0UPyaPcI6htTNtlS3yaHbHaCMr4RuN82Cek1sO28c86cMsKX3C1OGI6o79KQeo7bKMpx6Md0o4c2ww0Ugx10PwVtS3b3x06236oentEcIe4MdwNG3BTocMDg80hEw14G2t1awahE9k4G1k2E092wBg2wxgiE2Aa2l0G2ya100";
+    var zSecret5 = "5n31sbk9l0we0jt8m0a5g0Pjti5r1w181111333813210111111111f000000000000300000000000d221111111212113121111111c100000010000000000000000h000000000000600000000000v010000021100101000300000o4220b0000264xhxct2kagB2Nx8koj7000Lev2cEPFmRYpRLDg0008gx24gOC8sy278wgOHicGw003LwdoVzUhBeBrnNA00x248gx48gxA6gp1C48gx248VPDesZk9gFr6Kv2cFQ28p246gx248gp246gx2CcoNz7gxaA8iEp248gx248gx0p2vV5ckdc7I1OY1OYLbkMwHjw00UHyYNn513QjeC56Pw8VoaMm0F0FN2ZWoSaoE8jc46uAHbxWQ58bMkwW_eIWXHVW-OMuFYeM7bM7N0XaS_asTtOILbOY17b1m2M585e8bL1UUFyE8gY0YPyepDVK90tsQ49gaTcmGEpX0agm0F0FN2ysFwwVw83c457tXQQhoP-wlck6JHqOI1jw0XaSYNcTjWHyuaj9Hp3nLp6jJWFKVFYnBrn5r8rdT8OtIpYhND6slIxHTcz9SZTtPh2HN0wzwV6O2w4w2xj9dh4f2of4si2w4w2zx4gYhf4si2w4w2zB7pOhjhkqs0UIA8BDz2yy5DaDb1o2i93nUNA0HWIKetP6NKwEH9Rw6PoSJA58awmzIO1Oc4Osz8OsD8OcD9O5cAmg2FN2PGD4jcxVQ5LcpF8lcm4zlj4wnwgYFsS3yOgxPMr-i2A5UbOgMT4r6EwE1o2M58aw3UW3qSu91AwE1wffw7CwsNPvcwPwsx0P0l06A5oagkwkNEqD81o2A0ymcom8aVOMkAuLPcYurlUwghgtzygk0A0kap9G8ysO9Ecll1yGGNllpEIJqid9FcJKiGCa2Un9rKVum7unBVunBVpYhNHEHL4QMoj41M5uTaXbMMILbKYrsbwwsLbKRPY__PY__lMwgmD30i_bOqI_6v00R9uhq8DghIjYUokk8JjvEoZyItVM7cmGM3cmG0Fww4o6gBk0kQkAEj9xcm2l-3c5vLpJTtVtTo98vduMkgwgNaocF6h-c3LxI31iuOrKXVKrJP5KC03C95lw0v4U4405So2VARleodlSRlwHKMcNka19QdcnAMoL8Mr9Ocz9Osz8OsD9kNio1vuXXFAyRd0XGv1jLu5lmhnAxLj70P4D1foF3x3Eea6iUGZ0VyvvAH3MG6261X1KXLbKX18zpE97MgMsntAHM8859X9KXLyVK-bFo55k2_-1q242Tt1o3EbsPsA87slKVdSRgo02wnvg4Oipci0nOPvoeqGKuFdP9GH1D10wV9woOS42GI1t_W2iKMgkU2OX0P90T9Cwg5a0GGMmP48e0WpIck6wVxhtY0s62Tt0ChdA20L03Eww0lwpttTy05psTrw1tSM0KIGrS9GZyWHS9KLbULy9PcL8KXUKGXUyGOWOFLoCHS90tcw03x2KD9KMsjlTNcVdnoa9GYyYCHI54RuhtlwGCGWHwgaYIQgpdRunltV5luhujlTntTN6hdnhdnBlpkRt4RuNtlVkRuNAjlQjlXtsjt05cnAMoMc40211nApoaMiU1HO7czL3TgptxVKNJTKW3bLlj29l406c6OcB06cDoOoyOcHoMvoOEnoMikj8cUjgoYr-ws1JehGqxQOeChQOckOh7cgF431CptS3cYrKYPbKNNwSBgwoPplm36rfHMoRVtS0spDIjB0N0oRVtVwcqdaMH1zdBTo1NGMFY46nBTocrsYh86dmnnw76n9KMpCntwPIHH1CVtq0sqIbkr1BVlS36re5Y6dentw7cPqh1DptS36TeKMpKlJw76r2tg86nBlocpI9W31BVtS0spJRg8g6dunuo36ziIaMp-ntw76zb221zhB19wNGUXeNCOXIsptW_1zbBS636j2o486c-5BU0sqs6411y-m5ococ8eI6bUgno1j8s5d261MNaoE5pc30TU61EWp7j84y8Op1wo000000Cx424w8j0EkO8O0FyhIs89wPhAYjg1e2aEg2aC4bWg8nyB8ua6jlJVdmTARrujlJVdmTAR3JVdmTARrujlJVdmTARrujlJVdmTAR3NCTJRYpARrujTT6rCRNCVnNCjlJVf63NCVnNCjlJVdmTAYpNCVJspKlYpARrujNwYpKlYpARrujlJVf6spKrn6rBv6pdmTAR3TU4Uks1LJck3ZYqI2p6FwNUw0OmoKqO0yub0A1oFyg1ebJ0y1rj50TkUeM2p79wNUW39pyVH829kUwe1UMuEjBGLa4NqVzO_MulshA9MVg5ck6KEUyyw0000000000000";
 </script>
 <script>//------Button Play Action Code--------------
 // if (lumipeaker == false){
@@ -1147,9 +1156,12 @@
         // console.clear()
         cell = $(this).parent().prev();
         cell.text(parseInt(cell.text()) + 1);
-        
         secret1 = false;
-        secret1Toggle = true;
+        secret2 = false;
+        secret3 = false;
+        secret4 = false;
+        secret5 = false;
+        secretToggle = true;
         // beep.pause();
         beep.snapToStart();
         // beep = new beepbox.Synth(window[name]);
@@ -1187,6 +1199,26 @@
                 console.log("A secret is hidden within Spooktune...");
                 // secret1();
                 secret1 = true;
+        }
+        if ($(button).hasClass('sUT4')) {
+                console.log("A secret is hidden within tune...");
+                // secret1();
+                secret2 = true;
+        }
+        if ($(button).hasClass('sUT37')) {
+                console.log("A secret is hidden within tune...");
+                // secret1();
+                secret3 = true;
+        }
+        if ($(button).hasClass('sUT40')) {
+                console.log("A secret is hidden within tune...");
+                // secret1();
+                secret4 = true;
+        }
+        if ($(button).hasClass('sPuzzlePlank')) {
+                console.log("A secret is hidden within tune...");
+                // secret1();
+                secret5 = true;
         }
         
     }
