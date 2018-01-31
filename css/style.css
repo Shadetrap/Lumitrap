@@ -476,10 +476,10 @@ span {
 #thanks{
     color:rgb(160, 160, 160);
     display:none;
-    display:relative;
     text-align:center;
-    padding-top:0px;
-    margin-right: 29px;
+    position: absolute;
+    bottom:-9px;
+    left:45.5%;
     animation: thanks 8s;
     -webkit-animation: thanks 8s;
     animation-fill-mode: forwards;
@@ -488,11 +488,11 @@ span {
 @keyframes thanks{
     0%	{ opacity:0; }
     50%		{ opacity:1; }
-    100%		{ opacity:1; }}
+    100%		{ opacity:0; }}
 @-webkit-keyframes thanks{
     0%	{ opacity:0; }
     50%		{ opacity:1; }
-    100%		{ opacity:1; }}
+    100%		{ opacity:0; }}
 .bottomMargin{
     height:60px;
     width:60px;
