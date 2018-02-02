@@ -478,21 +478,21 @@ span {
     display:none;
     text-align:center;
     position: absolute;
-    bottom:9px;
+    bottom:16px;
     left:45.5%;
-    animation: thanks 8s;
-    -webkit-animation: thanks 8s;
+    animation: thanks 7s;
+    -webkit-animation: thanks 7s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
 @keyframes thanks{
     0%	{ opacity:0; }
     50%		{ opacity:1; }
-    100%		{ opacity:0; }}
+    100%		{ opacity:1; }}
 @-webkit-keyframes thanks{
     0%	{ opacity:0; }
     50%		{ opacity:1; }
-    100%		{ opacity:0; }}
+    100%		{ opacity:1; }}
 .bottomMargin{
     height:60px;
     width:60px;
