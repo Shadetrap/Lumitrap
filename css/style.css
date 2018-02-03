@@ -53,7 +53,7 @@ h1 {
     -webkit-animation-fill-mode: forwards;
 
     font-size: 72px;
-    text-shadow: 9 9 9px rgb(0, 217, 255);
+    text-shadow: 0px 0px 10px #64d96266;
     
 }
 
@@ -141,6 +141,7 @@ button:focus {
 }
 /*----------Body----------*/
 body {
+    background-color: #1d212b;
     margin: 0 auto;
     width: auto;
     /* background-color: #1d212b; */
@@ -412,6 +413,23 @@ button img {
     border-radius: 20px;
     border: 4px solid yellow;
 }
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border: 4px solid #7744ff;
+}
+::-webkit-scrollbar-thumb:before {
+    background: blue;
+    border-radius: 20px;
+    border: 4px solid yellow;
+}
 
 div.newData {
     background: #09F;
@@ -460,9 +478,9 @@ span {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     margin: 0;
-    background: url(http://simonkinslow.com/_2013/space/starsFar.png) repeat left top;
+    /* background: url('../img/') repeat left top; */
     z-index: 0;
-    opacity: 0.3;}
+    opacity: 0.8;}
     
 .tween-stageStarsFar{
     -webkit-animation	: tweenStageStarsFarFrames 23s linear infinite;
@@ -480,8 +498,8 @@ span {
     position: absolute;
     bottom:16px;
     left:45.5%;
-    animation: thanks 7s;
-    -webkit-animation: thanks 7s;
+    animation: thanks 8s;
+    -webkit-animation: thanks 8s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
@@ -503,3 +521,28 @@ span {
     bottom:0%;
     opacity:0;
 }
+x:-moz-any-link  { color: red }
+.controls{
+    font-style: italic;
+    color:white;
+    float:left;
+    top: 0px;
+    
+    position:absolute;
+    animation: controls 21s;
+    -webkit-animation: controls 21s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes controls{
+    0%	{ opacity:0; }
+    42%		{ opacity:0; }
+    67%		{ opacity:1; }
+    75%		{ opacity:1; }
+    100%		{ opacity:0; }}
+@-webkit-keyframes controls{
+    0%	{ opacity:0; }
+    42%		{ opacity:0; }
+    67%		{ opacity:1; }
+    75%		{ opacity:1; }
+    100%		{ opacity:0; }}
