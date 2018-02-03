@@ -113,7 +113,7 @@ header {
 button:focus {
     outline: 0;
 }
-/*------Gifs--------*/
+/*------Dynamic Images--------*/
 #lumipop {
     display: block;
     position: absolute;
@@ -138,6 +138,40 @@ button:focus {
     left: 301px;
     top: -101px;
     z-index:2;
+}
+#sanspeak {
+    display: none;
+    opacity:1;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: -120px;
+    height: 120px;
+    left: 433px;
+    top: -668px;
+    z-index:-1;
+    -webkit-transform: rotate(30deg); /* Safari 3-8 */
+    transform: rotate(30deg);
+    animation: sans 19s linear;
+    -webkit-animation: sans 19s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+@keyframes sans{
+    0%	    { left:187px; }
+    89.1%	{ left:187px; }
+    90.6%	{ left:245px; }
+    93%		{ left:245px; }
+    94.7% 	{ left:187px; }
+    100%	{ left:187px; }}
+@-webkit-keyframes sans
+{
+    0%	    { left:187px; }
+    89.1%	{ left:187px; }
+    90.6%	{ left:245px; }
+    93%		{ left:245px; }
+    94.7% 	{ left:187px; }
+    100%	{ left:187px; }
 }
 /*----------Body----------*/
 body {
