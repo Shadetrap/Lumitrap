@@ -14,11 +14,11 @@
     <script src="js/beepbox_synth.js"></script>
     <script src="js/parallax.min.js"></script>
     <!-- <link rel="icon" href="lumicon.gif" type   ="image/gif"/> -->
-    <link rel="icon" href="img/lumicon.ico">
+    <link rel="icon" href="img/lumicon0.ico">
     <title>Lumitrap</title>
 </head>
 <body class="scroll-container" id="scrollTainer">
-    <div class="stageStarsFar tween-stageStarsFar"></div>
+    <div class="stageStarsFar tween-stageStarsFar" id="randomImage"></div>
         <!-- <div w3-include-html="html/test.html"></div> -->
         <div w3-include-html="content.html"></div>
     <!-- onload="onLoad()" -->
@@ -40,9 +40,9 @@
                     <tr>
                         <td><button onclick="pauseButton
                             ()" id="pButtonID"class="btn2" name="⏹"></button></td>
-                            <td>
+                            <td><span class="controls">Space bar = play/pause,   &nbsp;   forward/rewind = left/right</span>
                             <div class="links">
-                                <a href="https://twitter.com/Lumitrap"target="_blank"><img src="img/twitterbirb.svg" class="linkTwit newTab" title="My twitter"/></a>
+                                <a href="https://twitter.com/Lumitrap"target="_blank"><img src="img/twitterbirb.svg" class="linkTwit newTab" title="My twitter x)"/></a>
                                 <!-- <a href="https://www.youtube.com/watch?v=o9wxUGJ-HIc" target="_blank" class="newTab">hej2</a> -->
                             </div>
                         </td>
@@ -916,7 +916,19 @@
         beep.pause();
         isPlaying = false;
     });
-    //----Bonus features-------
+    (function() {
+})();
+    //---------------RANDOMIZED EVENTS-----------------------------------
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    var icoimages = ['img/lumicon.ico', 'img/lumicon.ico', 'img/lumicon2.ico',  'img/lumicon2.ico', 'img/lumicon3.ico', 'img/lumicon4.ico', 'img/lumicon5.ico', 'img/lumicon6.ico', 'img/lumicon7.ico', 'img/lumicon8.ico', 'img/lumicon9.ico', 'img/lumicon10.ico', 'img/lumicon11.ico']
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = icoimages[Math.floor(Math.random() * icoimages.length)];
+    document.getElementsByTagName('head')[0].appendChild(link);
+
+    var images = ['img/starsFar.png', 'img/starsFar.png', 'img/starsFar.png', 'img/starsFar.png', 'img/starsFar.png', 'img/starsFar.png', 'img/starsFarBlu.png', 'img/starsFarGre.png', 'img/starsFarYel.png'];
+    $('#randomImage').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+    //--------------BONUS FEATURES-------------------------------------
     var secretSound = new Audio('audio/secret.mp3');
     var secret1 = false;
     var secret2 = false;
