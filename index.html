@@ -755,7 +755,7 @@
                     </tr>
                     <tr>
                         <td><button onclick="playSound
-                            (this, 'zJMJFields2')" class="bt bJMJFields2"><img src="img/play.svg"/></button></td>
+                            (this, 'zJMJFields2')" class="btn bJMJFields2"><img src="img/play.svg"/></button></td>
                         <td>Jean Michel Jarre - Magnetic Fields 2
                             <div class="links">
                                 <a href="https://t.co/7KahKwSt5v" target="_blank" class="newTab"><img src="img/link.svg" class="linkBeep" title="BeepBox"/></a>
@@ -1810,9 +1810,8 @@
             randomImage.style.webkitAnimation = "overlayMoveUp 23s linear infinite";
         }
 
-
         if ($(button).hasClass('bVimNo')) {
-                $('body').css({'background-image': 'url("img/foxbeep.gif")',
+                $('body').css({'background-image': 'url("img/Foxbeep.gif")',
                 'background-attachment' : 'scroll'}),
                 $('#randomImage').css({'background-image': 'none'});
         }
@@ -1962,6 +1961,43 @@
                             'image-rendering': 'pixelated',
                             'background-position' : '95% 50%',})
             $('#randomImage').css({'background-image': 'none'});
+        }
+        if ($(button).hasClass('bCaveStory')) {
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/cavestory.gif")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                            'image-rendering': 'pixelated',
+                            //'background-position' : '95% 50%',
+                        })
+            $('#randomImage').css({'background-image': 'none'});
+        }
+        if ($(button).hasClass('bDiscord')) {
+            $('body').css({'background-color': '#26018e'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/livingtombstone.png")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'contain',
+                            'image-rendering': 'pixelated',
+                            'background-position' : 'center top',
+                        })
+            $('#randomImage').css({'background-image': 'none'});
+        }
+        if ($(button).hasClass('bPuzzlePlank')) {
+            $('body').css({'background-color': '#26018e'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/mariogalaxy.jpg")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                        })
+        }
+        if ($(button).hasClass('bRiddle')) {
+            $('body').css({'background-color': '#0aaa0a'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/riddle.gif")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                        })
         }
         
     }
