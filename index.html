@@ -1006,10 +1006,11 @@
     //---------------RANDOMIZED EVENTS-----------------------------------
     
     var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-    var icoimages = ['img/lumicon.ico', 'img/lumicon.ico', 'img/lumicon2.ico',  'img/lumicon2.ico', 'img/lumicon3.ico', 'img/lumicon4.ico', 'img/lumicon5.ico', 'img/lumicon6.ico', 'img/lumicon7.ico', 'img/lumicon8.ico', 'img/lumicon9.ico', 'img/lumicon10.ico', 'img/lumicon11.ico']
+    var icoimages = ['img/lumicon.ico', 'img/lumicon2.ico',  'img/lumicon2.ico', 'img/lumicon3.ico', 'img/lumicon4.ico', 'img/lumicon5.ico', 'img/lumicon5.ico', 'img/lumicon5.ico', 'img/lumicon6.ico', 'img/lumicon7.ico', 'img/lumicon8.ico', 'img/lumicon9.ico', 'img/lumicon9.ico', 'img/lumicon11.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico', 'img/lumicon12.ico']
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = icoimages[Math.floor(Math.random() * icoimages.length)];
+    link.href = 'img/lumicon12.ico';
+    //link.href = icoimages[Math.floor(Math.random() * icoimages.length)];
     document.getElementsByTagName('head')[0].appendChild(link);
     var stars = 'img/stars.png';
     var greenStars = 'img/starsGre.png';
@@ -1677,6 +1678,7 @@
         }
         if ($(button).hasClass('but12')) {
             $('body').css({'background-image': 'url("img/home.png")',
+                            'background-color': '#7c6038',
                             'background-repeat' : 'no-repeat',
                             'image-rendering': 'pixelated',
                             'background-size': 'cover'})
@@ -1684,6 +1686,7 @@
         }
         if ($(button).hasClass('but15')) {
             $('body').css({'background-image': 'url("img/sans.png")',
+                            'background-color': '#162b3d',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover'})
             $('#randomImage').css({'background-image': 'url('+ stars +')'});
@@ -1701,6 +1704,7 @@
         }
         if ($(button).hasClass('but18')) {
             $('body').css({'background-image': 'url("img/holiday.png")',
+                            'background-color': '#4e5673',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover',
                             'background-position' : '50% 80%'})
@@ -1951,11 +1955,6 @@
                             'background-size': 'cover',
                             'background-position' : '50% 40%',})
         }
-        if ($(button).hasClass('bJMJFields2')) {
-            $('body').css({'background-image': 'url("img/stock1.gif")',
-                            'background-repeat' : 'repeat',
-                            'background-size': 'auto'})
-        }
         if ($(button).hasClass('bAllStar')) {
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/shrek.jpg")',
@@ -2019,6 +2018,7 @@
         if ($(button).hasClass('bCaveStory')) {
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/cavestory.gif")',
+                            'background-color': '#030C15',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover',
                             'image-rendering': 'pixelated',
@@ -2054,7 +2054,6 @@
                         })
         }
         if ($(button).hasClass('bJMJFields2')) {
-            $('body').css({'background-color': '#0aaa0a'})
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/jmj2.gif")',
                             'background-repeat' : 'no-repeat',
@@ -2172,6 +2171,7 @@
             $('body').css({'background-image': 'url("img/necrosprites2.gif")',
                             'background-position' : '50% 50%',
                             'image-rendering': 'pixelated',
+                            '-moz-image-rendering': 'crisp-edges',
                             'background-repeat' : 'no-repeat',
                             'background-size': '100%',
                         })
@@ -2199,8 +2199,8 @@
         if ($(button).hasClass('bBrody')) {
             $('#randomImage').css({'background-image': 'url('+ stars +')'});
             var gifSource = $('#brodypeak').attr('src'); //get the source in the var
-                $('#brodypeak').attr('src', ""); //erase the source     
-                $('#brodypeak').attr('src', gifSource + "?" + new Date().getTime()); //add the date to the source of the image... :-) 
+                // $('#brodypeak').attr('src', ""); //erase the source     
+                // $('#brodypeak').attr('src', gifSource + "?" + new Date().getTime()); //add the date to the source of the image... :-) 
                 document.getElementById("brodypeak").style.display = "block";
                 randomImage.style.animation = "overlayMoveLeft 12s linear infinite";
                 randomImage.style.webkitAnimation = "overlayMoveLeft 12s linear infinite";

@@ -178,6 +178,7 @@ button:focus {
     position: sticky;
     height: 120px;
     bottom:0px;
+    pointer-events: none;
     /* z-index:-1; */
 }
 
