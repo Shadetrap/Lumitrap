@@ -12,6 +12,7 @@
     animation: undertitle 3.25s;
     -webkit-animation: undertitle 3.25s;
     animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
@@ -19,6 +20,7 @@
     animation: undertitle 3.25s;
     -webkit-animation: undertitle 3.25s;
     animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 }
@@ -48,6 +50,7 @@ h1 {
     animation: mymove 3.25s;
     -webkit-animation: mymove 3.25s;
     animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
 
@@ -206,12 +209,14 @@ body {
     animation: bodycolor 3s, bgslowfade 10ms;
     -webkit-animation: bodycolor 3s, bgslowfade 30s;
     animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
     overflow-x: hidden;
     position: relative;
     box-shadow: inset 0 0 15em rgb(0, 0, 0),inset 0 0 30em rgb(0, 0, 0);
     background-attachment: fixed;
     background-position: center;
     animation: empty 0s linear infinite;
+    -webkit-animation: empty 0s linear infinite;
 }
 @keyframes bodycolor {
     0% {background-color: #000000;}
@@ -278,7 +283,6 @@ table {
     text-decoration: none;
     animation: tablehop 2.5s;
     -webkit-animation: tablehop 2.5s;
-    animation-delay: 0.0s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     
@@ -314,6 +318,7 @@ td {
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards; 
     animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
 }
 @keyframes glowing {
     0% {background-color:rgb(11, 11, 11);}
@@ -631,6 +636,57 @@ span {
     0%	{ opacity:0; }
     50%		{ opacity:1; }
     100%		{ opacity:1; }}
+
+@keyframes vvvvvv{
+    0%	{ background-position: 50% 100%; }
+    50%		{ background-position: 50% 0%; }
+    100%		{ background-position: 50% 100%; }}
+@-webkit-keyframes vvvvvv{
+    0%	{ opacity:0; }
+    50%		{ opacity:1; }
+    100%		{ opacity:1; }}
+    @keyframes superStill{
+        0%	{}
+        100%{}}
+    @-webkit-keyframes superStill{
+        0%	{}
+        100%{}}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -2px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(-3px, 1px); }
+    70% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 2px); }
+    100% { transform: translate(1px, -2px); }
+}
+@-webkit-keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    10% { transform: translate(-1px, -2px); }
+    20% { transform: translate(-3px, 0px); }
+    30% { transform: translate(3px, 2px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 2px); }
+    60% { transform: translate(-3px, 1px); }
+    70% { transform: translate(3px, 1px); }
+    80% { transform: translate(-1px, -1px); }
+    90% { transform: translate(1px, 2px); }
+    100% { transform: translate(1px, -2px); }
+}
+
+@keyframes fallenDown{
+    0%	{background-position: 50% 0%;}
+    100%{background-position: 50% 80%;}}
+@-webkit-keyframes fallenDown{
+    0%	{background-position: 50% 0%;}
+    100%{background-position: 50% 80%;}}
+
+
 .bottomMargin{
     height:60px;
     width:60px;

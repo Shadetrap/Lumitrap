@@ -27,7 +27,7 @@
     <link rel="icon" href="img/lumicon0.ico">
     <title>Lumitrap</title>
 </head>
-<body class="scroll-container bodyClass" id="scrollTainer bodyHashtag">
+<body class="scroll-container bodyClass" id="scrollTainer bodyHashtag" onload="bodyOnLoad();">
     <img src="img/blank.gif" style="display:none" data-src="img/1472596047419.gif">
     <img src="img/blank.gif" style="display:none" data-src="img/A-Charlie-Brown-Christmas-funny-dance-scene-(HQ).gif">
     <img src="img/blank.gif" style="display:none" data-src="img/alphys.png">
@@ -979,6 +979,10 @@
     function() {
         $(this).removeClass("start");
     });
+    function bodyOnLoad(){
+        $(document).ready(function(){
+    $(this).scrollTop(0);});
+}
     
     var song = new beepbox.Song(song);
     var beep = new beepbox.Synth("5n41sbk4l03e00t7m0a7g04j8i2r1w311024321311411f000000200000000d210001101111111c000000040000000h000085060600000v310220400000400o22200b4z018M0ic040020g0p21YEA62B40t86a4goSa2Fcyxf0UxwYn8RaeM95Edg005goYgNBaNoN3u000ahglOlC41Hc7Gp0Rj46Gowlll5ipB261FaCcI0002pQ5S00002o526jM4P6kf3oM0000");
@@ -1040,7 +1044,6 @@
     var secretSpookHint = false;
     var lumipeaker = false;
     var sanspeaker = false;
-    var brodypeaker = false;
     var secret1Spook = false;
     function futureFunction() {
         console.log("Secret1 function successfully called!");
@@ -1397,6 +1400,8 @@
             'background-size' : 'auto',
             'image-rendering': 'auto', 
             'background-position' : '50% 50%',
+            'animation' : 'bgStill 0s',
+            '-webkit-animation' : 'bgStill 0s',
             
 })
         // $( button, name.target ).closest( "tr" ).toggleClass("poop");
@@ -1472,7 +1477,7 @@
                 console.log("sanspeaker is already true, so don't run the script again");
             }
         }
-        if ($(button).hasClass('showBrodyPeak')) {
+        if ($(button).hasClass('showBrodyPeakk')) {
             if (brodypeaker == false) {
                 console.log("brodypeak true");
 
@@ -1590,7 +1595,7 @@
             $('body').css({'background-image': 'url("img/menu.png")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover contain',
-                            'background-position' : '50% 30%'
+                            'background-position' : '50% 0%'
                             }),
                             
                             $('#randomImage').css({'background-image': 'none'});
@@ -1606,8 +1611,14 @@
         if ($(button).hasClass('but4')) {
             $('body').css({'background-image': 'url("img/fallen.png")',
                             'background-repeat' : 'no-repeat',
-                            'background-position' : '50% 80%',
-                            'background-size': 'cover'})
+                            'background-position' : '50% 0%',
+                            'background-size': 'cover',
+                            'animation' : 'fallenDown 20s ease-in-out forwards',
+                            '-webkit-animation' : 'fallenDown 20s ease-in-out forwards',
+                            'animation-delay' : '0.5s',
+                            '-webkit-animation-delay' : '0.5s',
+                            
+                            })
             $('#randomImage').css({'background-image': 'url('+ yellowStars +')'});
             randomImage.style.animation = "overlayMoveDown 23s linear infinite";
             randomImage.style.webkitAnimation = "overlayMoveDown 23s linear infinite";
@@ -1667,6 +1678,7 @@
         if ($(button).hasClass('but12')) {
             $('body').css({'background-image': 'url("img/home.png")',
                             'background-repeat' : 'no-repeat',
+                            'image-rendering': 'pixelated',
                             'background-size': 'cover'})
             $('#randomImage').css({'background-image': 'none'});
         }
@@ -1716,7 +1728,10 @@
             $('body').css({'background-image': 'url("img/shop.png")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover',
-                            'background-color': 'orange', })
+                            'background-color': 'orange', 
+                            'image-rendering': 'pixelated',
+                            })
+                            
                             $('#randomImage').css({'background-image': 'none'});
         }
         if ($(button).hasClass('but30')) {
@@ -1739,68 +1754,89 @@
             $('body').css({'background-color': '#181842'})
             $('body').css({'background-image': 'url("img/birdcarry.gif")',
                             'background-repeat' : 'no-repeat',
+                            'image-rendering': 'pixelated',
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('but37')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/napstahouse.png")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'contain',
                             'background-position' : '50% 50%',})
         }
         if ($(button).hasClass('but38')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/napstahouse2.png")',
                             'background-repeat' : 'no-repeat',
                             'background-position' : '50% 50%',
                             'background-size': 'contain',})
         }
         if ($(button).hasClass('but39')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/napstahouse3.png")',
                             'background-repeat' : 'no-repeat',
                             'background-position' : '50% 50%',
                             'background-size': 'contain'})
         }
         if ($(button).hasClass('but40')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/napstahouse4.png")',
                             'background-repeat' : 'no-repeat',
-                            'background-position' : '50% 50%',
+                            'image-rendering': 'pixelated',
+                            'background-position' : '50% 95%',
                             'background-size': 'contain'})
         }
         if ($(button).hasClass('but42')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/thundersnail.png")',
                             'background-repeat' : 'no-repeat',
+                            'image-rendering': 'pixelated',
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('but43')) {
-            $('body').css({'background-image': 'url("img/temmievillage.png")',
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/Temvillge.png")',
                             'background-repeat' : 'no-repeat',
+                            'image-rendering': 'pixelated',
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('but44')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/temshop.png")',
                             'background-repeat' : 'no-repeat',
+                            'image-rendering': 'pixelated',
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('but48')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/alphys.png")',
                             'background-repeat' : 'no-repeat',
                             'image-rendering': 'pixelated',
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('but49')) {
-            $('body').css({'background-image': 'url("img/temshop.png")',
+            $('body').css({'background-image': 'url("img/mettaton.gif")',
                             'background-repeat' : 'no-repeat',
-                            'background-size': 'cover'})
+                            'background-size': '30%',
+                            'background-position' : '100% 50%'})
         }
         if ($(button).hasClass('but67')) {
             // $('#randomImage').css({'background-image': 'url('+ greenStars +')'});
-            $('body').css({'background-image': 'url("img/temshop.png")',
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/Metrance.png")',
                             'background-repeat' : 'no-repeat',
-                            'background-size': 'cover'})
+                            'background-size': '100%',
+                            'background-position' : '50% 0%',
+                            'image-rendering': 'pixelated',
+                            })
         }
         if ($(button).hasClass('but68')) {
-            $('body').css({'background-image': 'url("img/temshop.png")',
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/ratings.gif")',
                             'background-repeat' : 'no-repeat',
-                            'background-size': 'cover'})
+                            'background-position' : '4% 4%',
+                            'background-size': '25%',
+                            'image-rendering': 'pixelated'})
         }
         if ($(button).hasClass('but76')) {
             $('body').css({'background-image': 'url("img/temshop.png")',
@@ -1812,7 +1848,11 @@
 
         if ($(button).hasClass('bVimNo')) {
                 $('body').css({'background-image': 'url("img/Foxbeep.gif")',
-                'background-attachment' : 'scroll'}),
+                'background-attachment' : 'scroll',
+                'background-repeat' : 'no-repeat',
+                'background-position' : '10% 10%',
+                }),
+                
                 $('#randomImage').css({'background-image': 'none'});
         }
         if ($(button).hasClass('bCastlevania')) {
@@ -1825,7 +1865,9 @@
                 $('#randomImage').css({'background-image': 'none'});
         }
         if ($(button).hasClass('bSubboss')) {
-                $('body').css({'background-color': '#FADC6C'})
+                $('body').css({'background-image': 'url("img/subboss.png")',
+                'background-size': 'cover',
+                'background-position' : '50% 100%',})
                 $('#randomImage').css({'background-image': 'none'});
         }
         if ($(button).hasClass('bSnapshot')) {
@@ -1839,11 +1881,13 @@
                 $('body').css({'background-image': 'url("img/cantina.gif")'})
         }
         if ($(button).hasClass('bPangolin')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/pangolin.gif")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('bCortex')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/cortex.gif")',
                             'background-repeat' : 'no-repeat',
                             'image-rendering': 'pixelated', 
@@ -1864,6 +1908,7 @@
                             $('#randomImage').css({'background-image': 'none'});
         }
         if ($(button).hasClass('bHexagon')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-color': '#624520'})
             $('body').css({'background-image': 'url("img/hexagon.gif")',
                             'background-repeat' : 'no-repeat',
@@ -1874,26 +1919,33 @@
             $('body').css({'background-image': 'url("img/isaac.png")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover'})
+            $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            randomImage.style.animation = "overlayMoveUp 23s linear infinite";
+            randomImage.style.webkitAnimation = "overlayMoveUp 23s linear infinite";
         }
         if ($(button).hasClass('bDubmood')) {
+            $('#randomImage').css({'background-image': 'url('+ yellowStars +')'});
             $('body').css({'background-image': 'url("img/ascii.gif")',
                             'background-repeat' : 'repeat',
                             'image-rendering': 'pixelated', 
                             'background-size': 'auto'})
         }
         if ($(button).hasClass('bMiasSong')) {
+            $('#randomImage').css({'background-image': 'url('+ yellowStars +')'});
             $('body').css({'background-image': 'url("img/ascii.gif")',
                             'background-repeat' : 'repeat',
                             'image-rendering': 'pixelated', 
                             'background-size': 'auto'})
         }
         if ($(button).hasClass('bCrashRockslide')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/crash.png")',
                             'background-repeat' : 'no-repeat',
                             'background-position' : '50% 100%',
                             'background-size': 'contain'})
         }
         if ($(button).hasClass('bLinusAndLucy')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/lucy.gif")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover',
@@ -1905,6 +1957,7 @@
                             'background-size': 'auto'})
         }
         if ($(button).hasClass('bAllStar')) {
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/shrek.jpg")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover'})
@@ -1933,9 +1986,10 @@
                             'background-repeat' : 'no-repeat',
                             'image-rendering': 'pixelated',
                             'background-size': 'cover'})
-            $('#randomImage').css({'background-image': 'url('+ stars +')'});
-            randomImage.style.animation = "overlayMoveDown 23s linear infinite";
-            randomImage.style.webkitAnimation = "overlayMoveDown 23s linear infinite";
+            $('#randomImage').css({'background-image': 'none'});
+            // $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            // randomImage.style.animation = "overlayMoveDown 23s linear infinite";
+            // randomImage.style.webkitAnimation = "overlayMoveDown 23s linear infinite";
         }
         if ($(button).hasClass('bNecroLoby')) {
             $('body').css({'background-image': 'url("img/necro3.gif")',
@@ -1999,9 +2053,173 @@
                             'background-size': 'cover',
                         })
         }
+        if ($(button).hasClass('bJMJFields2')) {
+            $('body').css({'background-color': '#0aaa0a'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/jmj2.gif")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                        })
+        }
+        if ($(button).hasClass('bvvvvvv')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/vvvvvv.png")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                            'image-rendering': 'pixelated',
+                            'animation' : 'vvvvvv 1300s infinite linear',
+                            '-webkit-animation' : 'vvvvvv 1300s infinite linear',
+                        })
+        }
+        if ($(button).hasClass('bRick')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/rick.gif")',
+                            'background-repeat' : 'repeat',
+                        })
+        }
+        if ($(button).hasClass('bHappyHogwarts')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/hogwarts.jpg")',
+                            'background-size': 'cover',
+                            'background-position' : '50% 100%',
+                        })
+        }
+        if ($(button).hasClass('bAVGNTheme')) {
+            $('body').css({'background-color': '#210046'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/AVGN.gif")',
+                            'background-position' : '8% 50%',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                        })
+        }
+        if ($(button).hasClass('bUT70')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'none',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': '240px 240px',
+                            'image-rendering': 'pixelated',
+                            'background-position' : '92% 50%',
+                            'animation' : 'shake 0.5s infinite',
+                            '-webkit-animation' : 'shake 0.5s infinite',
+                            'animation-delay' : '2s',
+                            '-webkit-animation-delay' : '2.6s',
+                        })
+        }
+        if ($(button).hasClass('bHPAuntMarge')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/whompingWillow.png")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                            'background-position' : '50% 100%',
+                        })
+        }
+        if ($(button).hasClass('bLoZRidingNight')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/zelda.jpg")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                        })
+        }
+        if ($(button).hasClass('bElectroman')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/waterflame.jpg")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                            'background-position' : '50% 0%',
+                        })
+        }
+        if ($(button).hasClass('bIdle')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/idleTree.gif")',
+                            'background-position' : '92% 50%',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': '248px 232px',
+                        })
+        }
+        if ($(button).hasClass('bShovel')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/shovel.gif")',
+                            'background-position' : '8% 50%',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                        })
+        }
+        if ($(button).hasClass('bOneyPlays')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'none'});
+            $('body').css({'background-image': 'url("img/oneyplays.jpg")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                            'background-position' : '0% 0%',
+                        })
+        }
         
+        if ($(button).hasClass('bCrypt32')) {
+        $('#randomImage').css({'background-image': 'url('+ yellowStars +')'});
+        randomImage.style.animation = "overlayMoveLeft 8s linear infinite";
+        randomImage.style.webkitAnimation = "overlayMoveLeft 8s linear infinite";
+            $('body').css({'background-image': 'url("img/necrosprites2.gif")',
+                            'background-position' : '50% 50%',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': '100%',
+                        })
+        }
+    if ($(button).hasClass('bNecro52')) {
+        $('#randomImage').css({'background-image': 'url('+ blueStars +')'});
+        randomImage.style.animation = "overlayMoveLeft 8s linear infinite";
+        randomImage.style.webkitAnimation = "overlayMoveLeft 8s linear infinite";
+            $('body').css({'background-image': 'url("img/necrosprites.gif")',
+                            'background-position' : '50% 50%',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': '100%',
+                        })
+        }
+        if ($(button).hasClass('but76')) {
+            $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            $('body').css({'background-image': 'url("img/asgore.gif")',
+                            'background-position' : '100% 15%',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': '660px auto',
+                        })
+        }
+        if ($(button).hasClass('bBrody')) {
+            $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            var gifSource = $('#brodypeak').attr('src'); //get the source in the var
+                $('#brodypeak').attr('src', ""); //erase the source     
+                $('#brodypeak').attr('src', gifSource + "?" + new Date().getTime()); //add the date to the source of the image... :-) 
+                document.getElementById("brodypeak").style.display = "block";
+                randomImage.style.animation = "overlayMoveLeft 12s linear infinite";
+                randomImage.style.webkitAnimation = "overlayMoveLeft 12s linear infinite";
+
+                $('body').css({'background-image': 'url("img/space.jpg")',})
+
+        }
+        if ($(button).hasClass('b3Dgalax')) {
+            $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            $('body').css({'background-image': 'url("img/galax.png")',
+                            'background-repeat' : 'no-repeat',
+                            'image-rendering': 'pixelated',
+                            'background-size': 'cover',
+                            'background-position' : '100% 0%',
+                        })
+            randomImage.style.animation = "overlayMoveDown 12s linear infinite";
+            randomImage.style.webkitAnimation = "overlayMoveDown 12s linear infinite";
+        }
     }
-    
 
     function pauseButton() {
         if (isPlaying == true){
