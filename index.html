@@ -1928,7 +1928,7 @@
             randomImage.style.webkitAnimation = "overlayMoveUp 23s linear infinite";
         }
         if ($(button).hasClass('bDubmood')) {
-            $('#randomImage').css({'background-image': 'url('+ yellowStars +')'});
+            $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/ascii.gif")',
                             'background-repeat' : 'repeat',
                             'image-rendering': 'pixelated', 
@@ -1939,7 +1939,11 @@
             $('body').css({'background-image': 'url("img/ascii.gif")',
                             'background-repeat' : 'repeat',
                             'image-rendering': 'pixelated', 
-                            'background-size': 'auto'})
+                            'background' : 'linear-gradient(-90deg, #EE7752, #E73C7E, #23A6D5, #E73C7E, #EE7752)',
+                            'background-size': '300% 300%',
+                            'animation' : 'Gradient 8s linear infinite',
+                            '-webkit-animation': 'Gradient 8s linear infinite',
+                            '-moz-animation': 'Gradient 8s linear infinite',})
         }
         if ($(button).hasClass('bCrashRockslide')) {
             $('#randomImage').css({'background-image': 'none'});
@@ -2072,15 +2076,26 @@
                         })
         }
         if ($(button).hasClass('bRick')) {
-            $('body').css({'background-color': '#000'})
+            $('body').css({'background-color': '#eee'})
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/rick.gif")',
                             'background-repeat' : 'repeat',
                         })
         }
+        if ($(button).hasClass('bRicklovania')) {
+            $('body').css({'background-color': '#000'})
+            $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            $('body').css({'background-image': 'none',
+                            'background-repeat' : 'repeat',
+                            'animation' : 'ricklovania 38.8s forwards linear',
+                            '-webkit-animation' : 'ricklovania 38.8s forwards linear',
+                        })
+            randomImage.style.animation = "starsans 19.4s forwards linear";
+            randomImage.style.webkitAnimation = "starsans 19.4s forwards linear";
+        }
         if ($(button).hasClass('bHappyHogwarts')) {
             $('body').css({'background-color': '#000'})
-            $('#randomImage').css({'background-image': 'none'});
+            $('#randomImage').css({'background-image': 'url("none")'});
             $('body').css({'background-image': 'url("img/hogwarts.jpg")',
                             'background-size': 'cover',
                             'background-position' : '50% 100%',
@@ -2218,6 +2233,32 @@
                         })
             randomImage.style.animation = "overlayMoveDown 12s linear infinite";
             randomImage.style.webkitAnimation = "overlayMoveDown 12s linear infinite";
+        }
+        if ($(button).hasClass('bP2CauseOfScience')) {
+            $('#randomImage').css({'background-image': 'url('+ stars +')'});
+            $('body').css({'background-image': 'url("img/portal 2.png")',
+                            'background-repeat' : 'no-repeat',
+                            'background-size': 'cover',
+                            'background-position' : '50% 40%',
+                        })
+            randomImage.style.animation = "overlayMoveDown 12s linear infinite";
+            randomImage.style.webkitAnimation = "overlayMoveDown 12s linear infinite";
+        }
+        if ($(button).hasClass('bAmpPlains')) {
+            $('body').css({'background-image': 'url("img/MysteryDungeon.png")',
+                            'image-rendering': 'pixelated',
+                            'background-repeat' : 'no-repeat',
+                            'background-position' : '50% 0%',
+                            'background-size': 'cover',
+                            'animation' : 'ampPlains 31s ease-in-out forwards',
+                            '-webkit-animation' : 'ampPlains 31s ease-in-out forwards',
+                            'animation-delay' : '0.5s',
+                            '-webkit-animation-delay' : '0.5s',
+                            
+                            })
+            $('#randomImage').css({'background-image': 'none'});
+            randomImage.style.animation = "overlayMoveDown 23s linear infinite";
+            randomImage.style.webkitAnimation = "overlayMoveDown 23s linear infinite";
         }
     }
 
