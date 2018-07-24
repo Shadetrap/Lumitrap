@@ -8,5 +8,39 @@
          url('futuran-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face {
+    font-family: 'agitpropmedium';
+    src: url('agitpm__-webfont.woff2') format('woff2'),
+         url('agitpm__-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Eartmb2';
+    src: url('Eartmb2-webfont.woff') format('woff2'),
+         url('Eartmb2-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'hexagonh';
+    src: url('bumpitup.woff') format('woff2'),
+         url('bumpitup.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'odd_fontregular';
+    src: url('oddfont-webfont.woff2') format('woff2'),
+         url('oddfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'monster_friend_backregular';
+    src: url('monsterfriendback-webfont.woff2') format('woff2'),
+         url('monsterfriendback-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
