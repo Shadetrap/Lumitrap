@@ -3,12 +3,14 @@ Place content here to target all Internet Explorer users.
 <![endif]-->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="en">
+    
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="js/jBox/jBox.css">
     <link rel="stylesheet" href="js/jBox/themes/TooltipDark.css"
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="js/jBox/themes/NoticeFancy.css"
     <link rel="stylesheet" href="js/jBox/themes/TooltipBorder.css"
     <link rel="stylesheet" href="js/jBox/themes/TooltipBorderThick.css"
@@ -1309,6 +1311,27 @@ Place content here to target all Internet Explorer users.
 
 <img id="brodypeak" src="img/brody.gif" alt="gif here"> 
 <script>
+
+    function load(url) {
+    // display loading image here...
+    console.log("LOADING DATA");
+    //document.getElementById('loadingImg').visible = true;
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                document.getElementById('content').innerHTML = req.responseText;
+                document.getElementById('loadingImg').visible = false;
+                console.log("LOADING DATA FINISHED");
+            }
+        }
+    };
+    request.send(vars);
+}
 //window.onload = function() {
     // redirect to lumitrap.tk instead of lumitrap.tk/17
 //    window.location.href = "http://www.lumitrap.tk/";
@@ -1347,14 +1370,42 @@ Place content here to target all Internet Explorer users.
 var derbal = new jBox('Notice', {
     //theme:"ModalBorder",
     attach: '.myNotice',
-    content: 'This is the content that I demand',
+        content: 'Oh come on',
+    color: 'black',
+    fixed:true,
     attributes: {
       x: 'left',
-      y: 'top'
+      y: 'bottom'
     },
-    stack:false,
-    animation:{open:"tada",close:"zoomIn"},
+    
+    // The position attribute defines the distance to the window edges
+    position: {
+      x: 50,
+      y: 5
+    },
+    
+    // We disable responsive positions or this demo
+    responsivePositions: null
+
 });
+
+ var mobal = new jBox('Modal', {
+     //theme:"ModalBorder",
+     attach: '.MyTooltip',
+     content: $('#grabMe'),
+     title: 'bla',
+     width: 400,
+     getTitle: 'data-jbox-title',
+     getContent: 'data-jbox-content',
+     blockScroll: false,
+     adjustDistance: { left:200, right: 220}, zIndex: 4e3,
+     responsiveMinWidth: 0,
+     responsiveMinHeight: 0,
+ });
+
+
+
+
 
 var myBla = new jBox('Tooltip', {
     adjustDistance: { top: 200, right: 5, bottom: 200, left: 5 }, zIndex: 4e3,

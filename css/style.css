@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
 * {
-    font-family: 'arial', arial;
-    font-family: 'futura_lt_btlight';
+    font-family: 'VT323', monospace;
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight:900;
+    text-shadow:#6b6b6b 0 -1px 15px;
+    font:400 20px VT323, monospace;
     /* color: white; */
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 
 }
 a {text-decoration:none}

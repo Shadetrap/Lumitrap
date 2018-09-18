@@ -18,6 +18,7 @@
 
 .jBox-container {
   /* background: #fff; */
+  border:2px solid grey;
 }
 
 .jBox-content {
