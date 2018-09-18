@@ -12,10 +12,12 @@
   position: relative;
   word-break: break-word;
   box-sizing: border-box;
+  color: white;
+  background-color:black;
 }
 
 .jBox-container {
-  background: #fff;
+  /* background: #fff; */
 }
 
 .jBox-content {
@@ -78,6 +80,7 @@
   height: 20px;
   position: absolute;
   background: #fff;
+  background: red;
   transform: rotate(45deg);
 }
 
@@ -118,8 +121,11 @@
 .jBox-Modal .jBox-title {
   border-radius: 4px 4px 0 0;
   padding: 15px 20px;
-  background: #fafafa;
+  background: #fafafaf1;
   border-bottom: 1px solid #eee;
+  /* custom color here */
+  background: rgb(14, 14, 14);
+  border-bottom:rgb(17, 17, 17)
 }
 
 .jBox-Modal .jBox-footer {
@@ -254,7 +260,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .82);
+  /* background-color: rgba(0, 0, 0, .82); */
+  background-color: rgba(0, 0, 0, .4);
 }
 
 /* Footer */

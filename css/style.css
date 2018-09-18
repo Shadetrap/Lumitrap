@@ -59,7 +59,9 @@ body:before {
 
 h1 {
     /* height:688px; */
+    cursor: default;
     font-size: 60px;
+    font-family: agitpropmedium;
     margin: 0 auto;
     text-align: center;
     color: #64d962;
@@ -74,7 +76,6 @@ h1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    cursor: pointer;
 }
 
 h1 a {
@@ -153,7 +154,7 @@ h1 a {
 
 }
 .honk{
-    font-size: 2px;
+    font-size: 60px;
     margin: 0 auto;
     text-align: center;
     color: #64d962;
@@ -263,21 +264,22 @@ h1 a {
     100%{opacity:1}
 }
 @keyframes blackIn{
-    0%{background-color:#00000000; transition: opacity 0; opacity: 1;}
+    0%{background-color:#00000000; opacity: 1;}
     100%{background-color:#000000}
 }
 @-webkit-keyframes blackIn{
-    0%{background-color:#00000000; transition: opacity 0; opacity: 1}
+    0%{background-color:#00000000; opacity: 1}
     100%{background-color:#000000}
 }
 @keyframes blackOut{
-    0%{background-color:#000000; transition: opacity 0; opacity: 1}
+    0%{background-color:#000000; opacity: 1}
     100%{background-color:#00000000}
 }
 @-webkit-keyframes blackOut{
-    0%{background-color:#000000; transition: opacity 0; opacity: 1}
+    0%{background-color:#000000; opacity: 1}
     100%{background-color:#00000000}
 }
+/* transition: opacity 0;  */
 
 header {
     margin: 0 auto;
@@ -389,7 +391,7 @@ body {
     -webkit-animation: bodycolor 3s, bgslowfade 30s;
     animation-iteration-count: 1;
     -webkit-animation-iteration-count: 1;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     position: relative;
     box-shadow: inset 0 0 15em rgb(0, 0, 0),inset 0 0 30em rgb(0, 0, 0);
     background-attachment: fixed;
@@ -474,11 +476,17 @@ table {
 }
 table, td, tr{
     /* border: 1px solid white; */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
 }
 
 table:nth-child(1){
 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 @keyframes tablehop {
@@ -609,17 +617,26 @@ a:hover {
     margin-bottom: 0px;
 }
 .linkyou{
-right:0px;
+right:17px;
 }
 .transparent{
     opacity:0.2;
     cursor: default;
 }
 .linkbeep{
-    right:23px;
+    right:34px;
 }
+.linkInfo{
+    right:0px;
+    background-color:none;
+}
+.linkBugFix{
+    z-index: 10;
+    padding-left:20px;
+}
+
 .linkbeep2{
-    right:23px;
+    right:34px;
 }
 .linkTwit{
     right:0px;
@@ -711,7 +728,7 @@ div.newData {
     table tr td z{
         white-space:nowrap;
         text-overflow: clip;
-        overflow: hidden;
+        /* overflow: hidden; */
         width:auto;
     }
 
@@ -732,14 +749,14 @@ div.newData {
         width: auto;
         text-overflow: ellipsis;
         position:relative; 
-    overflow:hidden;
+    /* overflow:hidden; */
     overflow: visible; 
     }
     table tr{
         width: auto;
         text-overflow: ellipsis;
         position:relative; 
-    overflow:hidden;
+    /* overflow:hidden; */
     overflow: visible; 
     }
     .overlay{width:auto}
@@ -1053,3 +1070,7 @@ x:-moz-any-link  { color: red }
 }
 
 /* The pop up. */
+.fit{
+    width: 200px; height: auto;
+}
+/* a{font-size: 0;} */
