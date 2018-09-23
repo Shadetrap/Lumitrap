@@ -30,7 +30,6 @@ Place content here to target all Internet Explorer users.
      <script src="js/scrollIntoView.min.js"></script>
     <script src="js/jquery.jcarousel-core.min.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="/path/to/js.cookie.js"></script>
     
 
     <link rel="icon" href="img/2.ico" type="image/gif">
@@ -1587,7 +1586,6 @@ var pawp = $('poop'); //returns a HTML DOM Object
 
 var today = new Date();
 
-//https://github.com/tutorialzine/web-notifications-demo
 //Small text https://www.spiderarmy.com/tiny-text   
 //Excited for halloween? Halloween's my kind of jam! I call it walloween. Partly refferencing Waluigi. And because it sounds funny. Walloween! Mwahahah. Wallo-wallo-ween! Wallo-wallo-wallo-wallo [MAKES YOU SPOOKED. Avatar changes creepily, punch sound stop, if music plays, it gets super weird.]
 //Man I already miss halloween. The next 11 months are going to be SO BORING. Have you noticed stores are already decorating for christmas? Lunatics. It's like getting... Xmas shoved down our throats.
@@ -1621,44 +1619,52 @@ var today = new Date();
 //Stop. Now.
 //I bet this gets pretty boring after a while. I could write a whole harry potter book. 
 //Don't want to keep you here all day, even if I wanted.
-function notifyMe() {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    console.log("This browser does not support desktop notification");
-  }
 
-  // Let's check if the user is okay to get some notification
+
+
+
+
+
+
+
+// function notifyMe() {
+//   // Let's check if the browser supports notifications
+//   if (!("Notification" in window)) {
+//     console.log("This browser does not support desktop notification");
+//   }
+
+//   // Let's check if the user is okay to get some notification
 //   else if (Notification.permission === "granted") {
 //     // If it's okay let's create a notification
 //     var notification = new Notification("Hi there!");
 //     console.log("You said yes. Creating a notification!");
 //   }
 
-  // Otherwise, we need to ask the user for permission
-  // Note, Chrome does not implement the permission static property
-  // So we have to check for NOT 'denied' instead of 'default'
-  else if (Notification.permission !== 'denied') {
-    Notification.requestPermission(function (permission) {
-        console.log("Aw, permission denied...");
+//   // Otherwise, we need to ask the user for permission
+//   // Note, Chrome does not implement the permission static property
+//   // So we have to check for NOT 'denied' instead of 'default'
+//   else if (Notification.permission !== 'denied') {
+//     Notification.requestPermission(function (permission) {
+//         console.log("Aw, permission denied...");
 
-      // Whatever the user answers, we make sure we store the information
-      if(!('permission' in Notification)) {
-        Notification.permission = permission;
-        console.log("Storing the information...");
-      }
+//       // Whatever the user answers, we make sure we store the information
+//       if(!('permission' in Notification)) {
+//         Notification.permission = permission;
+//         console.log("Storing the information...");
+//       }
 
-      // If the user is okay, let's create a notification
-    //   if (permission === "granted") {
-    //     console.log("Like I said, he said yes, so I'm creating a notification now!");
-    //     var notification = new Notification("Hi there!");
-    //   }
-    });
-  }
+//       // If the user is okay, let's create a notification
+//       if (permission === "granted") {
+//         console.log("Like I said, he said yes, so I'm creating a notification now!");
+//         var notification = new Notification("Hi there!");
+//       }
+//     });
+//   }
 
-  // At last, if the user already denied any notification, and you 
-  // want to be respectful there is no need to bother him any more.
-}
-notifyMe();
+//   // At last, if the user already denied any notification, and you 
+//   // want to be respectful there is no need to bother him any more.
+// }
+// notifyMe();
 
         var clicks = 0;
         var buttonText = [
@@ -1841,17 +1847,18 @@ notifyMe();
             document.title = buttonText[clicks];
             myprettyface();
             if(clicks==1){  cleartime(); setTimeout(function () {link.href = 'img/ico/38.ico'}, 250);randomizeIc()
-            var notification = new Notification("Hi there!");
+                 Notification.requestPermission().then(function (result) {
+                     console.log(result);
+                 });
              }//confused
             if(clicks==2){  cleartime(); setTimeout(function () {link.href = 'img/ico/37.ico'}, 250);randomizeIc()
+                var img = 'img/ico/59.ico';
+                var body = "This is a body";
+                 var text = 'HEY! Your task "' + title + '" is now overdue.';
+                 
+                 var notificationh = new Notification('To do list', { body: text, icon: img });
              }//look left
-            if(clicks==3){  cleartime(); setTimeout(function () {link.href = 'img/ico/36.ico'}, 250);randomizeIc()
-            const title = 'Simple Title';
-    const options = {
-      body: 'Simple piece of body text.\nSecond line of body text :)'
-    };
-    registration.showNotification(title, options);
-        }//look right
+            if(clicks==3){  cleartime(); setTimeout(function () {link.href = 'img/ico/36.ico'}, 250);randomizeIc()}//look right
             if(clicks==4){  cleartime(); setTimeout(function () {link.href = 'img/ico/35.ico'}, 250);}//tilt down
             if(clicks==5){  cleartime(); setTimeout(function () {link.href = 'img/ico/39.ico'}, 250);}//look down
             if(clicks==6){  cleartime(); setTimeout(function () {link.href = 'img/ico/45.ico'}, 250);}//noyed look down
@@ -2641,11 +2648,7 @@ notifyMe();
         // }
         if ($(button).hasClass('but3')) {
             $('body').css({'background-image': flowey,
-                            'image-rendering' : '-moz-crisp-edges',
-                            'image-rendering' : '-o-crisp-edges',
-                            'image-rendering' : '-webkit-optimize-contrast',
-                            'image-rendering': 'crisp-edges',
-                            '-ms-interpolation-mode' : 'nearest-neighbor',
+                            'image-rendering': 'pixelated',
                             'background-repeat' : 'no-repeat',
                             'background-size': '90px auto',
                             'background-position' : 'center top 108px',
