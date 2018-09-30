@@ -4,8 +4,13 @@
 .jBox-wrapper {
   text-align: left;
   box-sizing: border-box;
+  color: blue;
+  fill: currentColor;
 }
-
+cvg{
+  color: blue;
+  fill: currentColor;
+}
 .jBox-title,
 .jBox-content,
 .jBox-container {

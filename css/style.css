@@ -18,7 +18,9 @@
 
 }
 a {text-decoration:none}
-
+/* .playlist{transform: scale(1.5);
+    transform-origin: center center;
+  margin: -50px -50px -50px -50px;} */
 body:before {
     content: "";
     display: block;
@@ -63,15 +65,17 @@ body:before {
         height: auto;
     }
     100% {
-        font-size: 18px;
+        font-size: 20px;
         height: auto;
+
     }
 }
 
 h1 {
+    font-size:60px;
     /* height:688px; */
+    transition: color 1s ease;
     cursor: default;
-    font-size: 60px;
     font-family: agitpropmedium;
     margin: 0 auto;
     text-align: center;
@@ -87,6 +91,9 @@ h1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.h101{
+    font-size:130px;
 }
 
 h1 a {
@@ -120,7 +127,7 @@ h1 a {
 	100% {background-position: 50% 500%}
 }
 @keyframes oh-my {
-	0% {background-position: 50% -80%}
+	0% {background-position: 50% -40%}
 	100% {background-position: 50% 0%}
 }
 @-webkit-keyframes oh-my {
@@ -162,10 +169,10 @@ h1 a {
     animation-timing-function: ease-in;
     -webkit-animation-timing-function: ease-in;
     animation-fill-mode: forwards;
+    font-size: 60px;
 
 }
 .honk{
-    font-size: 60px;
     margin: 0 auto;
     text-align: center;
     color: #64d962;
@@ -187,19 +194,19 @@ h1 a {
 }
 @keyframes honk{
     0% {
-        font-size: 60px;
+        transform: scale(1);
         color:#ffffff;
         text-shadow: 0px 0px 10px #ffffffff;
 
     }
     50%{
-        font-size: 44px;
+        transform: scale(0.6);
         color:#B2ECB1;
         text-shadow: 0px 0px 10px #B2ECB1a9;
 
     }
     100% {
-        font-size: 60px;
+        transform: scale(1);
         color:#64d962;
         text-shadow: 0px 0px 10px #64d96266;
 
@@ -207,21 +214,22 @@ h1 a {
 }
 @-webkit-keyframes honk{
     0% {
-        font-size: 60px;
+        transform: scale(1);
         color:#ffffff;
         text-shadow: 0px 0px 10px #ffffffff;
 
     }
     50%{
-        font-size: 44px;
+        transform: scale(0.6);
         color:#B2ECB1;
         text-shadow: 0px 0px 10px #b2ecb1a9;
 
     }
     100% {
-        font-size: 60px;
+        transform: scale(1);
         color:#64d962;
         text-shadow: 0px 0px 10px #64d96266;
+    background-color:#00000000
 
     }
 }
@@ -290,6 +298,14 @@ h1 a {
     0%{background-color:#000000; opacity: 1}
     100%{background-color:#00000000}
 }
+@keyframes dullBlackOut{
+    0%{background-color:#000000; opacity: 1}
+    100%{background-color:#00000081}
+}
+@-webkit-keyframes dullBlackOut{
+    0%{background-color:#000000; opacity: 1}
+    100%{background-color:#00000081}
+}
 /* transition: opacity 0;  */
 
 header {
@@ -326,7 +342,22 @@ button:focus {
     height: 120px;
     left: 100px;
     top: 0px;
-    z-index:2;}
+    z-index:2;
+}
+#songPop {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: -120px;
+    height: 95px;
+    left: 0px;
+    top: 0px;
+    z-index:0;
+    image-rendering: pixelated;
+
+}
 
 #lumipeak {
     display: none;
@@ -337,20 +368,22 @@ button:focus {
     position: relative;
     margin-top: -120px;
     height: 120px;
-    left: 301px;
+    left: 295px;
     top: -101px;
-    z-index:2;
+    z-index:0;
 }
 #sanspeak {
     display: none;
     opacity:1;
     margin-left: auto;
     margin-right: auto;
+    margin-left: 83px;
+    margin-right: 0px;
     position: relative;
     margin-top: -120px;
-    height: 120px;
+    height: 200px;
     left: 433px;
-    top: -668px;
+    top: -722px;
     z-index:-1;
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg);
@@ -376,10 +409,10 @@ button:focus {
 @keyframes sans{
     0%	    { left:170px; }
     88.5%	{ left:170px; }
-    90.2%	{ left:255px; }
-    92.8%	{ left:255px; -webkit-transform: rotate(10deg);transform: rotate(10deg);}
-    94.4% 	{ left:165px; -webkit-transform: rotate(360deg);transform: rotate(360deg); }
-    100%	{ left:165px; }}
+    90.2%	{ left:335px; }
+    92.8%	{ left:335px; -webkit-transform: rotate(10deg);transform: rotate(10deg);}
+    94.4% 	{ left:170px; -webkit-transform: rotate(360deg);transform: rotate(360deg); }
+    100%	{ left:170px; }}
 @-webkit-keyframes sans
 {
     0%	    { left:170px; }
@@ -394,6 +427,7 @@ button:focus {
     background-color: #552254;
 }
 body {
+    overflow-x: hidden;
     background-color: #1d212b;
     margin: 0 auto;
     width: auto;
@@ -437,9 +471,12 @@ body {
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
     position:relative;
+    /* filter: grayscale(100%); */
 }
 .bgShadow{
     padding-bottom: 20px;
+    /*This is some top padding for the sake of the 3D functionality */
+    padding-top: 1px;
 }
 
 .playlist tr:hover a {
@@ -463,7 +500,7 @@ table {
     /* -webkit-box-shadow: 0 3px 40px #66d964;
     box-shadow: 0 0.3px 40px #66d964; */
     width:473px;
-    border-collapse: collapse;
+
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
@@ -483,8 +520,10 @@ table {
     -webkit-animation: tablehop 2.5s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
+    transition: transform 0.6s ease-out;
 
 }
+
 table, td, tr{
     /* border: 1px solid white; */
   -webkit-touch-callout: none; /* iOS Safari */
@@ -572,7 +611,7 @@ table tr:last-child {
     width: 100px;
 }
 
-tr:nth-child(84) {
+tr:nth-child(85) {
     margin-bottom: 50px;
     padding-bottom: 50px;
 }
@@ -587,7 +626,6 @@ table tr:hover div {
 }
 
 table tr:last-child{
-    border: coral;
     border-radius: 15px 50px 30px 5px;
     -webkit-border-radius: 15px 50px 30px 5px;
     -moz-border-radius: 15px 50px 30px 5px;
@@ -649,8 +687,12 @@ right:17px;
 .linkbeep2{
     right:34px;
 }
-.linkTwit{
+.linkCred{
     right:0px;
+    opacity:1;
+}
+.linkTwit{
+    right:16px;
     opacity:1;
 }
 .links {
@@ -675,7 +717,7 @@ button img {
 }
 
 .links a img {
-    height: 15px;
+    height: 16px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -767,8 +809,8 @@ div.newData {
         width: auto;
         text-overflow: ellipsis;
         position:relative; 
-    /* overflow:hidden; */
-    overflow: visible; 
+        /* overflow:hidden; */
+        overflow: visible; 
     }
     .overlay{width:auto}
     .links{
@@ -789,7 +831,6 @@ div.newData {
     .controls{
         display:none;
     }
-
 }
 
 /*@media all and (max-width: 513px) {
@@ -883,7 +924,7 @@ span {
     to		{ transform: translateY(0px); }}
 /*------------------------------*/
 @-webkit-keyframes still{
-    from	{ -webkit-transform: translateY(0px); }
+    from	{ -webkit-transform: translateY(0px) translateX(0px); }
     to		{ -webkit-transform: translateY(0px); }}
 @keyframes still{
     from	{ transform: translateY(0px); }
@@ -959,10 +1000,10 @@ span {
     0%	{ background-position: 0% 50%; }
     100%		{ background-position: 100% 50%; }}
 @keyframes asgore{
-    0%	{ background-position: 100% 15% }
+    0%	{ background-position: 118% 15% }
     100%		{ background-position: 200% 15%; }}
 @-webkit-keyframes asgore{
-    0%	{ background-position: 100% 15% }
+    0%	{ background-position: 118% 15% }
     100%		{ background-position: 200% 15%; }}
 @keyframes rickroll{
     0%	{ transform: rotate(0deg); }
@@ -983,6 +1024,55 @@ span {
 @-webkit-keyframes twinsanity{
     0%	{ background-position: 50% 70%}
     100%		{ background-position: 50% 100%}}
+@keyframes knowledge{
+    0%	{ background-position: 50% 0%}
+    100%		{ background-position: 50% 69%}}
+@-webkit-keyframes knowledge{
+    0%	{ background-position: 50% 0%}
+    100%		{ background-position: 50% 69%}}
+@keyframes machine{
+    0%	{ background-position: 50% 50%}
+    100%		{ background-position: -10000% 50%}}
+@-webkit-keyframes machine{
+    0%	{ background-position: 400%}
+    100%		{ background-position: contain}}
+@keyframes fallenDown{
+    0%	{background-position: 50% 0%;}
+    100%{background-position: 50% 90%;}}
+@-webkit-keyframes fallenDown{
+    0%	{background-position: 50% 0%;}
+    100%{background-position: 50% 90%;}}
+@keyframes onceUpon{
+    0%	{background-position: 50% 100%;}
+    100%{background-position: 50% 0%;}}
+@-webkit-keyframes onceUpon{
+    0%	{background-position: 50% 100%;}
+    100%{background-position: 50% 0%;}}
+@keyframes ut4stars{
+    from	{ opacity:0}
+    to		{ opacity:1}}
+@keyframes ampPlains{
+    0%	{background-position: 50% 0%;}
+    100%{background-position: 50% 100%;}}
+@-webkit-keyframes ampPlains{
+    0%	{background-position: 50% 0%;}
+    100%{background-position: 50% 100%;}}
+@keyframes ricklovania{
+    from	{background-image: none; }
+    to {background-image: url("../img/rick.gif")}}
+@-webkit-keyframes ricklovania{
+    from	{background-image: none;}
+    to {background-image: url("../img/rick.gif")}}
+@keyframes Cryptlobby0{
+    0%	{background-size: 300%}
+    100%{background-size:100%}}
+@keyframes Cryptlobby1{
+    0%	{background-position: 15% 0%;}
+    100%{background-position: 85% 0%;}}
+@keyframes Cryptlobby2{
+    0%	{background-position: 85% 100%;}
+    100%{background-position: 15% 100%;}}
+
 @keyframes superStill{
     0%	{}
     100%{}}
@@ -1017,34 +1107,6 @@ span {
     100% { transform: translate(1px, -2px); }
 }
 
-@keyframes fallenDown{
-    0%	{background-position: 50% 0%;}
-    100%{background-position: 50% 90%;}}
-@-webkit-keyframes fallenDown{
-    0%	{background-position: 50% 0%;}
-    100%{background-position: 50% 90%;}}
-@keyframes onceUpon{
-    0%	{background-position: 50% 100%;}
-    100%{background-position: 50% 0%;}}
-@-webkit-keyframes onceUpon{
-    0%	{background-position: 50% 100%;}
-    100%{background-position: 50% 0%;}}
-@keyframes ut4stars{
-    from	{ opacity:0}
-    to		{ opacity:1}}
-@keyframes ampPlains{
-    0%	{background-position: 50% 0%;}
-    100%{background-position: 50% 100%;}}
-@-webkit-keyframes ampPlains{
-    0%	{background-position: 50% 0%;}
-    100%{background-position: 50% 100%;}}
-
-@keyframes ricklovania{
-    from	{background-image: none; }
-    to {background-image: url("../img/rick.gif")}}
-@-webkit-keyframes ricklovania{
-    from	{background-image: none;}
-    to {background-image: url("../img/rick.gif")}}
 
 
 .bottomMargin{
@@ -1091,3 +1153,93 @@ x:-moz-any-link  { color: red }
     width: 200px; height: auto;
 }
 /* a{font-size: 0;} */
+
+/* #menu > li {
+    float: left;
+    perspective: 100px;
+}
+#menu li ul {
+animation:threeDee 5s ease infinite;
+} */
+
+/* @keyframes threeDee {
+    0% {transform: rotateX(25deg);}
+    25% {transform: rotateX(0deg) rotateY(25deg);}
+50% {transform: rotateX(-25deg) rotateY(0deg);}
+    75% {transform: rotateX(0deg)  rotateY(-25deg);}
+100% {transform: rotateX(25deg)  rotateY(0deg);}} */
+@keyframes izPlaying{
+    0% {opacity: 1}
+    100%{opacity: 0}
+}
+@keyframes izStopped{
+    0% {opacity: 1}
+    100%{opacity: 0}
+}
+@keyframes threeDee {
+    0% {transform: rotateX(0deg) rotateY(0deg);}
+    25% {transform: rotateX(0deg) rotateY(10deg);}
+    50% {transform: rotateX(0deg) rotateY(0deg);}
+    75% {transform: rotateX(0deg)  rotateY(-10deg);}
+    100% {transform: rotateX(0deg)  rotateY(0deg);}}
+
+/* @keyframes threeDee {
+    0% {transform: rotateX(0deg) rotateY(10deg)}
+    50% {transform: rotateX(0deg)  rotateY(-10deg)}
+    100% {transform: rotateX(0deg) rotateY(10deg);}} */
+
+    tr{
+        /* border-left:1px solid white;
+        border-right:1px solid white; */
+        filter:grayscale(100%)
+    }
+
+    table{
+        border-radius:10px;
+        border:1px solid #444444;
+        border-radius:10px;
+    }
+    .bigMedia{
+        filter: grayscale(100%); 
+        pointer-events: none;
+        width: 75%;
+        position: fixed;
+        left: 50%;
+        margin-left: -37.5%;
+        display: block;
+        opacity: 0;
+        z-index: 4000;
+        top: 253px;
+        right: auto;
+        bottom: auto;
+        color: blue;
+        /* background-color:yellow; */
+        /* text-align: left;
+        box-sizing: border-box;
+        color: blue;
+        fill: currentColor; */
+    }
+.bigMediaIcon{
+    margin: 0 auto;
+    /* background-color:blue; */
+    width:472px;
+    height:560px;
+    /* background-image: url("../img/stop.svg"); */
+    /* background-size:100%; */
+    background-repeat: no-repeat;
+    display: block;
+    background-width:100%;
+  fill: currentColor;
+}
+.bigMediaIcon img{
+    margin: 0 auto;
+    width:100%;
+}
+
+.expand-link{
+    display: inline-block;
+}
+.icon{
+    width:100%;
+    height:100%;
+}
