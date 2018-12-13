@@ -1363,7 +1363,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
         //         }, 200);
         //     }
         // }
-        randomizeIcoButton();
+        //randomizeIcoButton();
         //reset gifs
         var flowey0 ="img/flowey.gif";
         var flowey = "url(" + flowey0 + "?ts=" + Date.now() + ")";
