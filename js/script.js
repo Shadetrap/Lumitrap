@@ -268,7 +268,7 @@ category.splice(13, 0, minecraft);
 //category.splice(14, 0, pokemon);
 
 var aNo = ((Math.random() * category.length) | 0) + 0;
-var aNo = 13;
+// var aNo = 13;
 var choiceee = category[aNo];
 var honkActive = false;
 newAudio = new Audio();
