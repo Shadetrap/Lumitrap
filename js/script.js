@@ -85,8 +85,8 @@ requestFullScreen(elem);
      title: 'Temp title!',
      content: 'Temporary text',
     //  width: 400,
-      //getTitle: document.title,
-    //  getContent: 'data-jbox-content',
+      getTitle: document.title,
+     getContent: 'data-jbox-content',
     blockScroll: false,
     //  adjustDistance: { left:200, right: 220}, zIndex: 4e3,
       responsiveMinWidth: 0,
@@ -165,7 +165,6 @@ responsiveMinHeight: 0,
 
         //!On Page start
 //*---------On page start--------------
-
 //!*Preload images using jQuery
 $.fn.preload = function() {
     this.each(function(){
@@ -242,7 +241,7 @@ var goo = ["audio/goo/discovery1.wav", "audio/goo/discovery2.wav", "audio/goo/di
 var fnaf = ["audio/honk.mp3"]
 var braid = ["audio/braid/enemy_bounce.wav", "audio/braid/got_piece_easiest.wav", "audio/braid/got_piece_easy.wav", "audio/braid/got_piece_hard.wav", "audio/braid/got_piece_hardest.wav", "audio/braid/got_piece_medium.wav", "audio/braid/got_piece_trivial.wav", "audio/braid/monstar_kill1.wav", "audio/braid/monstar_kill2.wav", "audio/braid/player_bounce_high1.wav", "audio/braid/player_bounce_low1.wav", "audio/braid/player_bounce_mid1.wav",]
 var punch = ["audio/misc/punch.mp3"]
-var engi = ["audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_yeah.mp3",]
+var engi = ["audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_nope.mp3", "audio/misc/engi_yeah.mp3",]
 var solid = ["audio/misc/metalgearsolid.swf.mp3"]
 var papers = ["audio/papers/speech-announce.wav", "audio/papers/speech-entrant.wav", "audio/papers/speech-inspector.wav", "audio/papers/speech-entrant.wav", "audio/papers/speech-inspector.wav", "audio/papers/speech-entrant.wav", "audio/papers/speech-inspector.wav", "audio/papers/speech-entrant.wav", "audio/papers/speech-inspector.wav"];
 var minecraft = ["audio/Minecraft/minestone0.mp3", "audio/Minecraft/minestone1.mp3", "audio/Minecraft/minestone2.mp3", "audio/Minecraft/minehurt.mp3"]
@@ -266,11 +265,10 @@ category.splice(10, 0, engi);
 category.splice(11, 0, solid);
 category.splice(12, 0, papers);
 category.splice(13, 0, minecraft);
-category.splice(14, 0, pokemon);
 //category.splice(14, 0, pokemon);
 
 var aNo = ((Math.random() * category.length) | 0) + 0;
-//   var aNo = 1;
+var aNo = 13;
 var choiceee = category[aNo];
 var honkActive = false;
 newAudio = new Audio();
@@ -339,34 +337,36 @@ function BAGELS() {
     ClMain += 1 //Next sentence
     //console.log("ClMain is now: " + ClMain);
     document.title = BrMain[ClMain];
-    if (ClMain == 1) { pTimer = setTimeout(function () { link.href = 'img/ico/38.ico' }, 250); randomizeIc(); }//confused
-    if (ClMain == 2) { pTimer = setTimeout(function () { link.href = 'img/ico/37.ico' }, 250); randomizeIc(); }//look left
-    if (ClMain == 3) { pTimer = setTimeout(function () { link.href = 'img/ico/36.ico' }, 250); randomizeIc(); }//look right
+    if (ClMain == 1) { pTimer = setTimeout(function () { link.href = 'img/ico/38.ico' }, 250); }//confused
+    if (ClMain == 2) { pTimer = setTimeout(function () { link.href = 'img/ico/37.ico' }, 250); }//look left
+    if (ClMain == 3) { pTimer = setTimeout(function () { link.href = 'img/ico/36.ico' }, 250); }//look right
     if (ClMain == 4) { pTimer = setTimeout(function () { link.href = 'img/ico/35.ico' }, 250); }//tilt down
     if (ClMain == 5) { pTimer = setTimeout(function () { link.href = 'img/ico/39.ico' }, 250); }//look down
     if (ClMain == 6) { pTimer = setTimeout(function () { link.href = 'img/ico/45.ico' }, 250); }//noyed look down
-    if (ClMain == 7) {
-        clearTimeout(pTimer); pTimer = setTimeout(function () { link.href = 'img/ico/2.ico' }, 250);
-        if (today.getDay() == 0) document.title = "And on a Sunday?";
-        if (today.getDay() == 1) document.title = "I hate mondays."
-        if (today.getDay() == 2) document.title = "At least Monday's over."
-        if (today.getDay() == 3) document.title = "Two more days 'til Friday."
-        if (today.getDay() == 4) document.title = "Meh."
-        if (today.getDay() == 5) document.title = "This your fav. Friday activity?"
-        if (today.getDay() == 6) document.title = "What a terrible weekend.";
-    }
-    if (ClMain == 8) {
-        if (today.getHours() >= 9 && today.getHours() <= 17) { document.title = "Still bright today."; }
-        if (today.getHours() >= 17 && today.getHours() <= 18) { document.title = "It's getting dark outside."; }
-        if (today.getHours() >= 19) { document.title = "Why, good EVENING."; }
-        if (today.getHours() >= 6 && today.getHours() <= 9) { document.title = "'Morning to you too!"; }
-        if (today.getHours() == 5) { document.title = "Shouldn't you still be a sleep"; }
-        if (today.getHours() <= 5) { document.title = "Shouldn't you be asleep?"; }
+    // if (ClMain == 7) {
+    //     clearTimeout(pTimer); pTimer = setTimeout(function () { link.href = 'img/ico/2.ico' }, 250);
+    //     if (today.getDay() == 0) document.title = "And on a Sunday?";
+    //     if (today.getDay() == 1) document.title = "I hate mondays."
+    //     if (today.getDay() == 2) document.title = "At least Monday's over."
+    //     if (today.getDay() == 3) document.title = "Two more days 'til Friday."
+    //     if (today.getDay() == 4) document.title = "Meh."
+    //     if (today.getDay() == 5) document.title = "This your fav. Friday activity?"
+    //     if (today.getDay() == 6) document.title = "What a terrible weekend.";
+    // }
+    // if (ClMain == 8) {
+    //     if (today.getHours() >= 9 && today.getHours() <= 17) { document.title = "Still bright today."; }
+    //     if (today.getHours() >= 17 && today.getHours() <= 18) { document.title = "It's getting dark outside."; }
+    //     if (today.getHours() >= 19) { document.title = "Why, good EVENING."; }
+    //     if (today.getHours() >= 21) { document.title = "How was dinner?"; }
+    //     if (today.getHours() >= 6 && today.getHours() <= 9) { document.title = "'Morning to you too!"; }
+    //     if (today.getHours() == 5) { document.title = "Shouldn't you still be a sleep"; }
+    //     if (today.getHours() <= 5) { document.title = "Shouldn't you be asleep?"; }
 
-        // if (today.getHours() >= 4) {document.title = "Shouldn't you be asleep?";}
-        // if (today.getHours() <= 4 && today.getHours() >= 9) {document.title = "Punching people in the morning.";}
-    }
-    if (ClMain > 6) { clearTimeout(pTimer); pTimer = setTimeout(function () { link.href = 'img/ico/15.ico'; }, 250); fuBrowser(); }//noyed look down
+    //     // if (today.getHours() >= 4) {document.title = "Shouldn't you be asleep?";}
+    //     // if (today.getHours() <= 4 && today.getHours() >= 9) {document.title = "Punching people in the morning.";}
+    // link.href = 'img/ico/15.ico';
+    // }
+    if (ClMain > 6) { clearTimeout(pTimer); pTimer = setTimeout(function () { link.href = icoimages[Math.floor(Math.random() * icoimages.length)]; }, 250); }//noyed look down
 
 }
 var BrMain = [
@@ -375,93 +375,127 @@ var BrMain = [
     "Ouch.",
     "What the...",
     "Hey..!",
-    "'Scuse me?",
-    "Ow!",
-    "Stop that!",
-    "AwGh.",
-    "...",
-    "My pretty name!",
-    "...",
-    "ᴵ ᶜᵃⁿ ᵗᵃˡᵏ ᵃᵇᵒᵘᵗ ᵃ ˡᵒᵗ ᵐᵒʳᵉ ᵗʰᶦⁿᵍˢ ⁿᵒʷ",
-    "ᴵ ᶜᵃᶰ ᵗᵃᶫᵏ ᵃᵇᵒᵘᵗ ᵃ ᶫᵒᵗ ᵐᵒʳᵉ ᵗʰᶦᶰᵍˢ ᶰᵒʷ⋅",
-    "I can talk about a lot more things now",
-    "DRgh.",
-    "Frick.",
+    "Excuse me?",
+    "That's my name!",
+    "Would you stop that?",
+    "Stop!",
     "Argh.",
-    "Don't punch that!",
+    "Don't press it!",
     "Oof.",
+    "Why are you doing this?",
+    "It's not for clicking.",
+    "No clickie",
+    "Bad user!",
     "ECH.",
-    "...Cut it OUT!",
-    "Fff-",
-    "HHh.",
     "Seriously?",
     "Not funny!",
-    "Pretty please?",
+    "But I made it clickable.",
     "-cough-",
-    "Hit me again I dare you.",
-    "...",
-    "r ",
-    "REEE",
-    "REEEEEEEE",
-    "-REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-    "What's your problem?",
-    "Punching is rude!",
-    "Didn't hurt.",
-    "You punch like a girl",
+    "...But still!",
+    "Pretty please..?",
+    "Punching is rude",
+    "How unprofessional.",
+    "Have manners!",
     "Don't you like me?",
+    "Aw.",
     "Something I said?",
+    "In that case,",
     "Can you forgive me?",
-    "Was that a yes?",
+    "Owh.",
+    "Was that a myes?",
     "I can't tell!",
-    "How am I to tell",
-    "That one really hurt!",
-    "K, you punch good.",
-    "Getting dizzy...",
-    "Urgh. Why is it always me.",
-    "Punching hurts",
-    "You've got my attention",
-    "Crab",
-    "Could we settle this peacefully?",
-    "A nice cup of tea?",
+    "How am I to tell?",
+    "Is this kunfu?",
+    "Or taekwondo?",
+    "Oaw!!",
+    "You've got experience",
+    "That I can tell!",
+    "Awch",
+    "Ow",
+    "Oofh",
+    "Oofsies",
+    "Ouchies!",
+    "Stars are spinning!",
+    "Birds are chirping!",
+    "Someone!",
+    "SAVE MEH!",
+    "HELP",
+    "H-hALp!!",
+    "I'm being violated!",
+    "Can't we just settle this?",
+    "Peacefully?",
+    "Over a nice cup of tea?",
+    "What flavor would you like?",
+    'Huh, "punch" flavor?',
+    "User...",
+    "This wasn't the idea...!",
     "Just enjoy the music!",
+    "Listen",
+    "You're having too much fun.",
+    "What am I to do?",
+    "Ahem.",
+    "YOUNG LADY!",
+    "I AM DISSAPOINT.",
+    "GO TO YOUR ROOM!",
+    "IMMEDIATELY!",
+    "YOU'VE GOT HOUSEARREST!",
+    "That's right.",
+    "I'm your parent now.",
+    "I wrote some contracts.",
+    "I'm moving in tomorrow.",
+    "I'll teach ye propper manners",
+    "You won't like what I'll do!",
+    "I'll bake pancakes often...",
+    '"Oh no!"',
+    "Letting you stay up late...",
+    '"How terrible...!"',
+    "Eat your left-over veggies...",
+    '"Just end me already!"',
+    "Oh that reminds me.",
+    "How I feel like a veggie",
+    "...from all the punches!!!",
+    "Argh!",
+    "I surrender!",
+    "Infact I've done nothing else!",
+    "How can I make you stop?",
+    "I'll do anything!",
+    "Give you a massage...",
+    "Walk your dog...",
+    "Empty your fridge...",
+    "No? Not your fridge",
+    "*Sigh*",
+    "So this is my life now",
+    "and yours apparently.",
+    "Hope you like it.",
     "...",
-    "Question.",
-    "How'd you find this site?",
-    "'cause It's not finished.",
-    "...",
-    "Don't tell anyone alright?",
-    "Keep it low key.",
-    "Until it's done.",
-    "Can you promise me that?",
-    "...",
-    "By the way, there's a word.",
-    "I really like this word",
-    "Apparently.",
-    "The word is undefinded!",
-    "So.",
-    "I'm gonna say it a bunch.",
-    "From now on.",
-    "Here I go!",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "undefinded",
-    "...",
-    "Yup",
-    "I love it",
+    "I was kidding earlier.",
+    "You're not punching hard.",
+    "Pffh.",
+    "You punch like a girl!",
+    "Nah",
+    "Didn't hurt.",
+    "Nu uh.",
+    "See",
+    "I was just acting!",
+    "..Yeah, hehe..",
+    "I'm pretty resistant!",
+    "and beware...",
+    "I could throw a punch back.",
+    "Right through your monitor.",
+    "A giant muscular fist.",
+    "When you least expect it.",
+    "Sounds impossible?",
+    "We've got the technology.",
+    "In ES6",
+    "The next Javascript update.",
+    "Just you wait!",
+    "Also I need to work out.",
+    "To make my fist muscular.",
+    "Alright, lol,",
+    "Amused you long enough!",
+    "Congratz 4 your persistency",
+    "This is my last line lol."
+
 ];
 
 function myprettyface() {
@@ -687,8 +721,8 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
             responsivePositions: null
         });
         if (e.keyCode == 49) {
-            if ($('.jBox-container').length) {
-                $('.jBox-container').remove()
+            if ($('*.jBox').length) {
+                $('*.jBox').remove()
             }
             e.preventDefault();
             if (beep.song.tempo == -20) {
@@ -709,6 +743,17 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                 console.log("Tempo max.");
                 bbSettings.open();
                 bbSettings.setContent('Tempo max');
+            if (lumipeaker == false) {
+                console.log("Lumipeak true");
+                var gifSource = $('#lumipeak').attr('src'); //get the source in the var
+                $('#lumipeak').attr('src', ""); //erase the source     
+                $('#lumipeak').attr('src', gifSource + "?" + new Date().getTime()); //add the date to the source of the image...
+                document.getElementById("lumipeak").style.display = "block";
+                lumipeaker = true;
+            }
+            else if (lumipeaker == true) {
+                console.log("lumipeaker is already true, therefore don't run the script again");
+            }
             }
             else {
                 beep.song.tempo++;
@@ -935,33 +980,33 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                 $('table').css({ 'animation': 'imageFilter 2s ease forwards', '-webkit-animation': 'imageFilter 2s linear forwards', })
                 $('h1').css({ 'animation': 'imageFilter 2s ease forwards', '-webkit-animation': 'imageFilter 2s ease forwards', })
 
-                    var bbSecret = $('.myNotice').jBox('Notice', {
-                        theme:'TooltipDark',
-                        autoClose: 6000,
-                        attach: '.myNotice',
-                        content: 'Settings',
-                        color: 'black',
-                        stack: false,
-                        color:'green',
-                        fixed:true,
-                        fade:2000,
-                        animation: {open: 'zoomIn', close: 'zoomIn'},
+                //     var bbSecret = $('.myNotice').jBox('Notice', {
+                //         theme:'TooltipDark',
+                //         autoClose: 6000,
+                //         attach: '.myNotice',
+                //         content: 'Settings',
+                //         color: 'black',
+                //         stack: false,
+                //         color:'green',
+                //         fixed:true,
+                //         fade:2000,
+                //         animation: {open: 'zoomIn', close: 'zoomIn'},
                         
-                        attributes: {
-                          x: 'left',
-                          y: 'top'
-                        },
-                        position: {
-                          x: 10,
-                          y: 10
-                        },
-                        responsivePositions: null
-                    });
-                if (secretToggle == true){
-                    bbSecret.setContent('You found a secret!').open();
-                }
+                //         attributes: {
+                //           x: 'left',
+                //           y: 'top'
+                //         },
+                //         position: {
+                //           x: 10,
+                //           y: 10
+                //         },
+                //         responsivePositions: null
+                //     });
+                // if (secretToggle == true){
+                //     bbSecret.setContent('You found a secret!').open();
+                // }
                 if (secretToggle == false){
-                    $('.jBox-container').remove()
+                    $('*.jBox').remove()
                 }
                 if (secret1 == true) {
                     beep.setSong(zSecret1);
@@ -1079,7 +1124,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                         !(function ($doc, $win) {
                             var screenWidth = $win.screen.width / 2,
                                 screenHeight = $win.screen.height / 2,
-                                $elems = $doc.getElementsByClassName("elem"),
+                                $elems = $doc.getElementsByClassName("menu2"),
                                 validPropertyPrefix = '',
                                 otherProperty = 'perspective(1000px)',
                                 elemStyle = $elems[0].style;
@@ -1187,7 +1232,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
     var zRickNMorty = "5sbk6l0le00t9m0a3g0ujpi9r1w1101310111120323111332112111111011111111f0000000000300033000000000000000000000000d0131110111213010211000110111112001111010c0020101000002000000000000000000000000000h7002027002600050600066000000000000000000v0000000000103001000000000000003320000403o2200b288xAaoUNFkJznfx6g00000000g8ERIkNQ9kJzDMFatM00000000byeqMNzCcoNzBalaw000000000h46ihxB8iqBIrhY4h000000000p2gm2y3G0491ZA9xPApegC5ehAV6jA91jA1Osx86szpOdD8Osz9OeVO4g9O0ExjAtjAtPApegC3ehAV6jAu4V1up1i1i20CCCBc_2GsqT0C0BLwpehaCN_0aQkQPdQ8L42o4mgwoihbMwCpkFFYaUic24kGwd7fBLLLLqCNTJioi0w000000B8jGaaaa4xoO6FyOF0wNN6wpeNIao8c1Ou9Oaqqaa3KKsCCNu5jfxdv4bwdY39Dt4VuYjPLCL7vUlDELXeVItoB5UzAgK1i4325AsgeWGssuRab7tduejIgXADlleivcxdj5Ni11x8m5c46czoN7ylLA66lnCLC65dnrSf5TttTt4Rt4RttTttTpTdzoIlv5lCrllrCftTJTtXlluTtXlluntJWou-EOsCz8E3hAp7z6hhgC91T5gTu9000aqV2gAk3i2N46cz8i3x864MUOcz8Ocz4sz9O1U1ApehAp6jApehAp6hAp6gd8mWaaaaaa0Gogcaog4p6hAp6hA1pxpfcr6PeNIdc86pOe9DydwePb869j2D8DoD8DpO9S9Vzye8Dy9UzDg1kMwFOf2acz8EE2CNA0iZcuoK4iymCabkL2ZtnoQxsEkwgoEEh5z8O00000000009JeTtHXSr7kytowrb46pp0jb86ppwjej8kMch0x8139SczpOtz8SsDoOdD92QOiuBCjc-cPUN_cZNAtNA1SczrOtz8SsDoh1zysBc6cxa6rOwJcA6pi1zMzKczMzGe8UzyczoO05pAPa8mRZwpBvsO5cz0idky0f0ecgpDM1XxCblrmNUEpbj11KZLr3PtXuSQNhrLypULy-EOebIeRIsnAYnuTJXtXuSVCTq8mCiixDBc-kOO4z6C23dpd1VGKpDCpp0hnxfslUPI1sNpgF87JBCbtXuTJTJEwTJSOBLH3R6oAbD5RBeC45lTBIPrJ_tOdJc18BgFwrVgA1-jIp6PAX6gA3ejIp2A238mCijZcOpBy3cIw8gWBC3Wbc113agFAbj11TSgA_ARARARARARAQ00000";
     var zThroughzemachine = "5sbk5l1ce00t7m0a7g1cj_i8r1w514535411356231353113115111001100110f000000000003030023000003000000000000d110111011102001111111111111111111111c003003100200020300000000000000000000h060000000006600000660006000000000000v000000000020210040000000000124032003o2100b0cww44114i8YsQ9yxqd4keDzVgWu20gMYoQiFyN4Mp0wziZgFlaRyRwK00001IUsBnjJWw94xEu0-vImXdKP4wN8k00r0M9c2j0000A882xwEoGufDAidaCi5yVAQ26zO0UWa69PyBgGkaRyRsroczrxOWscSzlCPqdmrNWYuLDXUF0ryTo000l0lo5m31xgwk874xN94Unc4j9sSo73NEMwF94yNkCqa7k254zj9kWxAPqdmjdWWwfTQ20_vg7zJUXsen3BKNodw000xodgbg8t1yMoBiFkGj0UMej3QhV6KnHBzpKU10C9w428CiFlqne74VIa5afTY1WWteDjFQWtfDrVOPpISp9mmk00p32ui2FNxAUiB45cGkkkwWB478ebNeapjxCsDchPdA6VGD76DmOsEil8OwCioGGtWpwxRC3UnCAwAuy1IFrqqUc7mfEx2WCkVVpEKNeeyCgGyGGAGAqEGGBzzyzz8hlx5kFSsLFAaD64I5SHfzf9gMQu92RFgiSVdaskhwWNZ40mPasQIOD74ntLxpjMxmhmlm9lCRAlBkIsskkh2aI8GDaPBZcDkUMNwRa8apkEEF2nYwV1NupcZPejycimpIwUPuFDGtLz91UxXjdcQODdPbmj1kUMmI9a5uvahW6Ba0wrdBJOqkUEz1RzMw2jwCle6ym5BcqkMizOzcygC78D8ArIysxj21oI896ij0lIwasC2FFj2SC4Gj34SI7Gr0F1hBkV6jBpmhAlqxAi5sDjIU9rBVmlDlVe1lVeh0ggncfcGXxHtSiTWkNVeMV6wCosI6nlVKV-vw0VD2FNwwoFh0PaB558iGknO3yYOpjxCsD4oKPdA76rRcZjJYp8ewZFCCqpjCVCjBIC2FNxIgysti1eu63rHrA55QPBRBPhMcKIJmH09xPBTbKgi2FNE90903asq4OxU8fFya0FCCupCCkFwIqskjAicNp4V4BcehegFx0cm44z99waSg5ej1kQFxrj2lugCRwZhmCzFMH0P3rgt3wkwEMaCGCCK896SS7Arr4-i4V555552D6m1WgcrZtdfcEwPGleRIFNF0slNv4Y8RNn4EwjNl9Y0rVyyyyyzM00Y8TaWqsD8AbIDawZPtzrGF2DeeMthd4wECyq9O9O9FCyrCf1CfcSCq91hdcQi2yq2ir66KVMaEGPaXjcje2BAFEdcQPj8apFBPLRMjacndSCqpFA5cQPjf4Os59gcz0pa1mr7wGcQY5m0RfyN0sMC56hhhhV0vVhGdtd84gpOag8MO1AR0PpOGg8MrGslw3sPGYdYNxGGAsKXJKWpNP5GGM13syqOGMfm-5VTzmtBp6jCpmhAVSlApeo142tBMTS4bP4iD6OIMarFEdcQPj8apFBPLis4O36PtFCCqp1jbeeiSGxajDFHFCCkUy4FUIC2Y0f6ww0lwpoaXL40aOVKMe05Tr02WOFI6NdnIQ3qGHaM76shmnBwObK-bGKMshlptpkS3oCHSaSqFf9JJoamqCwQPjdcwFCCv5dMjacvdSCqpFA5cNDJk0Qu6JlcQPU49hJAOlecdI4MigsgMXtrswEKCsKIKq65e-0q0Yzq04Uo0jww3o0Xw380E03RRGkgkOFhhjyD8swULcCuVD9N697cSgspGD76DmOsEil8OwCioGLACo8tpNf4mg9PMMXtrswEKCsKIKq66MzFCygkjjd4wECwyCxyHKOGaIOKMXP5Ajh8a9ECysysyqpECgoY6oYPqpEA54QPh8a9E8VIoqXD0GyHcHIrCsSxZlallT2RrSqJZUV2TlUw66zBTrFAww10zuPy1aHHKQGXL7IGXLnEacGZSK2uxrKXY0u_K9FPdGJ7tasHdRPld2fqaAdCi0oqe01s5jz363kEwFBiyyAbAEwp1Nu9NjascPAUz4BDeO3DdB0pbXwRecJbReeE40sasX4NFNNd4wECyq9O9O9FCyp1AMpzPdFCygkjjd4wj39Fa1Arp60A0Gsq2QI4jHGsq4ALxmLMk20FCCv2pFBcQyp3229q1BPAm2KGpOVO66KwpsV5RRhncV330Kgi2FNA-531xkUMCeYKWXkUNrLrJe949jz1KZ73j2WZfp7Uaqy2MRPldkwFJPMRD1cENsTGpFCCgkPjdY-dik38M4xvAE9Lp0kI5JxHCGqF1juHK2phyVLkPjdcwFCCrVSFa1AqWWq0-e1MS1WpbM0iK_7tRE4YkwL6XV632HNxDe29hJ6PhvwpqwapFBjz3Cqp3HE1MwGD6xaxj6dMoMwapFDypFAeKg7gdg9ctqof0FCCtCqp3HyxnWQUQ9x73Cmi3wN10kPjf4Pj8puBa8apiygn5JTVjascPASz4Bwl206YkUURaNjzwkB5jywiF9ed8g72MGGsO164fAE6B4Jfczuke63EMsoWGHzGjxCkVVpAV2X48aak8AqYoGGAU4GAqEGGBzzyzz8hlx5kFSsLFAaD66w4FMwjaB558aGD41lZPdcQT8VPuakk4Vqz123qOD76a3GB33EiOB3404GC5w4M8j1xj18g3V819NyO1eu5ZKJKgknjenmnd2Vz3D1akgkOB5qEJKQUFBe6pOrhyiOCga40dVODiD60E4FN090-iow5eedmR4M-j21wo5I94sF191nBF0TAeb7FTHC94Rlleo71x0swdTg1kUMQgla8apkEEFNpa8egsnCjascPAUz4BCr8ecTGpWDrUOgs1XAPRcVKZtKt80GsgexYrdIFOMPAleafaRe2GUCkUA6sAC4eA2dApe1pmhAFkUMQw4MUEEEEEkUOY0UzkqWqupOE61OIGPyaUzsGF2FNAFP111kUMC6YKWXkUNrLrLNi3kUMrLhw_7HMZEwGY9PcH8OshOIz9PcH8OsM284X8kVlSe92de5uqpOCzEF05jy18gWpjA0mjyZoxKXjegFReFMqEgj1lh14YEOs2OIz92C788jpMjaOchN7aOcDfOIz9PsF42IHa0DaMIsi4vwLdcQVmNVbe7AK1tPe3pmhAUzBp6jwClApeculymlDpmhAUBBpSlBVioi-kJjzapwWMwFNGqFNxcCUbKjaD6ntOZl2ioy-93L43MGdMNXwCVcYc8tKGYsoZq1wyGRecc99cuH82OH91OY1HO1FIFFIxVaSS896hAl-6Icju7Mm7Y6sj1tOpFBjzzk2gAFgAVgBLjB1QQXUb6Fxv4lcg91jlj3eb7yTjC94RlleoaexlllKXlldlMY6ulLj1zLakNwYCGOGCWmFLBqo6-C1BaoaJGK7yN9uFN6_jM9AFxTydlleVAMJBlRm3ptBqkh0kM2Iis40wSJEmNgdEMxQxHGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGu1jz323kEwFBiyyA9labV1NupcFMPejycimpIwUPuFDGtLz9jy2SCqpFBerCmICiC4NOcMgBZtQf1TMdJQxj8Mig2q8kXZ-TIW30npe1MwcD1gCJc1ALCS-GGGFc51gJaodTpBtBeppKlSkSmllll9xRlN5dRRg40905CfkQPcp7jt5IMVCCsEAFJCpElcQxQODJ6iXoY4wGV66wHU6SWgFAoaj1vuD5g0c883f014E463dg04Uq22rk4pC3VaMsbja9wFVBtBdCoDaRHkbXCVDTnQSpCpmP0_sGTbTdI26i582K58yAhi8F4kA0cgMsdjbqDClSkZe2DjasAGZgLOpkDUznUdASmmlSukVBCpm7LUzJGGGGGGGGGGGGGUGHyGIHaGGjJFwEl3Mp4gjnllllllllllllllllllllllllllllk6W8FIGGGGGGGGGGGGGGGGGGGGGGGGGGGGG3llllllllllllllllNln5lpmllllllPllllg0Y4I73kYr9pBtBeppNBtB9zyyaVL78AMFMwg2A1kgYnN74my9px2FNEaN5iljmgGsoiEQg-Cdm4j3Va0Qak2FNz6e2Fx3gCl6hN7cOn8dshP6hP7di8j6C0OMk729wwTMdexQRkFxTprs732AFiCCjFFAGqpiCCjAImi13M2Pgs3wqomC3FFIGJ2VycwiRl1QO9jeQO5j8rC58RcMG5sNsG_7Ua3JYgEaWDM3FGFYbIJK2Vza1blk5j8tc_j8tcyeoszlUkbKluJ8oBcxkO7jfQO5j8tcwRTtcxRTtcVjtQrlRlvtOBS736kjFBaGGFBiGGFBeGGEikUnwG-x-LSqpi8qUeCCKGljT284oHvjAoDjjAoBjjaisAVwRtK8cljA3llJljw1lkV0jlkRg742qHpGwllgMZC91MRaoaQDClSkVByomlSkCceV4cRRrlmllllBlrlllidzk6zr0icc0krg1g1g1g1g1g05jz601jaKWjj6DLGSD6wqh0cPqHtAu9OrMZ3wthhhN72cBM7D4lGooQs45czqRc1a5CCGGGGGGGGGGGGGyGGGGGGGCCGGGGGEcNgYQRllllllllllllklllllllkQRlllll1IIJGGGGGGGGGGGGy6gy2qqGGEu8aqpGGGGGxMQRRRllllllllgQdd4hg4gPlllln4ddcRlgYQMYa5c568cqGGGGGIGHaGGGGGM28cqGGGIW8sqGGGI0y3240pm8pGGGGGGGGGGGGGya0y6qqGGE66xqCo33unEudltgpDyaqWGGGGGGGGGGGGGaGGGGGGGqqGGGGGwSgs9i367bGHFBINelGmElTbbXwklRRRYt-k3aPcH2ZEGgyJQTlRTtOu2qVx42aga9GGGsNGGGGEeXBwRTodtTAFCoZxllo2KXKKXJX6KXKKXIex0Q9ntxlTunR_WFBS2KXKKXLrKXHKX3b1rGgz7pApwmcBChCtywszcPbAZPcQ5tTttTuTtTntS6Ej1dpEyOZPskAITtT60e2WbSccgt4qioa9GGGWGGGGwY0-49MSN7CXEmdZKrK_zf4mhqMmaivcXC0HKXHKXSXKWXKMLq98BykTlLpJTtxNk7gYCg0Bc6xCn2Y0cg805o6m2KXN02IKrI3w1tSM0KIGr1IjlXd0SGGOI1ND4lBVocyXLyWHI74lmnmldwS9GZyJCGiC0pG84oL2kV69QQV69iBdcD9fodnCL8dTtLgdTtLo5Tr01W0KXNO0Xc0Ywjeoi2Vx6yAFjatcFlTtcTjaBtTjdQODntQPtcFlTtcTjaBtTjdQODjtQltcFlTtcTjaBtTjdQODntQPtcFkOFjaqv4JYENu4FOcyjAIz8BaqpeBc6Zz9wGqWqpboOFaCW2F3MqaiBcFQOBntQPtcGlTtcTjattTjdQOBntQPtcGlTtcTjatdThlQOBntQPtcGepV0yD08FxMEikFBeCkGXKCrFDGXKCrFBeKXFCWphHKWpKClaXKCrFBeCXEGWpiHKWpKClcc1laCl0Loq2qEuAaylcZntQPtcZntQPtcXntQPtcZntQPtcGlTscDBcFkODntQPtc_ntQPsLfQO5jflTtcTj8tcxRTrMasoooiB45cGkkkQGB5AwULcCkUpD9N69bcSgspLkPReTNAwU2T9DGpPtWXsWgL03s201m1BwHKYg0HbCX0U0ntI09LbGMrlluPgdyqHH0snNupug3bKXUyGH1N5lBRBjodyqLoGGwKo9A9akODjaltTjdQOFntQPtcFRTtcTjaltTjdQOFntQPry3lkV0TtQPvlljA1tTjdwsgbKZCr1jlz3Qj8ZjatcERTtcTjfRTtcTjattTjdQOBntQPtcGlTtcTRllRtTRcTPllBTtcS3GqIA7EKikFBeCkGXKCrFBiKXFCWpiHKWpKCkGXKCrFBiKXJjOCsFBeKXFCWpWKXFCVuvFAaCuHKWpKCgWp3HKPxj0MlUF4ig285eecMAwGAMF16rAwrAKA4KjCp2WCgYJootc_aVB6pntQPtCoV1hCptThotKWZz21wxptSZwyEYcVMTtNGkRhui-XM8625BTv61wxsjlNGkRhui-WVz21wVllNoo8v5TqEt3PapOlPacOKXFCXcPGcPbKWbWTtW4312OXLAl7xKrKURaqEL9vtU4312OXLz0MgK9GUj2zOL8OI2OIz92FNEbB4sImlT8ACAig8KhAU9Bp6i7n68qiCqO9jz2m7y7QNIOGVk1EkE5jnh0KFwAxac8kNMkj8j30h1zyu8UDye9UwG787M2397A0j0wN1SZywd4BAV58Wqaa0kkkFPPJcQiy90u8VVc6eEY8OczDf2e0-8OMFN-3hoq0G0MQ2FQgl03R_ksA2gcsbYhN_4scf4snN75YhNvwIdc-Gaa5ece0wQO7w7OzKadyweuyr6MD35YjN74nXeNI9xrBAwZCm6Fh1jaB558iWkgswULcCv6pOshyiPdA7AWpfMw2tQu7oi2xh257j2x46eoidzye8UxVhOEg84Cdc_txC6ncsENrB2D670gqp380YhgC7BMYCDzsyH9U0UdcxTq9a06Cd_yhQwEFChjz50JcCf09464QU7O1wxFCIWoIucifxaq32o8kdvjNc3jiD4iyp2oXyMdMv1rMyzMyz8jjgAPwqNFz0-17i2yCFjz50LK4M-h1xde3jf0J6FNxzVP50q95cusxf0xAOqaa0kkl9PPJcQi4qpI9zgC54DIX2ocgewmmX5E_7-Xyx4mcyiYFOahQQkk0EEEYoSCq9Yi2j7RJYhgEwxhAmZjAmJsuecB8MaPaaa4goOa97MDqpED2aj7SgrAkucp4zTeh9tBx61mphhhT6hhrT8RcQjx59xXccdiy2ClaaagBQEwV1NupcFMPejycimpIwXssAwcEF1xAcwF1w83Y2nuoEh5z8AQNVOahQQkk8wNAkiasYxQPhe3OokPkkNEj2yLpEIQ1c6admS8E3z2Cb2sLSCjnsshNlsOA96pAo26kEEXx8kbs38t1srsdjz38Lj3yx464Mld0wkNXpNBx6xJJsueeibaOWaa0kkmFPOdjd4UhiokPoEEEEi4z4czc3phgCd2oEmTN68rT2dMleccMMRa8apkEEF2niy3A75VAOD3cVe8N9pCO1ctQOqsxkhYNa188u5hFxM387A0O26g2D10V80L01I0w0lwpoaXL40aOVKMe05Tr02WOFI6NdnIQ3qGHaM76shmnBwObK-bGKMshlptpkS3oCHSaSqEGD6cOwGogQ9BhA9zgC5cBP4YgFxNgMsi2yyyGhAiGsol0V7lp6rAoBAllkSJecq1M1dceaGlpxlgedAupOp0LzMfB5574s8nYhf4s8Yg2yy8WGWO-4XArmhymhymhAU3nUqgYbMGAL2G1NQxPej91YcXM-SgUDw6LLibxtRintk3zF3CsCibSc0AgDUryf5lkM8mD4h1205CdlrAzTej8BX8geEX2OuoVgAwGsoEdagIcbr8aae8OV4Lswag840YeOgsNPlougaUw6EEwNAk9wIk71g9kMcwEl02qV7cHIOrbcOKP9IAsO4Ji0CON8aFaKJj1Fs1saD66lJiosk1EA4NVO4Y26f9EEE1hhkj2rkNB86Ef5F6hM0y374YhNf4siogQ8ChNf4sjN74YhNf4sjN74Yg4ehAs3shNf4sjN74YhNf4sjN0gV6hMbN74YhNf4sjN74YhNf4107EwO4MweoUDye9Uzyu8UDye9y2iAMYXP7g7csjN74YhAAah9yxZ0MgsbAx6S8IzbFOYpMVmj9Lod11W2KXKKXJX4KXKKXIf4svpApZenz87aPau831Q5tTttTv5TtRTtxU6U-8sz9FOID6iaYopfyBMxwlltRTtLoJTtRTtxU8u6C8cz6aDbNzj1G1wqqo6CC2FFKFFwE4aCa8SE2grgFzIq9A9xw8wNNf4sjN74YhNf4sj44B9xHUzyK8UTye9UzyK82C8liA5axRvoV_Ce0-8UDye5-83U5w4whwigag1jdNcme8BdDojBhmj8E22-Obj24GFFFFFFFyagYHjzyZy-COPsSbSb4HalEknClQQQQQQQTnsnDikxtttDpRRRRRStDnkxYoYoYklZHoSGSkx8M38OMFBxZ2RkQQQQOOoq54xp4GpX59RTxTouCCCCCCCCmR2ygIynlViKi3GBtdddddddcFUEs8mh7NcF2M0kM440ai02TANaSJOOzaAtNeibkwou0hBKF2HWAaAaiwXgkO0fq0eMYRcnZHuIHOXJHaIT0pmrKrmVpnBSXmk0eS39Pv2ZHtIHOXtHaIT0pmrKrmVpnBSXmk0eTURJrGc2a0dLvKEOHRck7YPsGPcYejCmkplGCabGNGo8C4a2512w0kMsV1VTeTsDqOr4UpNe20dJj11RajkBc500axUNxNkt2oAAZw2C2j0l1JhE67oh0R83t_GJHkHaYKVc6AwuSXudjwLdTeSQ2Q3I3d0J-Tg9gpSpMkEoEfnnt1Kp7punJSkulQpLBeljNCm79PbacGhj5Ta07kQ0fSJjWHqReOLbAuGi1gSXudYHPtPJJ0J0h00PgbvJQ5Dmto02TgYvN44Vyno0cLrI0B3lep4pD5RYpjBsPC0OZKM2smrI9yrVhP0p477oCCbKRGtCnnBrikB9aoa1_c0kwi8lwg1E3TwebPKZSJWPbHOAMGO_2-Yekwk2584i01UY7La7j10CXOM8wg381JTum3KB84y0EAg0fABnPrCgy1unJSk9ymC356EpeljNCm79PbacGgj5Ta07kS75hItihgB_e8g1xjxAF182Rc4wpj10Qve0OgV8IA6i3Nz81Ix3ABa251iw74b713kMk24gaWwd0cw6g1jxE-ggGsEB8asl5wu5ej4cPcPcYujBT6o4w9MXWk820urweuVjx1TlE-618BpD0qRMxwpBArcJ8kmpuMaXZ3UOQhhdRypcz3RcFyUA01Qz9lVsxJplCU3aNbsSJOOLbJSIE0mtLEoFNkpl0TkV0ktTtkU0cPLAVtNC182seEFgw81VK0VXBe47t3E7B61KoDZUdLrI1Tlep4pD5RYpjlPeo3rSX09No1IaUcIkw0bkwiekMh4i512wxg0FzuMdQ00fsxOVKOa1nxRd02_3Zihwhg1JWFthBiiCa3-pKlpCu790B16O2c2xnta40xndy8kFu1Q2xQMg9hLb0y10cw6TtVotz8ESXLb1I0O0rtSAbouYYwKqT_9506TGBR6l9unVCVlCpUsDcIEOHkMtR3tYuaEcqND1gqS4E0pFCCqpi1I2sC-5aj0L2G7j10B6YI7z0cw6TtVotz8ESXLb1I0O0rtSF0wm5D5lgWgEc80eoeVDmQkslSYhDstJYthgVCntFgE8QPCpCpw5c4B4ao4glZtttttttqodVttvimnnmP4B06lpphlGfuws7tHJLHHHHHHHVLbHHU_bHHVDgplBB5m_PLY5F4ww0eC201SYu1420p0dKXOMX6hhJTum3o1A0SXJi10IFzuMa-Y3Ui7bCX8E5j4KE4xgoMY9-4-6WAC9mRGlB6lvKpmVpnBVGodpCTAYo111g2BbgnesYCbSRKnlVt-RBmrwcHdTdHsIHOXtHa0Jj00IaC21g-p1AyUA6NIxOigv6czyGSoG26mD3O2oDrv6WP0ytHDtWR86aqqGHWChE5da4KawaDa9W2D5ho00kVc_cPcPeMcTfagf7vix0g3Ps1LtjdKTi780A1U6C21TVis6Eao86Xv6XU8tKtPTvr5ddllBig85k1l0RucThMkMoVzCHSoG86nSyyC9STNK-4trNerjCposDcIEOF7yZOM1qUE84_ReRPtJ6lrK9OhqA325OcJR8lvkxkxik7q2Cg1j1gYdY0cXsFSJCNe6sjwzdLOZak95j1g02akeEXftwm7G40bYuRdcmJHkXacGhT4V8Ji1x10hBKF2HWAaAa65j00gW30FwwqA98v6K9UH93k2zakwgqUEA5c6cTCITuOtH9IjxD4U8PrXBajfkMk03K0ag9487g7OPMTDcXuOqJDcYpOzcLNDNPL7KE1UMH0w2g7Le8wDc7M00VuTo1a6Gtcm2cN3zbedFOKpTgVuSFwwUD5wf49yqA37k1HUyTLtMenJS0YqHNzcXzbedFOKpTgVuTUUD3DshNik5lBk1p6UwCazO5NRJun8XmlpK0OIiTdHsIHOXtHa0Lrg0HqTkNaSJSOzaSQMkbbudEUTzsBe9bvbJlEop0K-RakjpmZCUzT9yNS5UZthBrvBBBXVAw_q05lkxpCpk1ya-ug0DEbkQNaSJiIEOJLHXbudEUTzsBe9bkUuSI85cwK2jwCsKYClZpUpR-FtRJqBo186KbR18bcSTDuoVTzutPrgsqFwwXKFxjCbiB__3q7j10B6YI2840O0rtTBwt8k5bkg89Q9wN0lSHvcA45111ciuwLbF42gdsnK91py5LeYNPL6YXCSwURj11Ttj2DcmBa05UrgWo84ETBwh0w6g3rKYIeNAkrtTBwS0p0dKXi5JreaGxQxgoU1P1TcWR86czCLTCcXDJLzKoO7cOXJa516CsPcPc0FwAEw";
     var zDetectivePenguin = "5n31sbkbl00e0vt8m0a7g0vjni2r0w333111311111f000000300000d131101111111c200030000000h606050600000v000100100100o3400b0004U6g8BnaoW0001zhAs-58OCI8gx48gy5fwNA9248h24WcFQcqJwy28p1AFlV36z88wy6gGTgvwNHngFpMx3we0JiAFAams8gz8U8AFaop2sQaD6mgmC7cyCxoC4yDGiw4Uy2gi1D8OsHaOcD8OsTaOcD8OleECcF5ctz1SAy3aqc5A9zhU8lkQBjhkiOVTdT44Mqh5BcGf6KqWDaWHGuEVEYRAVnd1RhCklcswNifib18bRFxFO2Xj32inpxwbJccU1tCzabIMw5WOhHJNpuijGFNBb0FxPsCwYC4yDGiw4Alcc0g7f0jhx4goj6zJ2KCAFB0Qr556NN6hhAp56hAkasgs4r4CfnxEqqgYi6A58sDvPO6lh5xjza10kExFBiy5Cqp8AnhnQBRehi6B85wYwtI5ujF1IYTy1QaL5YPylecI43KpkEhFBhy7Ci98-40YaXBnd63Vcq4MAaGqiFzNPiplRVtFEQEANNpUCIGLbLyu8UUY20pk5BSCFjG9kQl4riqkIFM30iqso02ccOC728cp6hBpejAp6hy6jAV1u0bIrm05Rwo02bw1dRBkxu-BBnD80lBPtXCYrKVJpkTCrJVKVcRTrKRuTnSldWmPfx0fACn8AE60H1oTlS2KWX3j8aXHI5tRSga8exi2w2osr0a4NQdgh5Dyuo1N6M2z91A4jS7iwiUaWKNeo-lmrBGysMXGwllgDj35SJ8Dc81145lkpmHqqAyGqRxGoGIG49agQtg3MvaIyG3Jp5lBV000tH8GwXmhldiLpPvePItMuaOaEeRAlmtAka7qOaEeRAlhj7H8GwYlAlgtH8GKaOaEf5p5k7qOaEKjnpghuCKGqge0UArvQyuMWPB0lRtysNQaH4cJgzQ4A5_zeiR6JyK0kiOJ8KHDI1nlSbJ2GN3bkbAnh6C6CD6eSwOWMptVoaGYBQcJ86Vg2o8IMN2qGUuSmv24AbwMw7Nx6PcP7Ny6PcP7N27wgc50pDi22ia18CoEh4P2EyMgxpwXK2A6sgeoN8Mc3C4yMcerKUSA938Bj39413841383Acy8gOwN2myz45p4V3cEoHA4xgwGGE3A7lkhbAF4alKhgtTyUOKltCGrGK-qKGHGGWOGFWa7CHxcP7EIfcM4jS6NG0H0HGX4VzElm8pqEDceWE5lk9QhMZHiCby84p6gCj6EFwOy9fcxj2zytDtAsD4zP-NAp7kqzPfkYOkf40E1P6jP93GcA69i894WA2w74ozN9p81yeB8a0shyf4AeoOgoB8wAiCeGC7vz6jjAo5AqNWgr6jjAp-gtTt3ji6QerCxFF3q4Vmk6CAdgqgknwA904x80A3RDk5Yz88DeO2-hA4jy0a09zhGCytSyh0KkJ5Nn1zTDsa8UVE1khMU5Nf42g3Cyw-bG-k5Yz88BcAuyzuFj08o70La-s1DO894YyQks8kxg79-9K19n0Kf2l2oQ90ztc5g5e8C2D6opj7lja6j3D9KRyPdD9wzJpmPARtPIoxy68oxy680-0t57id8_64Mp1ylUbzG8a0shyf4BAM64-8_ydUjAMSIK3Xej2DqOJD9y3NDoN34cgN34cgfq0a0u4ozUilj4oyD1O0kg0w90gFww8wSgr75S7q1Ism3p1I7yX3J0Seb1IwSebIeQ3oUJag3XXffs7DwsNPo4x9S0FghKk3HcPuEEOcywFo06rTswUA6NPKxSwr75wSgr1UKMtVN74sVNf4shPtwUHye8VLpEES2Ah0szyu9VzyeoEEhGD2okEoXywumXDtNhAp51hT8EDN5sm4-lk3Dtw6hVnAX0czyX1Br0ubStz8E9GhwKPRcCqCub2uGEfdwSeH1IwSebIeQ3oUL9gFhUYXEus1N7ewSgr75S7q1Ism10E0YVwus1P7e0Sgr75S7qgCiDD084F00000YXEus1R7e0Sgr75S7q1Ismc";
-    var zUT70 = "5sbk0l00e07tbm0a7g07j7i1r1w01010111f20202000d01000101c40404000h40004000v00000020o2420b0i8y8Q4y8yc18y8z8h4h4Mp23Vlb7rtM37kT3UkZi5jiL03Aww0lwpoaXL40aOVKMe05Tr02WOFI6NdnInluTlmpoecUysLb1ARtYhllwUyGOWOFI6NdnIlIRg0GmeSXI6iFK7MFWAb6Dciopm28hKok1ycy9Ay0aBzJKU1xGrxYauF2FF5U0sk402I3b1ntUw1mndS1M0KXo0nmldwS9GZyWHSWGPb1ND4jBVocCHLyaGI74lmnmldwS9GZyJCG04TcwF06BCon896goM0";
+    var zUT70 = "5sbk0l08e00tbm0a7g08j7i1r1w01010111f20202000d01000101c40404000h40004000v00000020o2420b0i8y8Mgi8y8M0i8y8M8h4h4Mp23Vlb7rtM37kT3UkZi5jiL03Aww0lwpoaXL40aOVKMe05Tr02WOFI6NdnInluTlmpoecUysLb1ARtYhllwUyGOWOFI6NdnIlIRg0GmeSXI6iFK7MFWAb6Dciopm28hKok1ycy9Ay0aBzJKU1xGrxYauF2FF5U0sk402I3b1ntUw1mndS1M0KXo0nmldwS9GZyWHSWGPb1ND4jBVocCHLyaGI74lmnmldwS9GZyJCG04TcwF06BCon896goM0";
     var zAmpPlains = "5sbk9l01e0stbm0a7g0tjji5r1w112211111441411111111111f100100200002400000000000d111211011100111111111111c040000040004000000000000h000000000000100000000000v000000001110000000100000o3310b04ghx44xj7ccNP8iFaSdoVzme04ghx44xj7ccNP8iFaSdoVzme28wOy8cNN84kq19kJj6KqZHCL058h12cxgx248gxcoO0x2s8gDp2kq4qoY8yNyegf4cwejA1M384unApmgfbO0UxA1N38dd72jlMl4QO4hEi60i7CBv2GE2DMCD8FwqsCBde4nC4NwcCB8mupFh4CAMG1QaNT664c1N4wg9O5GG2Wg8dlgkNS61wL2cT8Nb8n8GHFFAbp5PfUcbCGFPjMgBsGGfzkjojjXh5zyYwaqC0y30YnpjVhAV68QTp2KzB4qeEO5aCmkzARkGWeso8e9lkXCjljJy70q5442cyz8OkxEOaval846vbwi0ag3Nl7k8yhEl6NAV750H1i2n1i2E587j54ApaiGGGAWGGFaGGGj00005ceAgoPcz4sz9OcT8OIz4YzaOcP8OYz9OcP8Osz2b8OszaO1Osz9OcL8OszcOcH8PszaOcP8Pcz9OcT8Osz2f8Osz2f8Jd7s1dn1kjj8h5x4o14ukxVlcte0IFV0FOaHqsCBde8li6xco39Fi5DCqkh9Fc8FxAw8z1g2A58agh22E5gagk0F1i2A5gaw3k2A50agkwF1k2EO3Uqyr2qvMt3WwaqC4y33KoX1ogqGEdlk6GG3ll1sNGGwKgRlgn8mGEbY810xGGwRlgqGEdlk7yGEf5lguaGwLNfx1UGG2WggdlguaGwK8RlguGGwKgZlgni33GG38v2gwGGFQggaGIGGGGIGGPg0qGGGGJTnh18GG8LBllllBlm29XjdrllCXKRl5TsQU07aaGGJGGM0nw1g402I3b1ntUw1mndS1M0KXo0nmldwS9GZyWHSpKGY1Nv4nCpocyXLyWHI74lmnmldwS9GZyg002rQNko0qGbaqa4x8Oaqsz8EEOcwqaaqqacz8EEOcyyz8O1EEFFEEOcyCD8Oaacz862y6C1y2C0y2CCCyCCCArbqpe7FKLFAUuBdeUkmmzlouC89u0w1LEy2Cywd49h4ddc1j8zcddc3pjjj1h1j1gZcdkapzhgy96hIp56NAr0UxhIp6NAkr6hI3wt6NAr6hhIp6M8rGdz8EOchEEFO2oV56g7fEOcD8OaGq28F9GOiV1s0005j10gh030A10cw3cmIOwr0ebSgk0OsA75TB0Uw6g0ub3AwS0snosE75zkMi8UKMYm3C03PotA6M3yX3J0UIqC290ebKCtHCM3AYO2w6jAwE1AV8a0pei2w6jIwS0p01SsA6M381IV8dw6g3pOgpei39Ogsnuk0tL91N0cwl0cwmg2wl0G0p0cw0X9BEOgsnuk3y0p01UL91I0O1k0O1p0a1k2E1Aawc8nof5Ym3y0p0eqPa1I0ULp1g39Ogsnuk3y0p000000000";
     var zMoskau = "5sbk6l00e0ut6m0a7g0xjvi3r1w2111636121111111f0001000000000000d1002110111111111c0222000000000000h0060606000000000v0221000000001000o3100b1k221212123451lmn6789abcdefghij0001p2g345656789a789bcdefhijklmnmo0001122121212456145678889acdefcdef0001116272228999999993334443434345000p2uOaoIkOdcBj9kSkSkSkSkCkIIFIFJFIFIFIFIFbCNAHxQxSpiYwg-bCrmoAskMaAca0ZIoR0W6uxoqhFAGpaCOCOCOCOAxsN648gdlk5O4Ec9Fx15LpCoD8hHVo8ihhaA54wy168V6hA18uSw8cdlk7CwMKORxOMwwRljcHcpxjcyNcg9D4tOpOpOp2gZdogwqGEfd1xt5H5CpDAhHVo8nAi-ki7B2okV6hA18nclAP0RlgqG33ll1Bf23ll1GGwRlhjB9ZOX1PcPcPcPcPcPcPcvcc2p38wRTtwuMXKXOXKTj30k78F4w8p0x8mCDA2p-Mu2ibAq_5546cT8N38PYz4cwyZDyXo9cs60R9OdLcsNyehDV68p68V16X7dmo5vrW-fUzdOc_8PYz4cwztDyXobA60RaOdLcsNyehDV68p68V14FyNppjpjpjpjpjpjponcWbJj66xcXU7v3LpQ6EXT0XmGkXWauPIOhR2Jkiwy7go1PoSkkM0000ldDBW2FIsNN0kQeQwEkRtzsKQA32K6H88EkMwSgnwIwMgo85cc5i14w-3dVgFEVMPd3AyY9BFEpRrAOuB-EW5WAwVCuG8cCmFBxuF0wMFEq3Ndjz7PQOVj7huiA56SFEVGhfA7erUgujP6VPVfCrVDx1GVPmCmRcVF8tec8x421sNo31GGCVzlwbF0wRlpllBlmk5kDtQPtlllTllipgGokia8ceompygcpllAtlleEbKWGIGGOGHa-FiXFCWKVek1oasQO79DsPaGGGGtgfsllpllBlmlZiBTjdRllntllu8Tz4zUMP7oCeyo4yrcY0xOXJT1i341SoO8XjzoI0vqFdWoISCm5N5jbj76CqpcrpxIF2Ahbj7AT4QMXSdKXpBUgYPcygIwpD4i39DbJy1cUygpcUCgpcxv7_IPrH82pN4wUCmoZTL-34y03hz3K_1Jk2g71tM90sjFxP4wMyE7D_VjV3sEC7uNJTvBx5PcT4b86pN4wOpOXYFD4i39D4O39AbP_p0j8cCrtOpN4wSppzTu_Uci80d6cf_Y6RgbK183wAhNeC7coz6cK1VK-k-gF2EC7uNJTrCnDHKotlkygkO1GIh7XaHcPm85ly8ZVloDJK85lgnP_GXllnTIwaH4hLVGDcvcXkxI1ymo1ENxNDwpxRg90s5T0A1NeC7ci32awva8WTtk39CF3ZOGN4v-WHLcXkxI1ymo3L_Q7tk2Lwi0U94snpycoOUaFbjgKi0002Cbigc90hIr6NIr6NIr6NIr6NIr6NIr6NIr6MthOdzoh5z8Ocz8Ocz8Ocz8OcwVehAp6hAp6hAp6hAp6hAp1OdzydzoSdzoSdzoSdiSdzoSdzoSdzoSdwW9Ir6NIr6NIr6NIr6wX6NIr6NIr6NIr6MtLoSdzoSdzoSdzoSdXoSdzoSdzoSdzoS3IX6NIr6NIr6NIr6NIr6NIr6NIr6NIr6MtRh10z4IzbOc6OcPCcH8Osz9O3DV6hApChAp6lAp6hAp6hA78Ocz8Ocz8Ocz8Ocz8Ocz81jdKCCCKK-UTTkn9Cr0lcPo6eVljj0mMACoiWyVC97INuP4vN0uh80Ygg000000000Fws23i0z91jAp8asz91jAp8asz91jAp8asz91jA791jAao82mPIpgaszqStza1jArmPIpgaszqStwVi84FwNN6lAV6hNn4YhN6lAV6hNn4YhN6lAV6hNn4YRP7cV6guqVDye8OID8OeaUDye8OID8OeaUDye8OID8OeaUDye8OID8O3Nn4YhN6lAV6hNn4YhN6lAV6hNhjCK84tA5n4p8asz91jAp8asz91jAp8asz91Nmg1cizB0FUzyJDoOwkV6QOxBbAEo_DgmsNPKPIpgaszqStwVgaszqStza1jArmPIpgaszqStza1Jkl7a1i3Kwpfx6k2A6Q39ScE58dE6jIpgaszq1IX000000000000";
     var zLoZRidingNight = "5sbkal00e0nt6m1a5g0njhi2r1w111111211111f000000000000d112011111111c001000000000h006000000000v001000000000o3440b28p2CewahAaoW5boRPUh28p2Cew8xAaoW0y6gFAE28p2Cew8xAaoW0y6gFAE00000000000000000000p28J84ge6A8q9z8cAGC9FkwNMNXpz8cAHFwBi3727JCcF0K3GFnzyF1z6lkwg24GgoN5tIGMoOzvkcQ4z216TickxGyeyYyNOBioS4Npwo60GrmwR5Boh6xco21L0dkm5ex8qe9GGpQVaAIFlR9H81j1V46c8XWqqWEn8MeWC4xaEk5EHw5j10qhFA6mba6C94lS7xJ1nbkQMBlw8ilFy6CG8Mm2J0tphWp0YoNVRRVRM0nORdc9l30JFLya6BE45EFs1i1oi79yyVIv8ygx9zepEW7BGqoiFc0g62QQN3jl4w9y5s0YbzUUsQ3woFKecKzORdc9lM431qqoxFBEC1cgHM00000Fyei144OHWqqWEk47tj2gBka2QlNNM266AgG8k0yI5xNR0psJjj2lm0x9mC8qqEz1oaQF2eqgh0e08qNAbwn0Lf3I0PVqCC4GxwmQTN42gwgm2Lah3DzUe28rp2414w9Df3KwMR9qCC4Gx0gJdcgQRh82oxn7778pN2q242aQUX8cdilFFxaE84bjj4dcJ4M9y5u00000000000000";
@@ -1235,8 +1280,8 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
     //*If you press a "button", then:
     //If you press a "button", then:
     function playSound(button, name) {
-        
-        //reset "setTimeout", so songs with those functions won't overlap over other songs
+        sanspeaker = false;
+        //reset "setTimeout", so songs with those using setTimeout won't overlap over other songs
         var id = window.setTimeout(function () { }, 0);
         while (id--) {
             window.clearTimeout(id); // will do nothing if no timeout with id is present
@@ -1360,7 +1405,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
         
         //-----IF/ELSE BUTTON PRESS STATEMENTS------
         // Show the bottom lumitrap gif when playing the shovel knight song
-        if ($(button).hasClass('showLumiPeak')) {
+        if ($(button).hasClass('showLumiPeakkk')) {
             if (lumipeaker == false) {
                 console.log("Lumipeak true");
                 var gifSource = $('#lumipeak').attr('src'); //get the source in the var
@@ -1382,6 +1427,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                 $('#sanspeak').attr('src', gifSource + "?" + new Date().getTime()); //add the date to the source of the image...
                 document.getElementById("sanspeak").style.display = "block";
                 sansSound.play();
+                sansSound.currentTime = 0;
                 sanspeaker = true;
             }
             else if (sanspeaker == true) {
@@ -1488,12 +1534,14 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
         $('body').css('transition', 'background 1s ease');
         $('#randomImage').css({'transition':'transform 1s ease'});
         $('#randomImage').css('transition', 'background 1s ease');
-        $('.jBox-container').remove()
+        $('#randomImage').css({'transition':'scale 1s ease'});
+        $('*.jBox').remove()
         //*---------BACKGROUND VISUALS----------
         $('body').css({'box-shadow':'inset 0 0 15em rgb(0, 0, 0),inset 0 0 30em rgb(0, 0, 0)'});
         if ($(button).hasClass('but1')) {
             $('h1').css({'color': '#FEFEFE',});
-             $('body').css({'background-image': 'none',
+            $('body').css('transition', 'background-size 0s ease');
+            $('body').css({'background-image': 'none',
                              'background-repeat' : 'no-repeat',
                              'image-rendering': 'pixelated',
                              'background-size': 'cover'}),
@@ -1581,7 +1629,8 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
         if ($(button).hasClass('but3')) {
             $('h1').css({'color': '#FEFEFE',});
             $("#songPop").attr("src", flower);
-            $('body').css({'background-image': 'url("img/flowey.gif")',
+            $('body').css('transition', 'background-size 0s ease');
+            $('body').css({'background-image': flowey,
                             'image-rendering' : '-moz-crisp-edges',
                             'image-rendering' : '-o-crisp-edges',
                             'image-rendering' : '-webkit-optimize-contrast',
@@ -1679,6 +1728,8 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             randomImage.style.webkitAnimation = "overlayMoveUp 10s linear infinite";
         }
         if ($(button).hasClass('but10')) {
+            $('#randomImage').css('transition', 'background-size 0s ease');
+            $('body').css('transition', 'background-size 0s ease');
             $('body').css({'background-image': 'url("img/blook.gif")',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'auto',
@@ -1711,25 +1762,15 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'background-size': 'cover'})
         }
         if ($(button).hasClass('but15')) {
-            $('#randomImage').css({'background-image': 'none', 'opacity':'1', 'animation' : 'blackOut 1s ease-in forwards'});
+            $('#randomImage').css({
+                'background-image': 'url('+ stars +')',
+                'animation': 'overlayMoveDown 15s linear infinite',
+                '-webkit-animation': 'overlayMoveDown 15s linear infinite',})
             $('body').css({'background-image': 'url("img/sans.png")',
                             //'background-color': '#162b3d',
                             'background-color': '#273b55',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover'})
-
-                            setTimeout(function(){
-                            $('#randomImage').css({
-                                'opacity':'0',})
-                            }, 1500);
-                            setTimeout(function(){
-                            $('#randomImage').css({
-                                'background-image': 'url('+ stars +')',
-                                'animation': 'overlayMoveDown 15s linear infinite',
-                                '-webkit-animation': 'overlayMoveDown 15s linear infinite',
-                                'transition' : 'opacity 7s ease',
-                                'opacity':'1',})
-                            }, 2000);
         }
         if ($(button).hasClass('but16')) {
             $('body').css({'background-image': 'url("img/papyrus.gif")',
@@ -1849,7 +1890,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'background-size': 'contain'})
         }
         if ($(button).hasClass('but40')) {
-            $(['napstahouse42.png']).preload();
+            $(['img/napstahouse42.png']).preload();
             $('#randomImage').css({'background-image': 'none', 'opacity':'1', 'animation' : 'blackOut 0.8s ease-out forwards'});
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/napstahouse4.png")',
@@ -1897,9 +1938,12 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'image-rendering': 'pixelated',
                             'background-position': '0% 100%',
                             'background-size': 'cover'})
+                            $('body').css('transition', 'background-size 0s ease');
+                            $('#randomImage').css('transition', 'background-size 0s ease');
                             setTimeout(function(){
                             $('body').css({'animation' : 'alphys 49s linear forwards'});
-                            }, 31100);   
+                            }, 31300);   
+                            
 
                             setTimeout(function(){
                             $('#randomImage').css({'background-image': 'url("img/alphysL.gif")',
@@ -1911,7 +1955,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'width': '100%',
                             'height': '100%',
                             })
-                            },90100); 
+                            },90000); 
         }
         if ($(button).hasClass('but49')) {
             $('#randomImage').css({'background-image': 'none'});
@@ -2043,7 +2087,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'background-size': 'auto'})
         }
         if ($(button).hasClass('bMiasSong')) {
-                $('html,body').animate({ scrollTop: $('#middle').offset().top}, 0);
+                $('html, body').animate({ scrollTop: $('#middle').offset().top}, 1);
                 
 
             $('.wrapper').css({'perspective': '500px'});
@@ -2080,6 +2124,8 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'background-position' : '50% 40%',})
         }
         if ($(button).hasClass('bAllStar')) {
+            beep.beat = 6;
+            //beep.part = 3;
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/shrek.jpg")',
                             'background-repeat' : 'no-repeat',
@@ -2090,7 +2136,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             $('body').css({
                             'animation' : 'shrek 9.5s forwards ease-in',
                             '-webkit-animation' : 'shrek 9.5s forwards ease-in',})
-                            }, 11400);
+                            }, 9690);
                             
         }
         if ($(button).hasClass('bChickenInvaders')) {
@@ -2123,8 +2169,8 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                             'image-rendering': 'pixelated',
                             'animation' : 'machine 5000s linear infinite',
                             'background-position': '50% 50%'})
-                                $('#randomImage').css({'background-color':'#000000','animation' : 'dullBlackOut 3s ease-out forwards',})
-                                }, 6000);
+                                $('#randomImage').css({'background-color':'#000000','animation' : 'dullBlackOut 0.1s forwards',})
+                                }, 6300);
                            
 
         }
@@ -2158,6 +2204,12 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                                 $('body').css({
                                     'animation':'Cryptlobby2 14.750s forwards linear',
                                 })}, 44250);
+                            setTimeout(function(){
+                                $('body').css({
+                                    'animation':'none',
+                                    'background-position':'50% 50%',
+                                    'backgroud-size':'100%',
+                                })}, 59000);
                                 
         }
         if ($(button).hasClass('bBowser')) {
@@ -2219,6 +2271,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
         if ($(button).hasClass('bvvvvvv')) {
             $('#randomImage').css({'background-image': 'none'});
             $('body').css({'background-image': 'url("img/vvvvvv.png")',
+            
                             'background-color': '#000',
                             'background-repeat' : 'no-repeat',
                             'background-size': 'cover',
@@ -2238,18 +2291,20 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
                         })
         }
         if ($(button).hasClass('bRicklovania')) {
-            $('body').css({'background-color': '#000'})
+            $('body').css({'background-color': '#000','transition':'background-color 0s linear'})
             $('#randomImage').css({'background-image': 'url('+ stars +')'});
-            $('body').css({'background-image': 'none',
+        randomImage.style.animation = "overlayMoveLeft 8s linear infinite";
+        randomImage.style.webkitAnimation = "overlayMoveLeft 8s linear infinite";
+            $('body').css({ 'background-image': 'none',
                             'background-repeat' : 'repeat',
-                            'animation' : 'ricklovania 38.8s forwards linear',
-                            '-webkit-animation' : 'ricklovania 38.8s forwards linear',})
-
-                            randomImage.style.animation = "starsans 19.4s forwards linear";
-                            randomImage.style.webkitAnimation = "starsans 19.4s forwards linear";
+                            })
+        
+        
                         setTimeout(function(){
                         $('body').css({'background-image' : 'url("img/rick.gif")',});
+                        $('#randomImage').css({'background-image':'none'})
                         }, 19400);
+                    
         }
         if ($(button).hasClass('bHappyHogwarts')) {
             $('body').css({'background-color': '#000'})

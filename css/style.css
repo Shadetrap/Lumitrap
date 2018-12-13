@@ -432,7 +432,7 @@ button:focus {
     90.2%	{ left:335px; }
     92.8%	{ left:335px; -webkit-transform: rotate(10deg);transform: rotate(10deg);}
     94.4% 	{ left:170px; -webkit-transform: rotate(360deg);transform: rotate(360deg); }
-    100%	{ left:170px; }}
+    100%	{ left:170px; display:hidden; }}
 @-webkit-keyframes sans
 {
     0%	    { left:170px; }
@@ -881,7 +881,7 @@ div.newData {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%); 
-        background-color:rgb(11, 11, 11);
+        background-color:#0b0b0b;
     }
     .linkTwit{
         top:0!important;
@@ -957,11 +957,11 @@ span {
     to		{ -webkit-transform: translateX(-240px); transform: translateX(-240px); }}
 /*-----------------------------*/
 @-webkit-keyframes overlayMoveRight{
-    from	{ -webkit-transform: translateX(0px); }
-    to		{ -webkit-transform: translateX(240px); }}
+    from	{ -webkit-transform: translateX(-240px); }
+    to		{ -webkit-transform: translateX(0px); }}
 @keyframes overlayMoveRight{
-    from	{ -webkit-transform: translateX(0px); transform: translateX(0px); }
-    to		{ -webkit-transform: translateX(240px); transform: translateX(240px); }}
+    from	{ -webkit-transform: translateX(-240px); transform: translateX(-240px); }
+    to		{ -webkit-transform: translateX(0px); transform: translateX(0px); }}
 /*------------------------------*/
 @-webkit-keyframes overlayMoveUp{
     from	{ -webkit-transform: translateY(0px); }
@@ -1061,10 +1061,10 @@ span {
     0%	{ background-position: 0% 50%; }
     100%		{ background-position: 100% 50%; }}
 @keyframes asgore{
-    0%	{ background-position: 118% 15% }
+    0%	{ background-position: 114% 15% }
     100%		{ background-position: 200% 15%; }}
 @-webkit-keyframes asgore{
-    0%	{ background-position: 118% 15% }
+    0%	{ background-position: 114% 15% }
     100%		{ background-position: 200% 15%; }}
 @keyframes rickroll{
     0%	{ -webkit-transform: rotate(0deg); transform: rotate(0deg); }
@@ -1140,11 +1140,11 @@ span {
     0%	{background-position: 15% 0%;}
     100%{background-position: 85% 0%;}}
 @-webkit-keyframes Cryptlobby2{
-    0%	{background-position: 85% 100%;}
-    100%{background-position: 15% 100%;}}
+    0%	{background-position: 85% 65%;}
+    100%{background-position: 15% 65%;}}
 @keyframes Cryptlobby2{
-    0%	{background-position: 85% 100%;}
-    100%{background-position: 15% 100%;}}
+    0%	{background-position: 85% 65%;}
+    100%{background-position: 15% 65%;}}
 
 @keyframes superStill{
     0%	{}

@@ -1,1 +1,96 @@
+-About-
+Since I got in to coding and since I make BeepBox covers, I took the challenge of doing something with the BeepBox api and implemented it in a website.
+I made the site in 2017 but i
+I started to enjoy learning JavaScript, and since BeepBox makes you able to implement it's songs on websites, I did so.
+The site exists because I enjoy making beepbox covers, and I wanted to learn JavaScript.
+
 All the credits will go here once the site is done diddly doodled.
+I do not own any of the visuals.
+
+Visuals:
+Undertale - S.1: Sprites from the original game.
+Undertale - S.2: Sprites from the original game.
+Undertale - S.3: Sprites from the original game.
+Vim - No - Src: https://www.youtube.com/watch?v=MBDJEcTLrKI
+Undertale - S.4: Fan-art by Seven-Bit on Deviantart: https://www.deviantart.com/seven-bit/art/Fallen-Down-Undertale-654631476
+Undertale - S.5: Fan-art by Mnstrcndy/MC/Kay on tumblr: http://mnstrcndy.tumblr.com/post/162601443319/visual-development-and-background-for-the
+Undertale - S.6: Sprites mashup from the original game.
+Undertale - S.6: Just the fighting-grid from Undertale made in photoshop.
+Groovy Birthday: cover of the "Happy Birthday" song, and the background is from the Pokemon Anime.
+Castlevania - Vampire Killer: A tiled sprite from CastleVania.
+Undertale - S.8: Sprites from the original game.
+Undertale - S.9: Just the fighting-grid from Undertale made in photoshop.
+Undertale - S.10: Sprites from the original game.
+Undertale - S.11: Sprites from the original game.
+Undertale - S.12: Sprites from the original game.
+Undertale - S.13: Scene from the original game, shading by gzorro20 on Deviantart: https://www.deviantart.com/gzorro20/art/Home-590416799
+Undertale - S.15: Fan-art by Seven-Bit on Deviantart: http://mnstrcndy.tumblr.com/post/143048902064/out-of-the-cold
+Undertale - S.16: Scene from the original game.
+Undertale - S.18: Fan-art by Mnstrcndy/MC/Kay on tumblr: http://mnstrcndy.tumblr.com/
+Undertale - S.20: Fan-art by Mnstrcndy/MC/Kay on tumblr: http://mnstrcndy.tumblr.com/
+Undertale - S.22: Fan-art by Mnstrcndy/MC/Kay on tumblr: http://mnstrcndy.tumblr.com/
+Undertale - S.22: Fan-art by Mnstrcndy/MC/Kay on tumblr: http://mnstrcndy.tumblr.com/
+Undertale - S.23: Background sprite from the original game.
+Undertale - S.30: Sprites from the original game.
+Undertale - S.32: Sprites from the original game.
+Undertale - S.35: Gif recorded from the original game.
+Undertale - S.37: Background sprite from the original game.
+Undertale - S.38: Background sprite from the original game, with a grey filter.
+Undertale - S.39: Background sprite from the original game, with more filters.
+Undertale - S.40: Sprites from the original game.
+Undertale - S.42: Screenshot from the original game.
+Undertale - S.43: Screenshot from the original game.
+Undertale - S.44: Background sprite from the original game.
+Undertale - S.48: Background sprites edited together the original game.
+Undertale - S.48: Background sprites edited together the original game.
+Undertale - S.49: Fan-animation by Gooseworx on Deviantart: https://www.deviantart.com/gooseworx/art/It-s-Showtime-597724796
+Undertale - S.67: Sprite from the original game.
+Undertale - S.68: Gif recorded from the original game.
+Binding of Isaac - Theme: Binding of Isaac Wrath of the Lamb - Steam Background: https://steamcommunity.com/market/listings/753/113200-Wrath%20of%20the%20Cast
+Starwars - Cantina Band: Gif recorded from Star Wars Episode 1.
+Scott Pilgrim vs. The World: Subboss Theme: Wallpaper made of a scan from volume 1 of Scott Pilgrim comics: https://www.deviantart.com/quiklost/art/Scott-Pilgrim-Wallpaper-167636333
+Snapshot OST - Knowing the Meaning: Screenshot from the original game.
+Pangolin Love - Cutscene from the original game made into a gif.
+Spore - Flower Dance: Wallpaper from the original game.
+Cortex Command - This World: Screenshot of the game's title screen.
+Crash Bandicoot Wrath Of Cortex - Theme: Gif recording of the loading screen from the original game.
+Neil Cicierega - BRODYQUEST: Background from idevie tutorials: https://idevie.com/tutorials/create-a-realistic-star-field-with-space-dust-in-photoshop-with-action . Adrien Brody GIF: Adrien Brody.
+Super Hexagon - Hexagon Stage: Gif from the Super Hexaon remake "Meta Hexagon": https://gamebuino.com/creations/meta-hexagon
+Bublby - World Bowser 8 Bit: bowser jump by Ivan/Pug-of-War: http://pug-of-war.tumblr.com/post/119430419251/bowser
+Cave Story+ - On To Grasstown: Someone online didn't give them credit, but I know it's by someone from pixeljoint.com
+Crypt of The Necrodancer - 3-2 Cold: Sprites from the original game.
+Dubmood - 3D Galax: Screenshot from the original game.
+VVVVVV - Background sprites put together from the original game.
+Gigi D'Agostino - The Riddle: GIF recording from the music video, animation by FILM BILDER studios.
+Rick Astley - Never Gonna Give You Up: GIF recording from the music video.
+Undertale - S.100: Sprites from the original game and... another gif from the song above.
+Discord (Remix) - The Living Tombstone
+Super Mario Galaxy 2 - Puzzle Plank Galaxy: Wallpaper from the original game.
+Harry Potter 1 Video Game - Happy Hogwarts: Screenshot from the original game.
+Dubmood - LUCiD Keygen 2.xm: (I honestly don't know. Sorry!)
+Syphus - Mia's Song.mod: Just a css gradient.
+Crash Twinsanity - Rockslide Rumble: Art taken from two game over screens from the original game.
+Vince Guaraldi Trio - Linus And Lucy: Gif recording from The Peanuts TV special: "A Charlie Brown Christmas".
+Crypt of The Necrodancer - Lobby: Gif recording of the original game.
+Portal 2 - Forwarding the Cause of Science: Wallpaper from the original game.
+Jean Michel Jarre - Magnetic Fields 2: gif by Hexeosis on Tumblr: http://hexeosis.tumblr.com/post/170700674147
+Smash Mouth - All Star: Movie poster of the movie.
+Crypt of The Necrodancer: Sprites from the original game.
+Chicken Invaders 2 - Theme (Just To Funk): Game Poster of the original game.
+Harry Potter 3 - Aunt Marge's Waltz: Screenshot from Harry Potter and the Prisoner of Azkaban.
+TheFatRat: Time Lapse: The album cover of TheFatRat's Single: Time Lapse https://thefatrat.bandcamp.com/track/time-lapse
+Fez - Knowledge: Animated gif from the original game.
+Angry Video Game Nerd II - Overworld: Sprites from the original game.
+Rick and Morty - Theme: Pixel art by Mikołaj Birek: http://gallery.wacom.com/gallery/55883023/Rick-and-Morty-PIXEL-ART
+Lumitrap - Through Ze Machine: Rube Goldberg Machine. Gif by hundreds of SomethingAwful forum goons.
+Lumitrap - Detective Penguin: Illustration by Devin Hermanson: https://twitter.com/devinher
+Undertale S.70: None
+Pogemon Mystery Dungeon - Amp Plains: Art from the original game.
+Dschinghis Khan - Moskau: Dance taunts from the game Team Fortress 2. Five Nights At Freddies model swap. Dragon dance: http://maguy69.centerblog.net/21560-danse-du-dragon
+Legend of Zelda Breath of the Wild - Riding (Night): Wallpaper from the original game.
+Waterflame - Electroman Adventures: Single cover.
+Idle Tree Soundtrack - l3go: Sprites from the original game.
+Oney Plays: Art by ChocolateCakeBag on DeviantArt: https://www.deviantart.com/chocolatecakebag/art/Oneyplays-desktop-wallpaper-650062028
+Lumitrap/8372 - Electric Winds: https://gifer.com/en/9ZWy
+Shovel Knight - Strike The Earth!: Background image from the game's own website.
+Necrodancer - Fungal Funk: none.
