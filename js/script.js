@@ -1350,20 +1350,20 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
         //Reset secret filter-flash animation:
         $('table').css({ 'animation': 'bgStill 0s', '-webkit-animation': 'bgStill 0s', })
         //Randomize the Website icon:
-        // function randomizeIcoButton() {
-        //     if ($(button).hasClass('bUT')) {
-        //         link.href = 'img/ico/ut.ico'
-        //     }
-        //     if (!$(button).hasClass('bUT')) {
-        //         //link.href = 'img/ico/59.ico'
-        //         link.href = 'img/ico/0.ico'
-        //         setTimeout(function () {
-        //             //link.href = icoimages[Math.floor(Math.random() * icoimages.length)];
-        //             //link.href = 'img/ico/0.ico'
-        //         }, 200);
-        //     }
-        // }
-        //randomizeIcoButton();
+         function randomizeIcoButton() {
+            //  if ($(button).hasClass('bUT')) {
+            //      link.href = 'img/ico/ut.ico'
+            //  }
+             if (!$(button).hasClass('bUT')) {
+                 //link.href = 'img/ico/59.ico'
+                 link.href = 'img/ico/0.ico'
+                 setTimeout(function () {
+                     //link.href = icoimages[Math.floor(Math.random() * icoimages.length)];
+                     //link.href = 'img/ico/0.ico'
+                 }, 200);
+             }
+         }
+        randomizeIcoButton();
         //reset gifs
         var flowey0 ="img/flowey.gif";
         var flowey = "url(" + flowey0 + "?ts=" + Date.now() + ")";
