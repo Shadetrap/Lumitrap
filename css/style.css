@@ -719,19 +719,22 @@ a:hover {
     margin-bottom: 0px;
 }
 .linkyou{
-right:17px;
+/* right:17px; */
+    right:0px;
+    background-color:none;
 }
 .transparent{
     opacity:0.2;
     cursor: default;
 }
 .linkbeep{
-    right:34px;
+    /* right:34px; */
+    right:17px;
 }
-.linkInfo{
+/* .linkInfo{
     right:0px;
     background-color:none;
-}
+} */
 .linkBugFix{
     z-index: 10;
     padding-left:20px;

@@ -39,7 +39,7 @@ function requestFullScreen(element) {
 }
 
 var elem = document.body; // Make the body go full screen.
-requestFullScreen(elem);
+// requestFullScreen(elem);
 
 
 //window.onload = function() {
@@ -82,10 +82,9 @@ requestFullScreen(elem);
      //theme:"ModalBorder",
      attach: '.MyTooltip',
      content: $('#grabMe'),
-     title: 'Temp title!',
      content: 'Temporary text',
     //  width: 400,
-      getTitle: document.title,
+      getTitle:document.title,
      getContent: 'data-jbox-content',
     blockScroll: false,
     //  adjustDistance: { left:200, right: 220}, zIndex: 4e3,
@@ -188,7 +187,7 @@ var song = new beepbox.Song(song);
 var beep = new beepbox.Synth("5n41sbk4l03e00t7m0a7g04j8i2r1w311024321311411f000000200000000d210001101111111c000000040000000h000085060600000v310220400000400o22200b4z018M0ic040020g0p21YEA62B40t86a4goSa2Fcyxf0UxwYn8RaeM95Edg005goYgNBaNoN3u000ahglOlC41Hc7Gp0Rj46Gowlll5ipB261FaCcI0002pQ5S00002o526jM4P6kf3oM0000");
 beep.volume = 2;
 beep.pause();
-beep.play();
+
 
 //*-----force these GIFs to start-----
 var gifSource = $('#lumipop').attr('src'); //get the source in the var
@@ -223,6 +222,7 @@ var secretSound = new Audio('audio/secret.mp3');
 var sansSound = new Audio('audio/sans.mp3')
 var secret1 = secret2 = secret3 = secret4 = secret5 = secret6 = secret7 = secret8 = secret9 = secret10 = secret11 = secret12 = secret13 = secret14 = secret15 = secret16 = false;
 var isPlaying = false;
+$("#pButtonID").html("⏹");
 var lumipeaker = false;
 var sanspeaker = false;
 var windowFocus = true;
@@ -274,7 +274,7 @@ var honkActive = false;
 newAudio = new Audio();
 newAudio.volume = 0.9;
 
-console.log("aNo returns with: " + aNo);
+// console.log("aNo returns with: " + aNo);
     //console.log("choiceee returns with: "+ choiceee);
 
     //$("h1").on('mousedown touchstart', function (){
@@ -672,7 +672,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
             if (isPlaying == false) {
                 beep.play();
                 isPlaying = true;
-                //$("#pButtonID").html("▶");
+                $("#pButtonID").html("▶");
                 $("path").attr("d", "M0,0 L0,14 L11,7 L0,0 Z");
                 $(".bigMedia").css({"animation":"izPlaying 0.3s ease-in forwards"});
                 $(".poop").css("animation-play-state", "running");
@@ -682,6 +682,7 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
             } else if (isPlaying == true) {
                 beep.pause();
                 isPlaying = false;
+                $("#pButtonID").html("⏹");
                 //$("#pButtonID").html("⏹");
                 //$("li").css("animation-play-state", "paused", "filter: grayscale(100%)");
                 $("path").attr("d", "M0,14 L4,14 L4,0 L0,0 L0,14 L0,14 Z M8,0 L8,14 L12,14 L12,0 L8,0 L8,0 Z");
@@ -941,7 +942,6 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
             //console.log(texta)
             //document.title = titleChange;
             //console.log = ("outputtingh:" + titleChange);
-
         }
         //*Next song
         if (e.keyCode == 40) {
@@ -1280,6 +1280,10 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
     //*If you press a "button", then:
     //If you press a "button", then:
     function playSound(button, name) {
+        // context.resume().then(() => {
+        //     console.log('Playback resumed successfully');
+        // });
+
         sanspeaker = false;
         //reset "setTimeout", so songs with those using setTimeout won't overlap over other songs
         var id = window.setTimeout(function () { }, 0);
@@ -2631,6 +2635,7 @@ var $links = $('.newTab').click(function () {
     windowFocus = false;
     $(".poop").css("animation-play-state", "paused");
     $("body").css("animation-play-state", "paused");
+    $("#pButtonID").html("⏹");
 });
 
 window.onblur = function () {
@@ -2642,9 +2647,9 @@ window.onfocus = function () {
     if (windowFocus == false) {
         //console.log("playing beep and setting window focus to true after this message");
         beep.play();
-        $("#pButtonID").html("▶");
         $(".poop").css("animation-play-state", "running");
         isPlaying = true;
+        $("#pButtonID").html("▶");
         //document.title = 'SHOULD PLAY NOW';
         windowFocus = true;
         //console.log("Did I make it? " + windowFocus);
@@ -2654,3 +2659,6 @@ window.onfocus = function () {
 // For browsers using tabs (like firefox)
 document.onblur = window.onblur;
 document.focus = window.focus;
+if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+    beep.play();
+}
