@@ -1,11 +1,5 @@
--About-
-Since I got in to coding and since I make BeepBox covers, I took the challenge of doing something with the BeepBox api and implemented it in a website.
-I made the site in 2017 but i
-I started to enjoy learning JavaScript, and since BeepBox makes you able to implement it's songs on websites, I did so.
-The site exists because I enjoy making beepbox covers, and I wanted to learn JavaScript.
-
-All the credits will go here once the site is done diddly doodled.
-I do not own any of the visuals.
+-Disclaimer-
+I do not own any of the visuals or pretty much all the covered songs displayed on the website.
 
 Visuals:
 Undertale - S.1: Sprites from the original game.
